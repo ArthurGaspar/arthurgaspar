@@ -36,3 +36,7 @@
   <img align="center" alt="ruby" src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/>
   <img align="center" alt="" src=""/>
 </div>
+
+<!-- ## 🔥 Projetos em Destaque
+[![Project Name](https://github-readme-stats.vercel.app/api/pin/?username=your-username&repo=your-repo&theme=radical)](https://github.com/your-username/your-repo)
+-->
