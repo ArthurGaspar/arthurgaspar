@@ -1,6 +1,6 @@
 ## Olá! Sou Arthur Gaspar, desenvolvedor de web e de software e também amante de ciência de dados e jogos! Aqui, você vai encontrar alguns de meus projetos pessoais :)
 
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)<br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Linguagens, tecnologias e softwares
