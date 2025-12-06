@@ -3,8 +3,22 @@
 💻 Desenvolvedor web e de software (full-stack) | 🎮 Amante de jogos | 📚 Gosto de recursos educacionais e trabalhar com ferramentas que ajudam os outros
 Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)<br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+---
+
+## 🚀 Projetos em Destaque
+
+### 🔹 [Lua X1](https://github.com/ArthurGaspar/lua-x1)
+[![Repo1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=lua-x1&theme=radical)](https://github.com/ArthurGaspar/lua-x1)  
+Um projeto de jogo (engine própria) em **Lua** e **C++**.
+
+---
+
+### 🌌 [Interactive Space 3D](https://github.com/ArthurGaspar/interactive-space-3D)
+[![Repo2](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=interactive-space-3D&theme=radical)](https://github.com/ArthurGaspar/interactive-space-3D)  
+Uma experiência **3D interativa** criada com **Three.js*, trazendo o espaço para dentro do navegador.
 
 ---
 
@@ -57,13 +71,3 @@ Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 </div>  
 
 ---
-
-## 🚀 Projetos em Destaque
-
-<details>
-  <summary>Clique para ver alguns projetos</summary>
-
-  [![Repo1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo1&theme=radical)](https://github.com/ArthurGaspar/lua-x1)
-  [![Repo2](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo2&theme=radical)](https://github.com/ArthurGaspar/interactive-space-3D)  
-
-</details>
