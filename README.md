@@ -2,7 +2,7 @@
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)<br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)<br>
-https://githubcard.com/arthurgaspar.svg?d=_1HtOx9W
+[![Top Langs Test](https://githubcard.com/arthurgaspar.svg?d=_1HtOx9W)
 
 
 ## Linguagens de programação, marcação e estilização
