@@ -11,13 +11,13 @@ Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 ## 🚀 Projetos em Destaque
 
 ### 🔹 [Lua X1](https://github.com/ArthurGaspar/lua-x1)
-[![Repo1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=lua-x1&theme=radical)](https://github.com/ArthurGaspar/lua-x1)  
+[![X1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=lua-x1&theme=radical)](https://github.com/ArthurGaspar/lua-x1)  
 Um projeto de jogo (engine própria) em **Lua** e **C++**.
 
 ---
 
 ### 🌌 [Interactive Space 3D](https://github.com/ArthurGaspar/interactive-space-3D)
-[![Repo2](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=interactive-space-3D&theme=radical)](https://github.com/ArthurGaspar/interactive-space-3D)  
+[![Interactive Space 3D](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=interactive-space-3D&theme=radical)](https://github.com/ArthurGaspar/interactive-space-3D)  
 Uma experiência **3D interativa** criada com **Three.js*, trazendo o espaço para dentro do navegador.
 
 ---
