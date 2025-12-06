@@ -1,8 +1,7 @@
 ## Olá! Sou Arthur Gaspar, desenvolvedor de web e de software e também amante de jogos e recursos educacionais! Aqui, você vai encontrar alguns de meus projetos pessoais :)
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)<br>
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)<br>
-[![Top Langs Test](https://githubcard.com/arthurgaspar.svg?d=_1HtOx9W)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 
 ## Linguagens de programação, marcação e estilização
