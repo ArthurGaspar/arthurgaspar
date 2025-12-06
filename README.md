@@ -3,8 +3,8 @@
 💻 Desenvolvedor web e de software (full-stack) | 🎮 Amante de jogos | 📚 Gosto de recursos educacionais e trabalhar com ferramentas que ajudam os outros
 Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)  
-![Profile Views](https://komarev.com/ghpvc/?username=ArthurGaspar&color=blue&style=for-the-badge)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
 
@@ -63,7 +63,7 @@ Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 <details>
   <summary>Clique para ver alguns projetos</summary>
 
-  [![Repo1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo1&theme=radical)](https://github.com/ArthurGaspar/repo1)
-  [![Repo2](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo2&theme=radical)](https://github.com/ArthurGaspar/repo2)  
+  [![Repo1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo1&theme=radical)](https://github.com/ArthurGaspar/lua-x1)
+  [![Repo2](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=repo2&theme=radical)](https://github.com/ArthurGaspar/interactive-space-3D)  
 
 </details>
