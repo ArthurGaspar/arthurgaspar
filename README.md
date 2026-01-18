@@ -8,7 +8,7 @@ Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 <p>
     <img align="left" 
     alt="Linguagens mais usadas"
-    height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PatrickMeirelles&theme=darcula&layout=compact&custom_title=Tecnologias&langs_count=9" />
+    height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&theme=darcula&layout=compact&custom_title=Tecnologias&langs_count=9" />
 </p>
 
 ---
