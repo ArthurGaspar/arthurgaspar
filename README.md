@@ -5,6 +5,11 @@ Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arthur-gaspar-197a7b265/)<br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+<p>
+    <img align="left" 
+    alt="Linguagens mais usadas"
+    height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PatrickMeirelles&theme=darcula&layout=compact&custom_title=Tecnologias&langs_count=9" />
+</p>
 
 ---
 
