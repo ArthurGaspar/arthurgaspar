@@ -8,6 +8,7 @@ Here you'll find some of my personal projects and creative experiments
 
 [![English](https://img.shields.io/badge/🇬🇧_English-b8860b?style=for-the-badge&logoColor=white)](./README.md)
 [![Português](https://img.shields.io/badge/🇧🇷_Português-1a1208?style=for-the-badge&logoColor=white)](./README_PT.md)
+[![Español](https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8_Espa%C3%B1ol-1a1208?style=for-the-badge&logoColor=white)](./README_ES.md)
 
 <br/>
 
