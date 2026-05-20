@@ -1,10 +1,8 @@
 <div align="center">
 
-<!-- ╔═══════════════════════════ BANNER ═══════════════════════════╗ -->
-
-<img src="./assets/banner.svg" alt="Arthur — Full-Stack Developer" width="100%" />
-
-<!-- ╔═══════════════════════════ LANGUAGE ═══════════════════════════╗ -->
+# Olá! Sou o Arthur 
+## 💻 Desenvolvedor full-stack e engenheiro de software em teste | 🎮 Amante de jogos | 📚 Gosto de recursos educacionais e trabalhar com ferramentas que ajudam os outros
+Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
 
 ###
 
