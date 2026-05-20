@@ -1,8 +1,8 @@
 <div align="center">
 
-# Olá! Sou o Arthur 
-## 💻 Desenvolvedor full-stack e engenheiro de software em teste | 🎮 Amante de jogos | 📚 Gosto de recursos educacionais e trabalhar com ferramentas que ajudam os outros
-Aqui você encontra alguns de meus projetos pessoais e experimentos criativos
+# Hi! I'm Arthur
+## 💻 Full-stack developer and software testing engineer | 🎮 Game lover | 📚 I enjoy educational resources and working with tools that help others
+Here you'll find some of my personal projects and creative experiments
 
 ###
 
