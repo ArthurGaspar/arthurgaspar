@@ -44,7 +44,7 @@ tools that make could make someone's life easier. ✦
 </a>
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ArthurGaspar&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=E8C25A&text_color=d4c08a" alt="Most used languages" width="100%"/>
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=ArthurGaspar&langs_count=5&theme=vision-friendly-dark)](https://github-stats-extended.vercel.app/api/top-langs?username=ArthurGaspar&langs_count=5&theme=vision-friendly-dark)
 
 </td>
 </tr>
