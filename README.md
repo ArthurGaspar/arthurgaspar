@@ -70,10 +70,10 @@ A **custom game engine** written in **Lua** and **C++**.
 </td>
 <td width="50%" valign="top" align="center">
 
-### ✺ Interactive Space 3D
-An **interactive 3D experience** built with **Three.js** — space inside your browser.
+### ✺ Psychic Visualizer
+A **browser-based music visualizer** — a throwback to the old-school Winamp/Milkdrop era, reborn for the modern web.
 
-[![Interactive Space 3D](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=interactive-space-3D&hide_border=true&bg_color=0d0a06&title_color=E8C25A&icon_color=b8860b&text_color=d4c08a)](https://github.com/ArthurGaspar/interactive-space-3D)
+[![Psychic Visualizer](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=psychic-visualizer&hide_border=true&bg_color=0d0a06&title_color=E8C25A&icon_color=b8860b&text_color=d4c08a)](https://github.com/ArthurGaspar/psychic-visualizer)
 
 </td>
 </tr>
