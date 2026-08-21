@@ -137,6 +137,4 @@ A **browser-based music visualizer** — a throwback to the old-school Winamp/Mi
 
 <br/><br/>
 
-![Profile views](https://komarev.com/ghpvc/?username=ArthurGaspar&label=Visitors&color=b8860b&style=for-the-badge)
-
 </div>
