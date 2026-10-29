@@ -1,0 +1,170 @@
+{
+  "usuario": "ArthurGaspar",
+
+  "_categorias": "A vitrine é montada daqui. Cada repo pode ser só o nome (dono = usuario) ou 'org/nome'. O campo `desc` é opcional e, quando existe, ganha da descrição do GitHub: serve para traduzir, e para os repos cuja descrição no GitHub está vazia ou só em português. Repositório arquivado é pulado automaticamente, assim como o que virar privado: não precisa tirar daqui à mão.",
+  "categorias": [
+    {
+      "chave": "ia",
+      "repos": [
+        {
+          "repo": "pv-bench",
+          "desc": {
+            "en": "Benchmark for Brazilian Portuguese comprehension in LLMs: 64 hand-written items, objective grading.",
+            "pt-BR": "Benchmark de compreensão de português brasileiro em LLMs: 64 itens escritos à mão, correção objetiva.",
+            "es": "Benchmark de comprensión del portugués brasileño en LLMs: 64 ítems escritos a mano, corrección objetiva."
+          }
+        },
+        {
+          "repo": "e2e-detective",
+          "desc": {
+            "en": "An AI agent that investigates failing end-to-end tests and reports the culprit like a case file.",
+            "pt-BR": "Um agente de IA que investiga testes end-to-end falhando e entrega o culpado como num inquérito.",
+            "es": "Un agente de IA que investiga pruebas end-to-end que fallan y entrega al culpable como un expediente."
+          }
+        }
+      ]
+    },
+    {
+      "chave": "academico",
+      "repos": [
+        {
+          "repo": "bioarcade",
+          "desc": {
+            "en": "Genomics pipeline and dashboard: CRISPR PAM site hunting, rendered as an explorable report.",
+            "pt-BR": "Pipeline de genômica e painel: caça a sítios PAM de CRISPR, num relatório navegável.",
+            "es": "Pipeline de genómica y panel: búsqueda de sitios PAM de CRISPR, en un informe navegable."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-uefimcp",
+          "desc": {
+            "en": "Base integration behind the UÉFIabecê MCP servers for UFABC course material.",
+            "pt-BR": "Integração base por trás dos servidores MCP UÉFIabecê das disciplinas da UFABC.",
+            "es": "Integración base detrás de los servidores MCP UÉFIabecê de las asignaturas de la UFABC."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-uefimcp-bct",
+          "desc": {
+            "en": "MCP server for UFABC's Science and Technology undergraduate programme.",
+            "pt-BR": "Servidor MCP do Bacharelado em Ciência e Tecnologia da UFABC.",
+            "es": "Servidor MCP del Bachillerato en Ciencia y Tecnología de la UFABC."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-uefimcp-biotec",
+          "desc": {
+            "en": "MCP server for UFABC's Biotechnology undergraduate programme.",
+            "pt-BR": "Servidor MCP do Bacharelado em Biotecnologia da UFABC.",
+            "es": "Servidor MCP del Bachillerato en Biotecnología de la UFABC."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-uefimcp-neuro",
+          "desc": {
+            "en": "MCP server for UFABC's Neuroscience undergraduate programme.",
+            "pt-BR": "Servidor MCP do Bacharelado em Neurociência da UFABC.",
+            "es": "Servidor MCP del Bachillerato en Neurociencia de la UFABC."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-tutorial",
+          "desc": {
+            "en": "Tutorials and guides for the UÉFIabecê projects.",
+            "pt-BR": "Tutoriais e guias dos projetos UÉFIabecê.",
+            "es": "Tutoriales y guías de los proyectos UÉFIabecê."
+          }
+        },
+        {
+          "repo": "uefiabece/uefi-context",
+          "desc": {
+            "en": "Shared context across every UÉFI repository, assembled to feed the MCP servers.",
+            "pt-BR": "Contexto comum de todos os repositórios UÉFI, montado para alimentar os servidores MCP.",
+            "es": "Contexto común de todos los repositorios UÉFI, armado para alimentar los servidores MCP."
+          }
+        },
+        { "_falta": "sem descrição no GitHub e sem `desc` aqui: o card sai só com nome e linguagem", "repo": "uefiabece/ontology-app-public" }
+      ]
+    },
+    {
+      "chave": "habilidades",
+      "repos": [
+        {
+          "repo": "tft-meta-pipeline",
+          "desc": {
+            "en": "Serverless ETL pipeline for Teamfight Tactics meta data, simulating AWS services from scratch.",
+            "pt-BR": "Pipeline ETL serverless de dados do meta de Teamfight Tactics, simulando serviços AWS do zero.",
+            "es": "Pipeline ETL serverless de datos del meta de Teamfight Tactics, simulando servicios AWS desde cero."
+          }
+        },
+        {
+          "repo": "sp-transit-logistics",
+          "desc": {
+            "en": "Route optimizer built on São Paulo's live transit feed, with delivery insights on a static site.",
+            "pt-BR": "Otimizador de rotas sobre o feed ao vivo do transporte de São Paulo, com análises num site estático.",
+            "es": "Optimizador de rutas sobre el feed en vivo del transporte de São Paulo, con análisis en un sitio estático."
+          }
+        }
+      ]
+    },
+    {
+      "chave": "artisticas",
+      "repos": [
+        {
+          "repo": "char-creator-mcp",
+          "desc": {
+            "en": "An MCP server that compiles character personalities from Markdown, for writing and worldbuilding.",
+            "pt-BR": "Um servidor MCP que compila personalidades de personagens em Markdown, para escrita e criação de mundos.",
+            "es": "Un servidor MCP que compila personalidades de personajes en Markdown, para escritura y worldbuilding."
+          }
+        },
+        {
+          "repo": "psychic-visualizer",
+          "desc": {
+            "en": "Browser music visualizer in the Winamp and MilkDrop spirit, rebuilt for the modern web.",
+            "pt-BR": "Visualizador de música no navegador, no espírito Winamp e MilkDrop, refeito para a web moderna.",
+            "es": "Visualizador de música en el navegador, al estilo Winamp y MilkDrop, rehecho para la web moderna."
+          }
+        }
+      ]
+    },
+    {
+      "chave": "criativo",
+      "repos": [
+        {
+          "repo": "hexmap",
+          "desc": {
+            "en": "Hexagonal map generator for strategy games.",
+            "pt-BR": "Gerador de mapas hexagonais para jogos de estratégia.",
+            "es": "Generador de mapas hexagonales para juegos de estrategia."
+          }
+        },
+        {
+          "repo": "dl-test",
+          "desc": {
+            "en": "A deliberate attempt at the worst website possible. Educational, in its own way.",
+            "pt-BR": "Uma tentativa deliberada do pior site possível. Educativo, do seu jeito.",
+            "es": "Un intento deliberado del peor sitio posible. Educativo, a su manera."
+          }
+        }
+      ]
+    },
+    {
+      "_vazia": "Categoria vazia é omitida do README. Está aqui para ter onde largar o que não se encaixa.",
+      "chave": "misc",
+      "repos": []
+    }
+  ],
+
+  "_topLinguagens": "Quantas barras o painel de linguagens mostra.",
+  "topLinguagens": 8,
+
+  "_ignorarLinguagens": "Linguagens que inflam a contagem sem dizer nada sobre o que eu sei fazer.",
+  "ignorarLinguagens": ["Makefile", "Batchfile", "Dockerfile", "Shell", "PowerShell", "Jupyter Notebook"],
+
+  "_incluirPrivados": "Agrega bytes por linguagem dos repos privados também. Nome nenhum de repo privado sai daqui, só o total por linguagem. Exige o secret PERFIL_TOKEN; sem ele a geração cai para só públicos e avisa.",
+  "incluirPrivados": true,
+
+  "_ignorarForks": "Fork não é código meu, então não conta na linguagem.",
+  "ignorarForks": true
+}

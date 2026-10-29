@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="284" height="142" viewBox="0 0 284 142" role="img" aria-label="dl-test · Uma tentativa deliberada do pior site possível. Educativo, do seu jeito.">
+<title>dl-test · Uma tentativa deliberada do pior site possível. Educativo, do seu jeito.</title>
+<defs>
+<linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F4F8FF"/>
+</linearGradient>
+
+<radialGradient id="cupula" cx="0.5" cy="0" r="0.85">
+<stop offset="0" stop-color="#FFF0BF" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#FFF0BF" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="corteCard"><path d="M0 126 V13 Q142 -13 284 13 V126 A16 16 0 0 1 268 142 H16 A16 16 0 0 1 0 126 Z"/></clipPath>
+</defs>
+<path d="M0 126 V13 Q142 -13 284 13 V126 A16 16 0 0 1 268 142 H16 A16 16 0 0 1 0 126 Z" fill="url(#papel)"/>
+<path d="M0 126 V13 Q142 -13 284 13 V126 A16 16 0 0 1 268 142 H16 A16 16 0 0 1 0 126 Z" fill="none" stroke="#E7E9F0"/>
+
+<g clip-path="url(#corteCard)"><rect width="284" height="142" fill="url(#cupula)"/></g>
+<path d="M142 18.5Q143.65 22.35 147.5 24Q143.65 25.65 142 29.5Q140.35 25.65 136.5 24Q140.35 22.35 142 18.5Z" fill="#FFC927" opacity="0.9"/>
+<text x="142" y="49" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#16203A" text-anchor="middle">dl-test</text>
+<text x="16" y="71" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="10.8" font-weight="400" fill="#54607A">Uma tentativa deliberada do pior site possível.</text><text x="16" y="85.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="10.8" font-weight="400" fill="#54607A">Educativo, do seu jeito.</text>
+<circle cx="20.5" cy="121" r="4.5" fill="#e34c26"/><text x="30" y="125" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A">HTML</text>
+</svg>

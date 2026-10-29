@@ -1,140 +1,142 @@
+<!-- Este arquivo é gerado por profile/generate.mjs. Edite profile/strings.json, não aqui. -->
 <div align="center">
 
-# Hi! I'm Arthur
-## 💻 Full-stack developer and software testing engineer | 🎮 Game lover | 📚 I enjoy educational resources and working with tools that help others
-Here you'll find some of my personal projects and creative experiments
+<img src="assets/banner.svg?v=202610291801" alt="Arthur Gaspar · Full-stack developer · Software engineer in test" width="100%">
 
-###
+<a href="README.md"><img src="assets/chip-en-on.svg?v=202610291801" alt="English" height="30"></a>
+<a href="README.pt-BR.md"><img src="assets/chip-pt-BR-off.svg?v=202610291801" alt="Português" height="30"></a>
+<a href="README.es.md"><img src="assets/chip-es-off.svg?v=202610291801" alt="Español" height="30"></a>
 
-[![English](https://img.shields.io/badge/🇬🇧_English-b8860b?style=for-the-badge&logoColor=white)](./README.md)
-[![Português](https://img.shields.io/badge/🇧🇷_Português-1a1208?style=for-the-badge&logoColor=white)](./README_PT.md)
-[![Español](https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8_Espa%C3%B1ol-1a1208?style=for-the-badge&logoColor=white)](./README_ES.md)
-
-<br/>
+<img src="assets/interesses.svg?v=202610291801" alt="Software · Research · Education · Games" width="100%">
 
 </div>
 
----
+<img src="assets/faixa-projetos.svg?v=202610291801" alt="Projects" width="100%">
+
+<img src="assets/cat-ia.svg?v=202610291801" alt="Artificial intelligence (2)" height="44">
 
 <table>
 <tr>
-<td width="58%" valign="top">
-
-### ☉ About me
-
-```lua
-local arthur = {
-  role      = "Full-Stack Dev and Software Engineer in Test",
-  passions  = { "games", "education", "tests", "building things" },
-  currently = "forging my own game engine",
-}
-```
-
-I love turning ideas into code — from **3D experiences in the browser**
-to **game engines** built from scratch. I enjoy educational resources and
-tools that make could make someone's life easier. ✦
-
-</td>
-<td width="42%" valign="top">
-
-### ✶ Get in touch
-
-<a href="https://www.linkedin.com/in/arthur-gaspar-197a7b265/">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-<br/><br/>
-
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=ArthurGaspar&langs_count=5&theme=vision-friendly-dark)](https://github-stats-extended.vercel.app/api/top-langs?username=ArthurGaspar&langs_count=5&theme=vision-friendly-dark)
-
-</td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/pv-bench"><img src="assets/repo-arthurgaspar-pv-bench.svg?v=202610291801" alt="pv-bench · Benchmark for Brazilian Portuguese comprehension in LLMs: 64 hand-written items, objective grading." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/e2e-detective"><img src="assets/repo-arthurgaspar-e2e-detective.svg?v=202610291801" alt="e2e-detective · An AI agent that investigates failing end-to-end tests and reports the culprit like a case file." width="100%"></a></td>
+  <td width="33%"></td>
 </tr>
 </table>
 
----
-
-<div align="center">
-
-## ✦ Featured Projects ✦
-
-</div>
+<img src="assets/cat-academico.svg?v=202610291801" alt="Research and education (8)" height="44">
 
 <table>
 <tr>
-<td width="50%" valign="top" align="center">
-
-### ☾ Lua X1
-A **custom game engine** written in **Lua** and **C++**.
-
-[![Lua X1](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=lua-x1&hide_border=true&bg_color=0d0a06&title_color=E8C25A&icon_color=b8860b&text_color=d4c08a)](https://github.com/ArthurGaspar/lua-x1)
-
-</td>
-<td width="50%" valign="top" align="center">
-
-### ✺ Psychic Visualizer
-A **browser-based music visualizer** — a throwback to the old-school Winamp/Milkdrop era, reborn for the modern web.
-
-[![Psychic Visualizer](https://github-readme-stats.vercel.app/api/pin/?username=ArthurGaspar&repo=psychic-visualizer&hide_border=true&bg_color=0d0a06&title_color=E8C25A&icon_color=b8860b&text_color=d4c08a)](https://github.com/ArthurGaspar/psychic-visualizer)
-
-</td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/bioarcade"><img src="assets/repo-arthurgaspar-bioarcade.svg?v=202610291801" alt="bioarcade · Genomics pipeline and dashboard: CRISPR PAM site hunting, rendered as an explorable report." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp"><img src="assets/repo-uefiabece-uefi-uefimcp.svg?v=202610291801" alt="uefi-uefimcp · Base integration behind the UÉFIabecê MCP servers for UFABC course material." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-bct"><img src="assets/repo-uefiabece-uefi-uefimcp-bct.svg?v=202610291801" alt="uefi-uefimcp-bct · MCP server for UFABC's Science and Technology undergraduate programme." width="100%"></a></td>
+</tr>
+<tr>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-biotec"><img src="assets/repo-uefiabece-uefi-uefimcp-biotec.svg?v=202610291801" alt="uefi-uefimcp-biotec · MCP server for UFABC's Biotechnology undergraduate programme." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-neuro"><img src="assets/repo-uefiabece-uefi-uefimcp-neuro.svg?v=202610291801" alt="uefi-uefimcp-neuro · MCP server for UFABC's Neuroscience undergraduate programme." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-tutorial"><img src="assets/repo-uefiabece-uefi-tutorial.svg?v=202610291801" alt="uefi-tutorial · Tutorials and guides for the UÉFIabecê projects." width="100%"></a></td>
+</tr>
+<tr>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-context"><img src="assets/repo-uefiabece-uefi-context.svg?v=202610291801" alt="uefi-context · Shared context across every UÉFI repository, assembled to feed the MCP servers." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/ontology-app-public"><img src="assets/repo-uefiabece-ontology-app-public.svg?v=202610291801" alt="ontology-app-public" width="100%"></a></td>
+  <td width="33%"></td>
 </tr>
 </table>
 
----
+<img src="assets/cat-habilidades.svg?v=202610291801" alt="Skills (2)" height="44">
+
+<table>
+<tr>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/tft-meta-pipeline"><img src="assets/repo-arthurgaspar-tft-meta-pipeline.svg?v=202610291801" alt="tft-meta-pipeline · Serverless ETL pipeline for Teamfight Tactics meta data, simulating AWS services from scratch." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/sp-transit-logistics"><img src="assets/repo-arthurgaspar-sp-transit-logistics.svg?v=202610291801" alt="sp-transit-logistics · Route optimizer built on São Paulo's live transit feed, with delivery insights on a static site." width="100%"></a></td>
+  <td width="33%"></td>
+</tr>
+</table>
+
+<img src="assets/cat-artisticas.svg?v=202610291801" alt="Artistic tools (2)" height="44">
+
+<table>
+<tr>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/char-creator-mcp"><img src="assets/repo-arthurgaspar-char-creator-mcp.svg?v=202610291801" alt="char-creator-mcp · An MCP server that compiles character personalities from Markdown, for writing and worldbuilding." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/psychic-visualizer"><img src="assets/repo-arthurgaspar-psychic-visualizer.svg?v=202610291801" alt="psychic-visualizer · Browser music visualizer in the Winamp and MilkDrop spirit, rebuilt for the modern web." width="100%"></a></td>
+  <td width="33%"></td>
+</tr>
+</table>
+
+<img src="assets/cat-criativo.svg?v=202610291801" alt="Creative (2)" height="44">
+
+<table>
+<tr>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/hexmap"><img src="assets/repo-arthurgaspar-hexmap.svg?v=202610291801" alt="hexmap · Hexagonal map generator for strategy games." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/dl-test"><img src="assets/repo-arthurgaspar-dl-test.svg?v=202610291801" alt="dl-test · A deliberate attempt at the worst website possible. Educational, in its own way." width="100%"></a></td>
+  <td width="33%"></td>
+</tr>
+</table>
+
+<p align="right"><a href="https://github.com/ArthurGaspar?tab=repositories">All public repositories &rarr;</a></p>
+
+<img src="assets/faixa-numeros.svg?v=202610291801" alt="By the numbers" width="100%">
+
+<table>
+<tr>
+  <td width="50%" valign="top"><b>Most used languages</b><br><sub>public and private repositories</sub><br><br><img src="assets/linguagens.svg?v=202610291801" alt="Most used languages" width="100%"></td>
+  <td width="50%" valign="top"><b>Writing code, most days</b><br><sub>last 12 months</sub><br><br><img src="assets/sequencia.svg?v=202610291801" alt="Writing code, most days" width="100%"></td>
+</tr>
+</table>
+
+<img src="assets/contribuicoes.svg?v=202610291801" alt="1022 contributions in the last year" width="100%">
+
+<img src="assets/faixa-ferramentas.svg?v=202610291801" alt="Tools I reach for" width="100%">
 
 <div align="center">
 
-## ⚗️ Knowledge Arsenal
-
-<br/>
-
-**🖥️ Languages**
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-
-**⚙️ Frameworks · Databases · Tools**
-
-![Electron](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
-![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-![Git](https://img.shields.io/badge/Git-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
-![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
-![FL Studio](https://img.shields.io/badge/FL%20Studio-ed9213?style=for-the-badge&logo=fl-studio&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
-
-**🌱 Things I want to learn**
-
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
-![Julia](https://img.shields.io/badge/Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)
-
-</div>
-
----
-
-<div align="center">
-
-## ✶ Scroll of Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=ArthurGaspar&show_icons=true&hide_border=true&bg_color=0d0a06&title_color=E8C25A&icon_color=b8860b&text_color=d4c08a" alt="Stats" height="170"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ArthurGaspar&hide_border=true&background=0d0a06&ring=E8C25A&fire=E8C25A&currStreakLabel=E8C25A&sideLabels=d4c08a&dates=8a7a5a&stroke=b8860b&sideNums=d4c08a&currStreakNum=E8C25A" alt="Streak" height="170"/>
-
-<br/><br/>
+<p><sub><b>Languages</b></sub></p>
+<p>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+<img src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=c-sharp&logoColor=white" alt="C#">
+<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++">
+<img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C">
+<img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua">
+<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS">
+</p>
+<p><sub><b>Frameworks · Databases · Tools</b></sub></p>
+<p>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+<img src="https://img.shields.io/badge/Next.js-1F2328?style=flat-square&logo=next.js&logoColor=white" alt="Next.js">
+<img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+<img src="https://img.shields.io/badge/Three.js-1F2328?style=flat-square&logo=three.js&logoColor=white" alt="Three.js">
+<img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">
+<img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="Pytest">
+<img src="https://img.shields.io/badge/Ollama-1F2328?style=flat-square&logo=ollama&logoColor=white" alt="Ollama">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
+<img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white" alt="MariaDB">
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions">
+<img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=.net&logoColor=white" alt=".NET">
+<img src="https://img.shields.io/badge/Unity-1F2328?style=flat-square&logo=unity&logoColor=white" alt="Unity">
+<img src="https://img.shields.io/badge/Blender-E87D0D?style=flat-square&logo=blender&logoColor=white" alt="Blender">
+<img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
+<img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobe-photoshop&logoColor=white" alt="Photoshop">
+<img src="https://img.shields.io/badge/FL%20Studio-F89A14?style=flat-square&logo=fl-studio&logoColor=white" alt="FL Studio">
+<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="Excel">
+</p>
+<p><sub><b>Learning next</b></sub></p>
+<p>
+<img src="https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white" alt="Ruby">
+<img src="https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white" alt="Julia">
+</p>
 
 </div>
+
+<img src="assets/faixa-contato.svg?v=202610291801" alt="Say hello" width="100%">
+
+<p><a href="https://www.linkedin.com/in/arthur-gaspar-197a7b265/"><img src="https://img.shields.io/badge/LinkedIn-2F6FE0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a></p>
+
+<p><sub>Badges generated on 2026-10-29 · fixture</sub></p>

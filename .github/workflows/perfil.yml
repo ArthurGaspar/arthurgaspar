@@ -1,0 +1,60 @@
+name: Atualizar perfil
+
+on:
+  schedule:
+    # 06:00 UTC = 03:00 em São Paulo, fora do horário de pico do runner.
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [master]
+    # Só o que define o perfil dispara. Sem esse filtro o commit do próprio
+    # workflow (que mexe em assets/ e README*.md) dispararia o workflow de novo.
+    paths:
+      - "profile/**"
+      - ".github/workflows/perfil.yml"
+
+concurrency:
+  group: perfil
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar badges e READMEs
+        env:
+          # PAT clássico com escopo `repo` + `read:user`. É o que alcança as
+          # linguagens e as contribuições dos repositórios privados. Se o secret
+          # não existir, o gerador cai para público e o README anuncia isso.
+          PERFIL_TOKEN: ${{ secrets.PERFIL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node profile/generate.mjs
+
+      - name: Conferir o que foi gerado
+        run: node profile/verificar.mjs
+
+      - name: Commitar se algo mudou
+        run: |
+          # A identidade é a do bot de propósito. Commitar com o PAT marcaria
+          # cada execução como contribuição minha, e o gráfico de contribuição
+          # logo acima passaria a medir o próprio workflow em vez do meu
+          # trabalho. O PAT serve para LER a API, nunca para assinar commit.
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets README.md README.pt-BR.md README.es.md
+          if git diff --staged --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git commit -m "perfil: atualizar badges e contribuições"
+          git push

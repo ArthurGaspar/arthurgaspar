@@ -1,0 +1,53 @@
+{
+  "_nota": "Estas continuam sendo badges do shields.io, por escolha: fazer uma SVG por ferramenta à mão seria trabalho demais para pouco retorno. As badges que mostram DADO (linguagem mais usada, contribuição, sequência) são geradas aqui e não dependem de ninguém.",
+  "grupos": [
+    {
+      "chave": "linguagens",
+      "badges": [
+        { "nome": "TypeScript", "cor": "3178C6", "logo": "typescript" },
+        { "nome": "JavaScript", "cor": "F7DF1E", "logo": "javascript", "logoCor": "black" },
+        { "nome": "Python", "cor": "3776AB", "logo": "python" },
+        { "nome": "Java", "cor": "ED8B00", "logo": "openjdk" },
+        { "nome": "C#", "cor": "512BD4", "logo": "c-sharp" },
+        { "nome": "C++", "cor": "00599C", "logo": "c++" },
+        { "nome": "C", "cor": "A8B9CC", "logo": "c", "logoCor": "black" },
+        { "nome": "Lua", "cor": "2C2D72", "logo": "lua" },
+        { "nome": "R", "cor": "276DC3", "logo": "r" },
+        { "nome": "HTML5", "cor": "E34F26", "logo": "html5" },
+        { "nome": "CSS", "cor": "1572B6", "logo": "css3" }
+      ]
+    },
+    {
+      "chave": "frameworks",
+      "badges": [
+        { "nome": "React", "cor": "61DAFB", "logo": "react", "logoCor": "black" },
+        { "nome": "Next.js", "cor": "1F2328", "logo": "next.js" },
+        { "nome": "Node.js", "cor": "5FA04E", "logo": "node.js" },
+        { "nome": "Vite", "cor": "646CFF", "logo": "vite" },
+        { "nome": "Three.js", "cor": "1F2328", "logo": "three.js" },
+        { "nome": "Electron", "cor": "47848F", "logo": "electron" },
+        { "nome": "Playwright", "cor": "2EAD33", "logo": "playwright" },
+        { "nome": "Pytest", "cor": "0A9EDC", "logo": "pytest" },
+        { "nome": "Ollama", "cor": "1F2328", "logo": "ollama" },
+        { "nome": "MySQL", "cor": "4479A1", "logo": "mysql" },
+        { "nome": "MariaDB", "cor": "003545", "logo": "mariadb" },
+        { "nome": "Git", "cor": "F05032", "logo": "git" },
+        { "nome": "GitHub Actions", "cor": "2088FF", "logo": "github-actions" },
+        { "nome": ".NET", "cor": "512BD4", "logo": ".net" },
+        { "nome": "Unity", "cor": "1F2328", "logo": "unity" },
+        { "nome": "Blender", "cor": "E87D0D", "logo": "blender" },
+        { "nome": "LaTeX", "cor": "008080", "logo": "latex" },
+        { "nome": "Photoshop", "cor": "31A8FF", "logo": "adobe-photoshop" },
+        { "nome": "FL Studio", "cor": "F89A14", "logo": "fl-studio" },
+        { "nome": "Excel", "cor": "217346", "logo": "microsoft-excel" }
+      ]
+    },
+    {
+      "chave": "aprendendo",
+      "badges": [
+        { "nome": "Ruby", "cor": "CC342D", "logo": "ruby" },
+        { "nome": "Julia", "cor": "9558B2", "logo": "julia" }
+      ]
+    }
+  ]
+}

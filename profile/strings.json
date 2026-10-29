@@ -1,0 +1,242 @@
+{
+  "en": {
+    "nome": "Arthur Gaspar",
+    "papel": "Full-stack developer · Software engineer in test",
+    "lugar": "São Paulo, Brazil · UFABC",
+    "interesses": [
+      {
+        "icone": "software",
+        "rotulo": "Software"
+      },
+      {
+        "icone": "pesquisa",
+        "rotulo": "Research"
+      },
+      {
+        "icone": "educacao",
+        "rotulo": "Education"
+      },
+      {
+        "icone": "jogos",
+        "rotulo": "Games"
+      }
+    ],
+    "contribuicoes": "contributions in the last year",
+    "meses": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "dias": [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
+    "menos": "less",
+    "mais": "more",
+    "total": "Total",
+    "ultimoAno": "last 12 months",
+    "atual": "Current streak",
+    "maior": "Longest streak",
+    "hoje": "today",
+    "nenhuma": "no active streak",
+    "faixas": {
+      "projetos": "Projects",
+      "numeros": "By the numbers",
+      "ferramentas": "Tools I reach for",
+      "contato": "Say hello"
+    },
+    "subLinguagens": "Most used languages",
+    "subPrivados": "public and private repositories",
+    "subPublicos": "public repositories",
+    "subSequencia": "Writing code, most days",
+    "verTodos": "All public repositories",
+    "geradoEm": "Badges generated on",
+    "grupos": {
+      "linguagens": "Languages",
+      "frameworks": "Frameworks · Databases · Tools",
+      "aprendendo": "Learning next"
+    },
+    "categorias": {
+      "ia": "Artificial intelligence",
+      "academico": "Research and education",
+      "habilidades": "Skills",
+      "artisticas": "Artistic tools",
+      "criativo": "Creative",
+      "misc": "Misc"
+    }
+  },
+  "pt-BR": {
+    "nome": "Arthur Gaspar",
+    "papel": "Desenvolvedor full-stack · Engenheiro de software em testes",
+    "lugar": "São Paulo, Brasil · UFABC",
+    "interesses": [
+      {
+        "icone": "software",
+        "rotulo": "Software"
+      },
+      {
+        "icone": "pesquisa",
+        "rotulo": "Pesquisa"
+      },
+      {
+        "icone": "educacao",
+        "rotulo": "Educação"
+      },
+      {
+        "icone": "jogos",
+        "rotulo": "Jogos"
+      }
+    ],
+    "contribuicoes": "contribuições no último ano",
+    "meses": [
+      "jan",
+      "fev",
+      "mar",
+      "abr",
+      "mai",
+      "jun",
+      "jul",
+      "ago",
+      "set",
+      "out",
+      "nov",
+      "dez"
+    ],
+    "dias": [
+      "dom",
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex",
+      "sáb"
+    ],
+    "menos": "menos",
+    "mais": "mais",
+    "total": "Total",
+    "ultimoAno": "últimos 12 meses",
+    "atual": "Sequência atual",
+    "maior": "Maior sequência",
+    "hoje": "hoje",
+    "nenhuma": "sem sequência ativa",
+    "faixas": {
+      "projetos": "Projetos",
+      "numeros": "Em números",
+      "ferramentas": "Ferramentas que uso",
+      "contato": "Fale comigo"
+    },
+    "subLinguagens": "Linguagens mais usadas",
+    "subPrivados": "repositórios públicos e privados",
+    "subPublicos": "repositórios públicos",
+    "subSequencia": "Escrevendo código, quase todo dia",
+    "verTodos": "Todos os repositórios públicos",
+    "geradoEm": "Badges geradas em",
+    "grupos": {
+      "linguagens": "Linguagens",
+      "frameworks": "Frameworks · Bancos de dados · Ferramentas",
+      "aprendendo": "Quero aprender"
+    },
+    "categorias": {
+      "ia": "Inteligência artificial",
+      "academico": "Pesquisa e educação",
+      "habilidades": "Habilidades",
+      "artisticas": "Ferramentas artísticas",
+      "criativo": "Criativo",
+      "misc": "Diversos"
+    }
+  },
+  "es": {
+    "nome": "Arthur Gaspar",
+    "papel": "Desarrollador full-stack · Ingeniero de software en pruebas",
+    "lugar": "São Paulo, Brasil · UFABC",
+    "interesses": [
+      {
+        "icone": "software",
+        "rotulo": "Software"
+      },
+      {
+        "icone": "pesquisa",
+        "rotulo": "Investigación"
+      },
+      {
+        "icone": "educacao",
+        "rotulo": "Educación"
+      },
+      {
+        "icone": "jogos",
+        "rotulo": "Juegos"
+      }
+    ],
+    "contribuicoes": "contribuciones en el último año",
+    "meses": [
+      "ene",
+      "feb",
+      "mar",
+      "abr",
+      "may",
+      "jun",
+      "jul",
+      "ago",
+      "sep",
+      "oct",
+      "nov",
+      "dic"
+    ],
+    "dias": [
+      "dom",
+      "lun",
+      "mar",
+      "mié",
+      "jue",
+      "vie",
+      "sáb"
+    ],
+    "menos": "menos",
+    "mais": "más",
+    "total": "Total",
+    "ultimoAno": "últimos 12 meses",
+    "atual": "Racha actual",
+    "maior": "Racha más larga",
+    "hoje": "hoy",
+    "nenhuma": "sin racha activa",
+    "faixas": {
+      "projetos": "Proyectos",
+      "numeros": "En números",
+      "ferramentas": "Herramientas que uso",
+      "contato": "Hablemos"
+    },
+    "subLinguagens": "Lenguajes más usados",
+    "subPrivados": "repositorios públicos y privados",
+    "subPublicos": "repositorios públicos",
+    "subSequencia": "Escribiendo código, casi todos los días",
+    "verTodos": "Todos los repositorios públicos",
+    "geradoEm": "Badges generadas el",
+    "grupos": {
+      "linguagens": "Lenguajes",
+      "frameworks": "Frameworks · Bases de datos · Herramientas",
+      "aprendendo": "Quiero aprender"
+    },
+    "categorias": {
+      "ia": "Inteligencia artificial",
+      "academico": "Investigación y educación",
+      "habilidades": "Habilidades",
+      "artisticas": "Herramientas artísticas",
+      "criativo": "Creativo",
+      "misc": "Varios"
+    }
+  }
+}

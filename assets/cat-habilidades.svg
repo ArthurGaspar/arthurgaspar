@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="44" viewBox="0 0 136 44" role="img" aria-label="Skills (2)">
+<title>Skills (2)</title>
+<defs>
+<linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F4F8FF"/>
+</linearGradient>
+
+</defs>
+<path d="M0 30 V10 Q68 -10 136 10 V30 A14 14 0 0 1 122 44 H14 A14 14 0 0 1 0 30 Z" fill="url(#papel)"/>
+<path d="M0 30 V10 Q68 -10 136 10 V30 A14 14 0 0 1 122 44 H14 A14 14 0 0 1 0 30 Z" fill="none" stroke="#E7E9F0"/>
+
+<path d="M26 18Q28.1 22.9 33 25Q28.1 27.1 26 32Q23.9 27.1 19 25Q23.9 22.9 26 18Z" fill="#FFC927" opacity="1"/>
+<text x="42" y="30" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#16203A">Skills</text>
+<text x="118" y="30" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#8A94AC" text-anchor="end">2</text>
+</svg>
