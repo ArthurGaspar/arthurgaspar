@@ -147,34 +147,38 @@ const idCard = (r) => `repo-${r.dono}-${r.nome}`.toLowerCase();
 /** A descrição traduzida ganha da do GitHub, que é um campo só e não traduz. */
 const descDe = (r, loc) => r.desc?.[loc] ?? r.descricao ?? "";
 
+/** Largura fixa do card no README. Três cabem na coluna de leitura do perfil. */
+const LARGURA_CARD = 268;
+
 /**
- * A vitrine, uma categoria por vez, três cards por linha. Categoria sem nenhum
- * repo disponível some do README em vez de virar um título solto.
+ * A vitrine, uma categoria por vez. Os cards fluem como imagens soltas.
+ *
+ * Tabela foi a primeira tentativa e saiu torta: o GitHub renderiza tabela de
+ * markdown com `width: max-content`, então uma linha incompleta não estica, e a
+ * categoria de dois projetos saía com card de 189px contra 255px da de oito.
+ * Com largura fixa na imagem, o tamanho não depende de quantos vizinhos há.
  */
 function blocoCategorias(categorias, s, loc, alvo) {
   return categorias
     .filter((c) => c.repos.length)
     .map((c) => {
-      const linhas = [];
-      for (let i = 0; i < c.repos.length; i += 3) {
-        const celulas = c.repos.slice(i, i + 3).map((r) => {
+      const cards = c.repos
+        .map((r) => {
           const d = descDe(r, loc);
           const alt = `${r.nome}${d ? ` · ${d}` : ""}`.replace(/"/g, "&quot;");
-          return `<td width="33%" valign="top"><a href="${r.url}">${img(`${idCard(r)}${alvo}`, alt, ' width="100%"')}</a></td>`;
-        });
-        while (celulas.length < 3) celulas.push('<td width="33%"></td>');
-        linhas.push(`<tr>\n${celulas.map((x) => `  ${x}`).join("\n")}\n</tr>`);
-      }
+          return `<a href="${r.url}">${img(`${idCard(r)}${alvo}`, alt, ` width="${LARGURA_CARD}"`)}</a>`;
+        })
+        .join("\n");
       const titulo = s.categorias[c.chave] ?? c.chave;
-      return `${img(`cat-${c.chave}${alvo}`, `${titulo} (${c.repos.length})`, ' height="44"')}\n\n<table>\n${linhas.join("\n")}\n</table>`;
+      return `${img(`cat-${c.chave}${alvo}`, `${titulo} (${c.repos.length})`, ' height="44"')}
+
+<p>
+${cards}
+</p>`;
     })
     .join("\n\n");
 }
 
-/**
- * Cada grupo sai em <p> explícito. Linha em branco não serve aqui: <sub> e <img>
- * são inline, então sem o bloco os rótulos grudam na fileira de badges.
- */
 function blocoFerramentas(s) {
   return TOOLS.grupos
     .map((g) => {

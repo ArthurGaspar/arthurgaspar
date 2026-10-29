@@ -83,7 +83,22 @@
             "es": "Contexto común de todos los repositorios UÉFI, armado para alimentar los servidores MCP."
           }
         },
-        { "_falta": "sem descrição no GitHub e sem `desc` aqui: o card sai só com nome e linguagem", "repo": "uefiabece/ontology-app-public" }
+        {
+          "repo": "uefiabece/ontology-app-public",
+          "desc": {
+            "en": "Socratic AI that questions instead of answering, to build critical thinking. FastAPI and React.",
+            "pt-BR": "IA socrática que questiona em vez de responder, para formar pensamento crítico. FastAPI e React.",
+            "es": "IA socrática que cuestiona en vez de responder, para formar pensamiento crítico. FastAPI y React."
+          }
+        },
+        {
+          "repo": "uefiabece/ontology-internal-public",
+          "desc": {
+            "en": "The same Socratic method as an MCP server: it holds the epistemic state by auditable rules, calling no LLM.",
+            "pt-BR": "O mesmo método socrático como servidor MCP: mantém o estado epistêmico por regras auditáveis, sem chamar LLM.",
+            "es": "El mismo método socrático como servidor MCP: mantiene el estado epistémico por reglas auditables, sin llamar a un LLM."
+          }
+        }
       ]
     },
     {
