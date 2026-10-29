@@ -1,92 +1,92 @@
 <!-- Este arquivo é gerado por profile/generate.mjs. Edite profile/strings.json, não aqui. -->
 <div align="center">
 
-<img src="assets/banner.pt-BR.svg?v=202610291801" alt="Arthur Gaspar · Desenvolvedor full-stack · Engenheiro de software em testes" width="100%">
+<img src="assets/banner.pt-BR.svg?v=202610291805" alt="Arthur Gaspar · Desenvolvedor full-stack · Engenheiro de software em testes" width="100%">
 
-<a href="README.md"><img src="assets/chip-en-off.svg?v=202610291801" alt="English" height="30"></a>
-<a href="README.pt-BR.md"><img src="assets/chip-pt-BR-on.svg?v=202610291801" alt="Português" height="30"></a>
-<a href="README.es.md"><img src="assets/chip-es-off.svg?v=202610291801" alt="Español" height="30"></a>
+<a href="README.md"><img src="assets/chip-en-off.svg?v=202610291805" alt="English" height="30"></a>
+<a href="README.pt-BR.md"><img src="assets/chip-pt-BR-on.svg?v=202610291805" alt="Português" height="30"></a>
+<a href="README.es.md"><img src="assets/chip-es-off.svg?v=202610291805" alt="Español" height="30"></a>
 
-<img src="assets/interesses.pt-BR.svg?v=202610291801" alt="Software · Pesquisa · Educação · Jogos" width="100%">
+<img src="assets/interesses.pt-BR.svg?v=202610291805" alt="Software · Pesquisa · Educação · Jogos" width="100%">
 
 </div>
 
-<img src="assets/faixa-projetos.pt-BR.svg?v=202610291801" alt="Projetos" width="100%">
+<img src="assets/faixa-projetos.pt-BR.svg?v=202610291805" alt="Projetos" width="100%">
 
-<img src="assets/cat-ia.pt-BR.svg?v=202610291801" alt="Inteligência artificial (2)" height="44">
+<img src="assets/cat-ia.pt-BR.svg?v=202610291805" alt="Inteligência artificial (2)" height="44">
 
 <table>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/pv-bench"><img src="assets/repo-arthurgaspar-pv-bench.pt-BR.svg?v=202610291801" alt="pv-bench · Benchmark de compreensão de português brasileiro em LLMs: 64 itens escritos à mão, correção objetiva." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/e2e-detective"><img src="assets/repo-arthurgaspar-e2e-detective.pt-BR.svg?v=202610291801" alt="e2e-detective · Um agente de IA que investiga testes end-to-end falhando e entrega o culpado como num inquérito." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/pv-bench"><img src="assets/repo-arthurgaspar-pv-bench.pt-BR.svg?v=202610291805" alt="pv-bench · Benchmark de compreensão de português brasileiro em LLMs: 64 itens escritos à mão, correção objetiva." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/e2e-detective"><img src="assets/repo-arthurgaspar-e2e-detective.pt-BR.svg?v=202610291805" alt="e2e-detective · Um agente de IA que investiga testes end-to-end falhando e entrega o culpado como num inquérito." width="100%"></a></td>
   <td width="33%"></td>
 </tr>
 </table>
 
-<img src="assets/cat-academico.pt-BR.svg?v=202610291801" alt="Pesquisa e educação (8)" height="44">
+<img src="assets/cat-academico.pt-BR.svg?v=202610291805" alt="Pesquisa e educação (8)" height="44">
 
 <table>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/bioarcade"><img src="assets/repo-arthurgaspar-bioarcade.pt-BR.svg?v=202610291801" alt="bioarcade · Pipeline de genômica e painel: caça a sítios PAM de CRISPR, num relatório navegável." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp"><img src="assets/repo-uefiabece-uefi-uefimcp.pt-BR.svg?v=202610291801" alt="uefi-uefimcp · Integração base por trás dos servidores MCP UÉFIabecê das disciplinas da UFABC." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-bct"><img src="assets/repo-uefiabece-uefi-uefimcp-bct.pt-BR.svg?v=202610291801" alt="uefi-uefimcp-bct · Servidor MCP do Bacharelado em Ciência e Tecnologia da UFABC." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/bioarcade"><img src="assets/repo-arthurgaspar-bioarcade.pt-BR.svg?v=202610291805" alt="bioarcade · Pipeline de genômica e painel: caça a sítios PAM de CRISPR, num relatório navegável." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp"><img src="assets/repo-uefiabece-uefi-uefimcp.pt-BR.svg?v=202610291805" alt="uefi-uefimcp · Integração base por trás dos servidores MCP UÉFIabecê das disciplinas da UFABC." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-bct"><img src="assets/repo-uefiabece-uefi-uefimcp-bct.pt-BR.svg?v=202610291805" alt="uefi-uefimcp-bct · Servidor MCP do Bacharelado em Ciência e Tecnologia da UFABC." width="100%"></a></td>
 </tr>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-biotec"><img src="assets/repo-uefiabece-uefi-uefimcp-biotec.pt-BR.svg?v=202610291801" alt="uefi-uefimcp-biotec · Servidor MCP do Bacharelado em Biotecnologia da UFABC." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-neuro"><img src="assets/repo-uefiabece-uefi-uefimcp-neuro.pt-BR.svg?v=202610291801" alt="uefi-uefimcp-neuro · Servidor MCP do Bacharelado em Neurociência da UFABC." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-tutorial"><img src="assets/repo-uefiabece-uefi-tutorial.pt-BR.svg?v=202610291801" alt="uefi-tutorial · Tutoriais e guias dos projetos UÉFIabecê." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-biotec"><img src="assets/repo-uefiabece-uefi-uefimcp-biotec.pt-BR.svg?v=202610291805" alt="uefi-uefimcp-biotec · Servidor MCP do Bacharelado em Biotecnologia da UFABC." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-uefimcp-neuro"><img src="assets/repo-uefiabece-uefi-uefimcp-neuro.pt-BR.svg?v=202610291805" alt="uefi-uefimcp-neuro · Servidor MCP do Bacharelado em Neurociência da UFABC." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-tutorial"><img src="assets/repo-uefiabece-uefi-tutorial.pt-BR.svg?v=202610291805" alt="uefi-tutorial · Tutoriais e guias dos projetos UÉFIabecê." width="100%"></a></td>
 </tr>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-context"><img src="assets/repo-uefiabece-uefi-context.pt-BR.svg?v=202610291801" alt="uefi-context · Contexto comum de todos os repositórios UÉFI, montado para alimentar os servidores MCP." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/uefiabece/ontology-app-public"><img src="assets/repo-uefiabece-ontology-app-public.pt-BR.svg?v=202610291801" alt="ontology-app-public" width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/uefi-context"><img src="assets/repo-uefiabece-uefi-context.pt-BR.svg?v=202610291805" alt="uefi-context · Contexto comum de todos os repositórios UÉFI, montado para alimentar os servidores MCP." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/uefiabece/ontology-app-public"><img src="assets/repo-uefiabece-ontology-app-public.pt-BR.svg?v=202610291805" alt="ontology-app-public" width="100%"></a></td>
   <td width="33%"></td>
 </tr>
 </table>
 
-<img src="assets/cat-habilidades.pt-BR.svg?v=202610291801" alt="Habilidades (2)" height="44">
+<img src="assets/cat-habilidades.pt-BR.svg?v=202610291805" alt="Habilidades (2)" height="44">
 
 <table>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/tft-meta-pipeline"><img src="assets/repo-arthurgaspar-tft-meta-pipeline.pt-BR.svg?v=202610291801" alt="tft-meta-pipeline · Pipeline ETL serverless de dados do meta de Teamfight Tactics, simulando serviços AWS do zero." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/sp-transit-logistics"><img src="assets/repo-arthurgaspar-sp-transit-logistics.pt-BR.svg?v=202610291801" alt="sp-transit-logistics · Otimizador de rotas sobre o feed ao vivo do transporte de São Paulo, com análises num site estático." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/tft-meta-pipeline"><img src="assets/repo-arthurgaspar-tft-meta-pipeline.pt-BR.svg?v=202610291805" alt="tft-meta-pipeline · Pipeline ETL serverless de dados do meta de Teamfight Tactics, simulando serviços AWS do zero." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/sp-transit-logistics"><img src="assets/repo-arthurgaspar-sp-transit-logistics.pt-BR.svg?v=202610291805" alt="sp-transit-logistics · Otimizador de rotas sobre o feed ao vivo do transporte de São Paulo, com análises num site estático." width="100%"></a></td>
   <td width="33%"></td>
 </tr>
 </table>
 
-<img src="assets/cat-artisticas.pt-BR.svg?v=202610291801" alt="Ferramentas artísticas (2)" height="44">
+<img src="assets/cat-artisticas.pt-BR.svg?v=202610291805" alt="Ferramentas artísticas (2)" height="44">
 
 <table>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/char-creator-mcp"><img src="assets/repo-arthurgaspar-char-creator-mcp.pt-BR.svg?v=202610291801" alt="char-creator-mcp · Um servidor MCP que compila personalidades de personagens em Markdown, para escrita e criação de mundos." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/psychic-visualizer"><img src="assets/repo-arthurgaspar-psychic-visualizer.pt-BR.svg?v=202610291801" alt="psychic-visualizer · Visualizador de música no navegador, no espírito Winamp e MilkDrop, refeito para a web moderna." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/char-creator-mcp"><img src="assets/repo-arthurgaspar-char-creator-mcp.pt-BR.svg?v=202610291805" alt="char-creator-mcp · Um servidor MCP que compila personalidades de personagens em Markdown, para escrita e criação de mundos." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/psychic-visualizer"><img src="assets/repo-arthurgaspar-psychic-visualizer.pt-BR.svg?v=202610291805" alt="psychic-visualizer · Visualizador de música no navegador, no espírito Winamp e MilkDrop, refeito para a web moderna." width="100%"></a></td>
   <td width="33%"></td>
 </tr>
 </table>
 
-<img src="assets/cat-criativo.pt-BR.svg?v=202610291801" alt="Criativo (2)" height="44">
+<img src="assets/cat-criativo.pt-BR.svg?v=202610291805" alt="Criativo (2)" height="44">
 
 <table>
 <tr>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/hexmap"><img src="assets/repo-arthurgaspar-hexmap.pt-BR.svg?v=202610291801" alt="hexmap · Gerador de mapas hexagonais para jogos de estratégia." width="100%"></a></td>
-  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/dl-test"><img src="assets/repo-arthurgaspar-dl-test.pt-BR.svg?v=202610291801" alt="dl-test · Uma tentativa deliberada do pior site possível. Educativo, do seu jeito." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/hexmap"><img src="assets/repo-arthurgaspar-hexmap.pt-BR.svg?v=202610291805" alt="hexmap · Gerador de mapas hexagonais para jogos de estratégia." width="100%"></a></td>
+  <td width="33%" valign="top"><a href="https://github.com/ArthurGaspar/dl-test"><img src="assets/repo-arthurgaspar-dl-test.pt-BR.svg?v=202610291805" alt="dl-test · Uma tentativa deliberada do pior site possível. Educativo, do seu jeito." width="100%"></a></td>
   <td width="33%"></td>
 </tr>
 </table>
 
 <p align="right"><a href="https://github.com/ArthurGaspar?tab=repositories">Todos os repositórios públicos &rarr;</a></p>
 
-<img src="assets/faixa-numeros.pt-BR.svg?v=202610291801" alt="Em números" width="100%">
+<img src="assets/faixa-numeros.pt-BR.svg?v=202610291805" alt="Em números" width="100%">
 
 <table>
 <tr>
-  <td width="50%" valign="top"><b>Linguagens mais usadas</b><br><sub>repositórios públicos e privados</sub><br><br><img src="assets/linguagens.svg?v=202610291801" alt="Linguagens mais usadas" width="100%"></td>
-  <td width="50%" valign="top"><b>Escrevendo código, quase todo dia</b><br><sub>últimos 12 meses</sub><br><br><img src="assets/sequencia.pt-BR.svg?v=202610291801" alt="Escrevendo código, quase todo dia" width="100%"></td>
+  <td width="50%" valign="top"><b>Linguagens mais usadas</b><br><sub>repositórios públicos e privados</sub><br><br><img src="assets/linguagens.svg?v=202610291805" alt="Linguagens mais usadas" width="100%"></td>
+  <td width="50%" valign="top"><b>Escrevendo código, quase todo dia</b><br><sub>últimos 12 meses</sub><br><br><img src="assets/sequencia.pt-BR.svg?v=202610291805" alt="Escrevendo código, quase todo dia" width="100%"></td>
 </tr>
 </table>
 
-<img src="assets/contribuicoes.pt-BR.svg?v=202610291801" alt="1022 contribuições no último ano" width="100%">
+<img src="assets/contribuicoes.pt-BR.svg?v=202610291805" alt="475 contribuições no último ano" width="100%">
 
-<img src="assets/faixa-ferramentas.pt-BR.svg?v=202610291801" alt="Ferramentas que uso" width="100%">
+<img src="assets/faixa-ferramentas.pt-BR.svg?v=202610291805" alt="Ferramentas que uso" width="100%">
 
 <div align="center">
 
@@ -135,8 +135,8 @@
 
 </div>
 
-<img src="assets/faixa-contato.pt-BR.svg?v=202610291801" alt="Fale comigo" width="100%">
+<img src="assets/faixa-contato.pt-BR.svg?v=202610291805" alt="Fale comigo" width="100%">
 
 <p><a href="https://www.linkedin.com/in/arthur-gaspar-197a7b265/"><img src="https://img.shields.io/badge/LinkedIn-2F6FE0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a></p>
 
-<p><sub>Badges geradas em 2026-10-29 · fixture</sub></p>
+<p><sub>Badges geradas em 2026-10-29</sub></p>
