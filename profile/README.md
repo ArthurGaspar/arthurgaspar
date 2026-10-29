@@ -19,6 +19,18 @@ O motivo de os três idiomas saírem de um template só: enquanto cada um era um
 arquivo editado à mão, o português ficou para trás e o espanhol nunca chegou a
 existir. Agora não há caminho em que eles divirjam: só `strings.json` tem prosa.
 
+## Dê `git pull` antes de mexer
+
+O workflow commita sozinho todo dia. Se você editar sem puxar antes, os dois
+lados divergem e o push é recusado. Como `assets/` e os três READMEs são
+gerados, o conflito nunca é de conteúdo de verdade: resolve-se regerando.
+
+```bash
+git pull --no-rebase            # conflito aqui só acontece em arquivo gerado
+node profile/generate.mjs --fixture
+git add -A && git commit
+```
+
 ## Rodar
 
 ```bash
