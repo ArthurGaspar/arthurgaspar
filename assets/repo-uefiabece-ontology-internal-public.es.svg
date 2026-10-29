@@ -18,5 +18,5 @@
 <path d="M142 18.5Q143.65 22.35 147.5 24Q143.65 25.65 142 29.5Q140.35 25.65 136.5 24Q140.35 22.35 142 18.5Z" fill="#FFC927" opacity="0.9"/>
 <text x="142" y="49" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#16203A" text-anchor="middle">ontology-internal-public</text>
 <text x="16" y="71" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="10.8" font-weight="400" fill="#54607A">El mismo método socrático como servidor MCP:</text><text x="16" y="85.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="10.8" font-weight="400" fill="#54607A">mantiene el estado epistémico por reglas</text><text x="16" y="100" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="10.8" font-weight="400" fill="#54607A">auditables, sin llamar a un LLM.</text>
-
+<circle cx="20.5" cy="121" r="4.5" fill="#e34c26"/><text x="30" y="125" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A">HTML</text>
 </svg>
