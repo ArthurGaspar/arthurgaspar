@@ -165,6 +165,9 @@
   "_incluirPrivados": "Agrega bytes por linguagem dos repos privados também. Nome nenhum de repo privado sai daqui, só o total por linguagem. Exige o secret PERFIL_TOKEN; sem ele a geração cai para só públicos e avisa.",
   "incluirPrivados": true,
 
+  "_pesoPorRepo": "true: cada repositório vale 1 e divide esse 1 entre as suas linguagens, então o gráfico responde 'em que eu construo coisas'. false: conta byte cru, e aí uma tese em LaTeX ou uma pasta de HTML enterra um código denso. Foi exatamente o que aconteceu na primeira rodada: TeX 37,8% e TypeScript 1,5%.",
+  "pesoPorRepo": true,
+
   "_ignorarForks": "Fork não é código meu, então não conta na linguagem.",
   "ignorarForks": true
 }

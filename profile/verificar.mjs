@@ -26,10 +26,16 @@ for (const r of READMES) {
   }
   const texto = readFileSync(caminho, "utf8");
 
-  for (const m of texto.matchAll(/src="assets\/([^"?]+)/g)) {
+  // src= é a versão clara e srcset= a escura; as duas precisam existir, senão
+  // metade dos leitores vê imagem quebrada e a outra metade não vê nada errado.
+  for (const m of texto.matchAll(/src(?:set)?="assets\/([^"?]+)/g)) {
     usados.add(m[1]);
     if (!existsSync(join(RAIZ, "assets", m[1]))) reprovar(`${r}: aponta para assets/${m[1]}, que não existe`);
   }
+
+  const claros = [...texto.matchAll(/ src="assets\/([^"?]+)/g)].length;
+  const escuros = [...texto.matchAll(/srcset="assets\/([^"?]+)/g)].length;
+  if (claros !== escuros) reprovar(`${r}: ${claros} imagens claras contra ${escuros} escuras`);
 
   // Um README sem card nenhum significa que a busca de repos falhou calada.
   if (!/assets\/repo-/.test(texto)) reprovar(`${r}: nenhum card de repositório`);

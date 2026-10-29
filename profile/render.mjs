@@ -20,8 +20,8 @@ export function banner(s) {
 
   // Fitas de luz: curvas longas e apagadas atravessando o céu.
   const fitas = [
-    { d: `M-60 150 C140 96 330 196 560 120 S840 54 960 92`, w: 15, op: 0.16, cor: C.amareloClaro },
-    { d: `M-60 178 C180 132 300 216 580 152 S860 102 960 134`, w: 9, op: 0.13, cor: C.azulPalido },
+    { d: `M-60 150 C140 96 330 196 560 120 S840 54 960 92`, w: 15, op: 0.3, cor: C.fitaQuente },
+    { d: `M-60 178 C180 132 300 216 580 152 S860 102 960 134`, w: 9, op: 0.3, cor: C.fitaFria },
   ]
     .map((f) => `<path d="${f.d}" fill="none" stroke="${f.cor}" stroke-width="${f.w}" stroke-linecap="round" opacity="${f.op}"/>`)
     .join("");
@@ -36,12 +36,12 @@ export function banner(s) {
 
   const defs = `
 <radialGradient id="aurora" cx="0.08" cy="0.1" r="0.8">
-<stop offset="0" stop-color="${C.amareloPalido}" stop-opacity="0.9"/>
-<stop offset="1" stop-color="${C.amareloPalido}" stop-opacity="0"/>
+<stop offset="0" stop-color="${C.auroraCor}" stop-opacity="${C.auroraOp}"/>
+<stop offset="1" stop-color="${C.auroraCor}" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="ceu" cx="0.9" cy="1" r="0.8">
-<stop offset="0" stop-color="${C.azulPalido}" stop-opacity="0.85"/>
-<stop offset="1" stop-color="${C.azulPalido}" stop-opacity="0"/>
+<stop offset="0" stop-color="${C.ceuCor}" stop-opacity="${C.ceuOp}"/>
+<stop offset="1" stop-color="${C.ceuCor}" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="disco" cx="0.42" cy="0.36" r="0.68">
 <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.4" stop-color="${C.amareloClaro}"/><stop offset="1" stop-color="${C.amarelo}"/>
@@ -56,9 +56,9 @@ ${fitas}
 ${raios}
 <circle cx="${sol.x}" cy="${sol.y}" r="54" fill="${C.amareloPalido}" opacity="0.55"/>
 <circle cx="${sol.x}" cy="${sol.y}" r="38" fill="url(#disco)"/>
-${nuvem(628, 174, 1.15, "#FFFFFF", 0.78)}
-${nuvem(812, 150, 0.8, C.amareloPalido, 0.72)}
-${nuvem(476, 196, 0.95, "#FFFFFF", 0.5)}
+${nuvem(628, 174, 1.15, C.nuvemA, 0.78)}
+${nuvem(812, 150, 0.8, C.nuvemB, 0.72)}
+${nuvem(476, 196, 0.95, C.nuvemA, 0.5)}
 ${brilho(566, 54, 7.5, C.amarelo, 0.8)}
 ${brilho(848, 70, 5, C.amarelo, 0.65)}
 ${brilho(622, 36, 4, C.azul, 0.3)}
@@ -94,7 +94,7 @@ export function interesses(s) {
       const divisor = i === 0 ? "" : `<path d="M${(cel * i).toFixed(1)} 28 Q${(cel * i + 5).toFixed(1)} ${h / 2} ${(cel * i).toFixed(1)} ${h - 28}" fill="none" stroke="${C.linha}" stroke-width="1"/>`;
       return `${divisor}
 <path d="${blob(cx, 44, 27, FORMAS[i % FORMAS.length])}" fill="${C.amareloPalido}" opacity="0.8"/>
-<g transform="translate(${cx - 16} 28)">${ICONES[it.icone]}</g>
+<g transform="translate(${cx - 16} 28)">${ICONES[it.icone]()}</g>
 ${txt(cx, 97, it.rotulo, { tam: 14, peso: 600, anc: "middle" })}`;
     })
     .join("");
@@ -134,7 +134,8 @@ ${txt(MEIA - pad, y + 12.5, pct(l.parte), { tam: 11, peso: 600, cor: C.tinta2, a
 
 /* --------------------------------------------------------------- contribuições */
 
-const NIVEIS = [C.vazio, RAMPA[5], RAMPA[3], RAMPA[2], RAMPA[0]];
+/** Montado na chamada, não no módulo, pela mesma razão dos ícones. */
+const niveis = () => [C.vazio, RAMPA[5], RAMPA[3], RAMPA[2], RAMPA[0]];
 
 function nivel(c, max) {
   if (!c) return 0;
@@ -159,6 +160,7 @@ export function contribuicoes(dias, total, s) {
   }
 
   const max = Math.max(1, ...dias.map((d) => d.count));
+  const N = niveis();
   const topo = 92;
   const grade = pad + rotuloDia;
   const h = topo + 7 * passo + 34;
@@ -168,7 +170,7 @@ export function contribuicoes(dias, total, s) {
       sem
         .map((d, y) =>
           d
-            ? `<rect x="${grade + x * passo}" y="${topo + y * passo}" width="${cel}" height="${cel}" rx="2.5" fill="${NIVEIS[nivel(d.count, max)]}"><title>${d.date}: ${d.count}</title></rect>`
+            ? `<rect x="${grade + x * passo}" y="${topo + y * passo}" width="${cel}" height="${cel}" rx="2.5" fill="${N[nivel(d.count, max)]}"><title>${d.date}: ${d.count}</title></rect>`
             : "",
         )
         .join(""),
@@ -190,7 +192,7 @@ export function contribuicoes(dias, total, s) {
     .map((i) => txt(pad + rotuloDia - 6, topo + i * passo + cel - 1.5, s.dias[i], { tam: 10, cor: C.tinta3, anc: "end" }))
     .join("");
 
-  const legenda = NIVEIS.map(
+  const legenda = N.map(
     (c, i) => `<rect x="${W - pad - 96 + i * 15}" y="${h - 26}" width="11" height="11" rx="2.5" fill="${c}"/>`,
   ).join("");
 
@@ -295,8 +297,8 @@ ${txt(w - 18, 30, String(quantos), { tam: 11, peso: 600, cor: C.tinta3, anc: "en
 export function chipIdioma(rotulo, ativo) {
   const h = 34;
   const w = Math.round(largura(rotulo, 13, 600) + 34);
-  const fundo = ativo ? C.azul : "#FFFFFF";
-  const cor = ativo ? "#FFFFFF" : C.tinta2;
+  const fundo = ativo ? C.azul : C.papel;
+  const cor = ativo ? C.sobreAzul : C.tinta2;
   const borda = ativo ? C.azul : C.linha;
   const ponto = ativo
     ? `<circle cx="15" cy="${h / 2}" r="4" fill="${C.amarelo}"/>`

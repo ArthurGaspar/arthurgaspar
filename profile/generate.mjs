@@ -14,6 +14,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cabecalhoCategoria, chipIdioma, faixa } from "./render.mjs";
 import { pegarToken, buscarLinguagens, buscarContribuicoes, buscarRepos } from "./github.mjs";
+import { aplicarTema } from "./theme.mjs";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const RAIZ = join(AQUI, "..");
@@ -124,7 +125,20 @@ function gravar(nome, conteudo) {
   escritos.add(nome);
 }
 
-const img = (arq, alt, extra = "") => `<img src="assets/${arq}?v=${STAMP}" alt="${alt}"${extra}>`;
+/**
+ * Desenha o mesmo asset nas duas paletas: `nome.svg` e `nome.dark.svg`.
+ * O <picture> no README escolhe um dos dois pelo tema de quem está lendo.
+ */
+function gravarTemas(base, desenhar) {
+  for (const tema of ["claro", "escuro"]) {
+    aplicarTema(tema);
+    gravar(`${base}${tema === "escuro" ? ".dark" : ""}.svg`, desenhar());
+  }
+}
+
+/** <picture> com prefers-color-scheme, que é como o GitHub troca imagem por tema. */
+const img = (base, alt, extra = "") =>
+  `<picture><source media="(prefers-color-scheme: dark)" srcset="assets/${base}.dark.svg?v=${STAMP}"><img src="assets/${base}.svg?v=${STAMP}" alt="${alt}"${extra}></picture>`;
 
 const STAMP = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
 
@@ -146,13 +160,13 @@ function blocoCategorias(categorias, s, loc, alvo) {
         const celulas = c.repos.slice(i, i + 3).map((r) => {
           const d = descDe(r, loc);
           const alt = `${r.nome}${d ? ` · ${d}` : ""}`.replace(/"/g, "&quot;");
-          return `<td width="33%" valign="top"><a href="${r.url}">${img(`${idCard(r)}${alvo}.svg`, alt, ' width="100%"')}</a></td>`;
+          return `<td width="33%" valign="top"><a href="${r.url}">${img(`${idCard(r)}${alvo}`, alt, ' width="100%"')}</a></td>`;
         });
         while (celulas.length < 3) celulas.push('<td width="33%"></td>');
         linhas.push(`<tr>\n${celulas.map((x) => `  ${x}`).join("\n")}\n</tr>`);
       }
       const titulo = s.categorias[c.chave] ?? c.chave;
-      return `${img(`cat-${c.chave}${alvo}.svg`, `${titulo} (${c.repos.length})`, ' height="44"')}\n\n<table>\n${linhas.join("\n")}\n</table>`;
+      return `${img(`cat-${c.chave}${alvo}`, `${titulo} (${c.repos.length})`, ' height="44"')}\n\n<table>\n${linhas.join("\n")}\n</table>`;
     })
     .join("\n\n");
 }
@@ -178,7 +192,7 @@ function blocoFerramentas(s) {
 
 function montarReadme(loc, s, d, alvo) {
   const chips = LOCAIS.map(
-    (l) => `<a href="${ARQUIVO[l]}">${img(`chip-${l}-${l === loc ? "on" : "off"}.svg`, CHIP[l], ' height="30"')}</a>`,
+    (l) => `<a href="${ARQUIVO[l]}">${img(`chip-${l}-${l === loc ? "on" : "off"}`, CHIP[l], ' height="30"')}</a>`,
   ).join("\n");
 
   const subEscopo = d.escopo === "privado" ? s.subPrivados : s.subPublicos;
@@ -186,32 +200,32 @@ function montarReadme(loc, s, d, alvo) {
   return `<!-- Este arquivo é gerado por profile/generate.mjs. Edite profile/strings.json, não aqui. -->
 <div align="center">
 
-${img(`banner${alvo}.svg`, `${s.nome} · ${s.papel}`, ' width="100%"')}
+${img(`banner${alvo}`, `${s.nome} · ${s.papel}`, ' width="100%"')}
 
 ${chips}
 
-${img(`interesses${alvo}.svg`, s.interesses.map((i) => i.rotulo).join(" · "), ' width="100%"')}
+${img(`interesses${alvo}`, s.interesses.map((i) => i.rotulo).join(" · "), ' width="100%"')}
 
 </div>
 
-${img(`faixa-projetos${alvo}.svg`, s.faixas.projetos, ' width="100%"')}
+${img(`faixa-projetos${alvo}`, s.faixas.projetos, ' width="100%"')}
 
 ${blocoCategorias(d.categorias, s, loc, alvo)}
 
 <p align="right"><a href="https://github.com/${CFG.usuario}?tab=repositories">${s.verTodos} &rarr;</a></p>
 
-${img(`faixa-numeros${alvo}.svg`, s.faixas.numeros, ' width="100%"')}
+${img(`faixa-numeros${alvo}`, s.faixas.numeros, ' width="100%"')}
 
 <table>
 <tr>
-  <td width="50%" valign="top"><b>${s.subLinguagens}</b><br><sub>${subEscopo}</sub><br><br>${img("linguagens.svg", s.subLinguagens, ' width="100%"')}</td>
-  <td width="50%" valign="top"><b>${s.subSequencia}</b><br><sub>${s.ultimoAno}</sub><br><br>${img(`sequencia${alvo}.svg`, s.subSequencia, ' width="100%"')}</td>
+  <td width="50%" valign="top"><b>${s.subLinguagens}</b><br><sub>${subEscopo}</sub><br><br>${img("linguagens", s.subLinguagens, ' width="100%"')}</td>
+  <td width="50%" valign="top"><b>${s.subSequencia}</b><br><sub>${s.ultimoAno}</sub><br><br>${img(`sequencia${alvo}`, s.subSequencia, ' width="100%"')}</td>
 </tr>
 </table>
 
-${img(`contribuicoes${alvo}.svg`, `${d.stats.total} ${s.contribuicoes}`, ' width="100%"')}
+${img(`contribuicoes${alvo}`, `${d.stats.total} ${s.contribuicoes}`, ' width="100%"')}
 
-${img(`faixa-ferramentas${alvo}.svg`, s.faixas.ferramentas, ' width="100%"')}
+${img(`faixa-ferramentas${alvo}`, s.faixas.ferramentas, ' width="100%"')}
 
 <div align="center">
 
@@ -219,7 +233,7 @@ ${blocoFerramentas(s)}
 
 </div>
 
-${img(`faixa-contato${alvo}.svg`, s.faixas.contato, ' width="100%"')}
+${img(`faixa-contato${alvo}`, s.faixas.contato, ' width="100%"')}
 
 <p><a href="https://www.linkedin.com/in/arthur-gaspar-197a7b265/"><img src="https://img.shields.io/badge/LinkedIn-2F6FE0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a></p>
 
@@ -236,10 +250,10 @@ async function principal() {
   console.log(`· sequência: atual ${d.stats.atual}, maior ${d.stats.maior}, total ${d.stats.total}`);
 
   // Neutros: não carregam prosa, então um arquivo serve os três idiomas.
-  gravar("linguagens.svg", linguagens(d.langs.lista));
+  gravarTemas("linguagens", () => linguagens(d.langs.lista));
   for (const l of LOCAIS) {
-    gravar(`chip-${l}-on.svg`, chipIdioma(CHIP[l], true));
-    gravar(`chip-${l}-off.svg`, chipIdioma(CHIP[l], false));
+    gravarTemas(`chip-${l}-on`, () => chipIdioma(CHIP[l], true));
+    gravarTemas(`chip-${l}-off`, () => chipIdioma(CHIP[l], false));
   }
 
   for (const loc of LOCAIS) {
@@ -253,15 +267,15 @@ async function principal() {
 
     for (const c of d.categorias) {
       if (!c.repos.length) continue;
-      gravar(`cat-${c.chave}${alvo}.svg`, cabecalhoCategoria(s.categorias[c.chave] ?? c.chave, c.repos.length));
-      for (const r of c.repos) gravar(`${idCard(r)}${alvo}.svg`, cardRepo({ ...r, descricao: descDe(r, loc) }));
+      gravarTemas(`cat-${c.chave}${alvo}`, () => cabecalhoCategoria(s.categorias[c.chave] ?? c.chave, c.repos.length));
+      for (const r of c.repos) gravarTemas(`${idCard(r)}${alvo}`, () => cardRepo({ ...r, descricao: descDe(r, loc) }));
     }
 
-    gravar(`banner${alvo}.svg`, banner(s));
-    gravar(`interesses${alvo}.svg`, interesses(s));
-    gravar(`sequencia${alvo}.svg`, sequencia(seq, s));
-    gravar(`contribuicoes${alvo}.svg`, contribuicoes(d.dias.slice(-371), d.stats.total, s));
-    for (const [chave, titulo] of Object.entries(s.faixas)) gravar(`faixa-${chave}${alvo}.svg`, faixa(titulo));
+    gravarTemas(`banner${alvo}`, () => banner(s));
+    gravarTemas(`interesses${alvo}`, () => interesses(s));
+    gravarTemas(`sequencia${alvo}`, () => sequencia(seq, s));
+    gravarTemas(`contribuicoes${alvo}`, () => contribuicoes(d.dias.slice(-371), d.stats.total, s));
+    for (const [chave, titulo] of Object.entries(s.faixas)) gravarTemas(`faixa-${chave}${alvo}`, () => faixa(titulo));
 
     writeFileSync(join(RAIZ, ARQUIVO[loc]), montarReadme(loc, s, d, alvo), "utf8");
   }

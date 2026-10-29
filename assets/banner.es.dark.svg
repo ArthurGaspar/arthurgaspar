@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="216" viewBox="0 0 880 216" role="img" aria-label="Arthur Gaspar · Desarrollador full-stack · Ingeniero de software en pruebas">
+<title>Arthur Gaspar · Desarrollador full-stack · Ingeniero de software en pruebas</title>
+<defs>
+<linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#161B22"/><stop offset="1" stop-color="#1A2130"/>
+</linearGradient>
+
+<radialGradient id="aurora" cx="0.08" cy="0.1" r="0.8">
+<stop offset="0" stop-color="#2A2A1E" stop-opacity="0.75"/>
+<stop offset="1" stop-color="#2A2A1E" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="ceu" cx="0.9" cy="1" r="0.8">
+<stop offset="0" stop-color="#182741" stop-opacity="0.8"/>
+<stop offset="1" stop-color="#182741" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="disco" cx="0.42" cy="0.36" r="0.68">
+<stop offset="0" stop-color="#FFFFFF"/><stop offset="0.4" stop-color="#FFD866"/><stop offset="1" stop-color="#FFC927"/>
+</radialGradient>
+<clipPath id="corte"><path d="M0 198 V14 Q440 -14 880 14 V198 A18 18 0 0 1 862 216 H18 A18 18 0 0 1 0 198 Z"/></clipPath>
+</defs>
+<path d="M0 198 V14 Q440 -14 880 14 V198 A18 18 0 0 1 862 216 H18 A18 18 0 0 1 0 198 Z" fill="url(#papel)"/>
+<path d="M0 198 V14 Q440 -14 880 14 V198 A18 18 0 0 1 862 216 H18 A18 18 0 0 1 0 198 Z" fill="none" stroke="#30363D"/>
+
+<g clip-path="url(#corte)">
+<rect width="880" height="216" fill="url(#aurora)"/>
+<rect width="880" height="216" fill="url(#ceu)"/>
+<path d="M-60 150 C140 96 330 196 560 120 S840 54 960 92" fill="none" stroke="#3E3925" stroke-width="15" stroke-linecap="round" opacity="0.3"/><path d="M-60 178 C180 132 300 216 580 152 S860 102 960 134" fill="none" stroke="#22314C" stroke-width="9" stroke-linecap="round" opacity="0.3"/>
+<path d="M750.5 107.8 L771.7 113.5" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M738.6 128.5 L747.1 136.9" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M718.0 140.4 L723.7 161.7" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M694.2 140.5 L691.1 152.1" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M673.5 128.6 L658.0 144.2" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M661.6 108.0 L650.0 111.1" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M661.5 84.2 L640.3 78.5" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M673.4 63.5 L664.9 55.1" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M694.0 51.6 L688.3 30.3" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M717.8 51.5 L720.9 39.9" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M738.5 63.4 L754.0 47.8" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/><path d="M750.4 84.0 L762.0 80.9" stroke="#FFC927" stroke-width="2.4" stroke-linecap="round" opacity="0.45"/>
+<circle cx="706" cy="96" r="54" fill="#2A2415" opacity="0.55"/>
+<circle cx="706" cy="96" r="38" fill="url(#disco)"/>
+<g opacity="0.78" fill="#2B3449"><circle cx="593.5" cy="178.6" r="23.0"/><circle cx="621.1" cy="164.8" r="29.9"/><circle cx="653.3" cy="176.3" r="24.1"/><circle cx="678.6" cy="183.2" r="17.3"/><rect x="570.5" y="176.3" width="126.5" height="34.5"/></g>
+<g opacity="0.72" fill="#333C57"><circle cx="788.0" cy="153.2" r="16.0"/><circle cx="807.2" cy="143.6" r="20.8"/><circle cx="829.6" cy="151.6" r="16.8"/><circle cx="847.2" cy="156.4" r="12.0"/><rect x="772.0" y="151.6" width="88.0" height="24.0"/></g>
+<g opacity="0.5" fill="#2B3449"><circle cx="447.5" cy="199.8" r="19.0"/><circle cx="470.3" cy="188.4" r="24.7"/><circle cx="496.9" cy="197.9" r="19.9"/><circle cx="517.8" cy="203.6" r="14.3"/><rect x="428.5" y="197.9" width="104.5" height="28.5"/></g>
+<path d="M566 46.5Q568.25 51.75 573.5 54Q568.25 56.25 566 61.5Q563.75 56.25 558.5 54Q563.75 51.75 566 46.5Z" fill="#FFC927" opacity="0.8"/>
+<path d="M848 65Q849.5 68.5 853 70Q849.5 71.5 848 75Q846.5 71.5 843 70Q846.5 68.5 848 65Z" fill="#FFC927" opacity="0.65"/>
+<path d="M622 32Q623.2 34.8 626 36Q623.2 37.2 622 40Q620.8 37.2 618 36Q620.8 34.8 622 32Z" fill="#58A6FF" opacity="0.3"/>
+<path d="M782 34.5Q783.05 36.95 785.5 38Q783.05 39.05 782 41.5Q780.95 39.05 778.5 38Q780.95 36.95 782 34.5Z" fill="#FFC927" opacity="0.5"/>
+</g>
+<text x="56" y="104" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="700" fill="#E6EDF3">Arthur Gaspar</text>
+<path d="M58 122 Q104 114 150 122" fill="none" stroke="#FFC927" stroke-width="3.5" stroke-linecap="round"/>
+<text x="56" y="154" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#9198A1">Desarrollador full-stack · Ingeniero de software en pruebas</text>
+<text x="56" y="180" font-family="ui-monospace,SFMono-Regular,'SF Mono',Consolas,'Liberation Mono',monospace" font-size="12.5" font-weight="400" fill="#6E7681">São Paulo, Brasil · UFABC</text>
+</svg>

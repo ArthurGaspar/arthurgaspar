@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="34" viewBox="0 0 96 34" role="img" aria-label="Português">
 <title>Português</title>
-<rect x="0.5" y="0.5" width="95" height="33" rx="17" fill="#FFFFFF" stroke="#E7E9F0"/>
+<rect x="0.5" y="0.5" width="95" height="33" rx="17" fill="#FFFDF7" stroke="#E7E9F0"/>
 <circle cx="15" cy="17" r="4" fill="none" stroke="#8A94AC" stroke-width="1.4"/>
 <text x="26" y="21.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#54607A">Português</text>
 </svg>

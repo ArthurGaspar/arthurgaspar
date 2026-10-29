@@ -6,7 +6,7 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [main]
     # Só o que define o perfil dispara. Sem esse filtro o commit do próprio
     # workflow (que mexe em assets/ e README*.md) dispararia o workflow de novo.
     paths:

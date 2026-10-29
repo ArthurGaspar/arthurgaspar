@@ -9,7 +9,7 @@
  *     portador da informação.
  */
 
-export const C = {
+const CLARO = {
   papel: "#FFFDF7",
   papelFrio: "#F4F8FF",
   tinta: "#16203A",
@@ -24,10 +24,75 @@ export const C = {
   amareloPalido: "#FFF0BF",
   ambar: "#B07500",
   vazio: "#EFF1F6",
+  nuvemA: "#FFFFFF",
+  nuvemB: "#FFF0BF",
+  fitaQuente: "#FFD866",
+  fitaFria: "#E3EDFF",
+  auroraCor: "#FFF0BF",
+  auroraOp: 0.9,
+  ceuCor: "#E3EDFF",
+  ceuOp: 0.85,
+  // Cor que vai POR CIMA do azul cheio. No claro o azul é escuro e pede branco;
+  // no escuro o azul é aberto e pede tinta escura, senão o contraste cai para 2,4:1.
+  sobreAzul: "#FFFFFF",
 };
 
-/** Escala sequencial, do mais escuro ao mais claro. Só preenchimento. */
-export const RAMPA = ["#17398C", "#1E53B8", "#2F6FE0", "#5B9BFF", "#8FBCFF", "#BBD6FF", "#DCE9FF"];
+/**
+ * Tema escuro nas cores da própria superfície do GitHub, para o painel parecer
+ * um card nativo e não um adesivo colado por cima da página.
+ *
+ * O amarelo troca de papel aqui. Contra o papel claro ele tem 1,74:1 e por isso
+ * é só forma; contra #161B22 tem 11,23:1 e pode ser texto. Daí `ambar`, que no
+ * claro é um âmbar escuro, aqui ser o amarelo aberto.
+ */
+const ESCURO = {
+  papel: "#161B22",
+  papelFrio: "#1A2130",
+  tinta: "#E6EDF3",
+  tinta2: "#9198A1",
+  tinta3: "#6E7681",
+  linha: "#30363D",
+  azul: "#58A6FF",
+  azulFundo: "#1F6FEB",
+  azulPalido: "#1C2B45",
+  amarelo: "#FFC927",
+  amareloClaro: "#FFD866",
+  amareloPalido: "#2A2415",
+  ambar: "#FFD866",
+  vazio: "#21262D",
+  // No escuro a nuvem tem que ser mais clara que o painel para ainda ser nuvem,
+  // mas azulada: nuvem branca sobre fundo escuro vira mancha, não céu.
+  nuvemA: "#2B3449",
+  nuvemB: "#333C57",
+  fitaQuente: "#3E3925",
+  fitaFria: "#22314C",
+  auroraCor: "#2A2A1E",
+  auroraOp: 0.75,
+  ceuCor: "#182741",
+  ceuOp: 0.8,
+  sobreAzul: "#0B1220",
+};
+
+const RAMPA_CLARA = ["#17398C", "#1E53B8", "#2F6FE0", "#5B9BFF", "#8FBCFF", "#BBD6FF", "#DCE9FF"];
+const RAMPA_ESCURA = ["#79C0FF", "#58A6FF", "#388BFD", "#1F6FEB", "#1158C7", "#0D419D", "#0C2D6B"];
+
+/**
+ * Escala sequencial, do mais forte ao mais fraco. Só preenchimento, nunca texto.
+ * As duas são monotônicas em luminosidade: a clara escurece, a escura clareia.
+ */
+export const RAMPA = [...RAMPA_CLARA];
+export const C = { ...CLARO };
+
+/**
+ * Troca a paleta em vigor. É estado global mutável de propósito: assim nenhuma
+ * das funções de desenho precisa receber tema, e a geração, que é sequencial e
+ * de thread única, só chama isto antes de cada lote.
+ */
+export function aplicarTema(nome) {
+  Object.assign(C, nome === "escuro" ? ESCURO : CLARO);
+  RAMPA.length = 0;
+  RAMPA.push(...(nome === "escuro" ? RAMPA_ESCURA : RAMPA_CLARA));
+}
 
 /** Fonte de sistema: SVG em <img> no GitHub não carrega fonte externa. */
 export const FONTE = "system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";

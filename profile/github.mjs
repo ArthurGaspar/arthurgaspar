@@ -64,11 +64,20 @@ export async function buscarLinguagens(login, token, escopo, cfg) {
     const { nodes, pageInfo } = d.user.repositories;
     for (const repo of nodes) {
       if (cfg.ignorarForks && repo.isFork) continue;
+
+      const usaveis = repo.languages.edges.filter((e) => !cfg.ignorarLinguagens?.includes(e.node.name));
+      if (!usaveis.length) continue;
       contados++;
-      for (const e of repo.languages.edges) {
+
+      // Contar byte cru faz uma tese em LaTeX ou uma pasta de HTML enterrar um
+      // código denso: o gráfico passa a medir tamanho de arquivo, não ofício.
+      // Com peso por repo, cada repositório vale 1 e divide esse 1 entre as
+      // suas linguagens, então a barra responde "em que eu construo coisas".
+      const total = usaveis.reduce((a, e) => a + e.size, 0);
+      for (const e of usaveis) {
         const nome = e.node.name;
-        if (cfg.ignorarLinguagens?.includes(nome)) continue;
-        bytes.set(nome, (bytes.get(nome) ?? 0) + e.size);
+        const peso = cfg.pesoPorRepo === false ? e.size : e.size / total;
+        bytes.set(nome, (bytes.get(nome) ?? 0) + peso);
         if (e.node.color) cores.set(nome, e.node.color);
       }
     }

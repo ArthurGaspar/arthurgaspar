@@ -52,20 +52,46 @@ com o PAT contaria como contribuição sua, e aí o gráfico de contribuição l
 acima passaria a medir o próprio workflow rodando todo dia em vez do seu
 trabalho. O PAT serve para **ler** a API e nada mais.
 
+## Os dois temas
+
+Cada asset é desenhado duas vezes, em `nome.svg` e `nome.dark.svg`, e o README
+escolhe com `<picture>` + `prefers-color-scheme`, que o GitHub suporta.
+
+A troca é feita por `aplicarTema("claro" | "escuro")`, que muda a paleta em
+vigor. É estado global mutável de propósito: assim nenhuma função de desenho
+precisa receber tema. O preço é que **cor nenhuma pode ser literal no desenho, e
+nenhuma string pode ser montada no carregamento do módulo**: foi exatamente o
+que aconteceu com as nuvens, fixas em `#FFFFFF`, e com os ícones, que montavam o
+traço uma vez só e ficavam presos no tema claro.
+
+A primeira tentativa foi painel claro único, servindo os dois temas. No claro
+funcionou; no escuro os painéis pareciam adesivos colados sobre a página.
+
 ## Regras de cor
 
 Saíram do validador de paleta, não do olho:
 
-- `#FFC927` tem contraste **1,74:1** contra o papel. É forma e brilho, nunca
-  texto, nunca uma marca que carregue valor. Para número em destaque existe
-  `#B07500`, que passa.
-- A rampa azul é monotônica em luminosidade, então serve de escala sequencial.
+- `#FFC927` tem **1,74:1** contra o papel claro e **11,23:1** contra o escuro.
+  Por isso ele troca de papel entre os temas: no claro é só forma e brilho, e
+  quem carrega número é `#B07500`; no escuro ele pode ser texto.
+- As duas rampas azuis são monotônicas em luminosidade: a clara escurece, a
+  escura clareia.
 - Toda barra e célula leva rótulo em texto: a cor nunca é o único portador.
+- `sobreAzul` é a cor que vai por cima do azul cheio. Ela existe porque branco
+  sobre o azul do tema escuro dá 2,4:1.
+
+## A métrica das linguagens
+
+`pesoPorRepo: true` faz cada repositório valer 1 e dividir esse 1 entre as suas
+linguagens. Com byte cru, a primeira rodada real devolveu **TeX 37,8%** e
+**TypeScript 1,5%**: uma tese em LaTeX e pastas de HTML enterraram todo o resto.
+Byte mede tamanho de arquivo, não ofício.
 
 ## Limites conhecidos
 
-- A descrição de cada card vem da descrição do repositório no GitHub, que é um
-  campo só. Ela aparece igual nos três idiomas, porque não há onde traduzir.
+- A descrição de cada card vem de `desc` no `featured.json`, por idioma. Quando
+  não existe, cai para a descrição do GitHub, que é campo único e aparece igual
+  nos três idiomas.
 - Só o `README.md` da raiz aparece na página do perfil. As versões pt-BR e es são
   alcançadas pelo seletor de idioma no topo.
 - O SVG é servido como imagem: fonte externa não carrega, por isso tudo usa a

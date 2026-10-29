@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="236" viewBox="0 0 430 236" role="img" aria-label="Racha actual: 40 · Racha más larga: 40">
+<title>Racha actual: 40 · Racha más larga: 40</title>
+<defs>
+<linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#161B22"/><stop offset="1" stop-color="#1A2130"/>
+</linearGradient>
+
+</defs>
+<path d="M14 0 H416 A14 14 0 0 1 430 14 V222 A14 14 0 0 1 416 236 H14 A14 14 0 0 1 0 222 V14 A14 14 0 0 1 14 0 Z" fill="url(#papel)"/>
+<path d="M14.5 0.5 H415.5 A14 14 0 0 1 429.5 14.5 V221.5 A14 14 0 0 1 415.5 235.5 H14.5 A14 14 0 0 1 0.5 221.5 V14.5 A14 14 0 0 1 14.5 0.5 Z" fill="none" stroke="#30363D"/>
+
+<path d="M143.3 52 V184" stroke="#30363D"/>
+<path d="M286.7 52 V184" stroke="#30363D"/>
+
+<text x="71.66666666666667" y="118" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" font-weight="700" fill="#E6EDF3" text-anchor="middle">1022</text>
+<text x="71.66666666666667" y="139" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#9198A1" text-anchor="middle">Total</text>
+<text x="71.66666666666667" y="156" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="9.5" font-weight="400" fill="#6E7681" text-anchor="middle">últimos 12 meses</text>
+<circle cx="215" cy="74" r="30" fill="#2A2415" opacity="0.8"/>
+<circle cx="215" cy="74" r="13" fill="#FFC927"/><path d="M233.85 74.00 L240.35 74.00" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M228.33 87.33 L232.93 91.93" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M215.00 92.85 L215.00 99.35" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M201.67 87.33 L197.07 91.93" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M196.15 74.00 L189.65 74.00" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M201.67 60.67 L197.07 56.07" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M215.00 55.15 L215.00 48.65" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/><path d="M228.33 60.67 L232.93 56.07" stroke="#FFC927" stroke-width="2" stroke-linecap="round"/>
+<text x="215" y="130" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="700" fill="#E6EDF3" text-anchor="middle">40</text>
+<text x="215" y="150" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11.5" font-weight="600" fill="#FFD866" text-anchor="middle">Racha actual</text>
+<text x="215" y="167" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="9.5" font-weight="400" fill="#6E7681" text-anchor="middle">20 sep → hoy</text>
+
+<text x="358.33333333333337" y="118" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" font-weight="700" fill="#E6EDF3" text-anchor="middle">40</text>
+<text x="358.33333333333337" y="139" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#9198A1" text-anchor="middle">Racha más larga</text>
+<text x="358.33333333333337" y="156" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="9.5" font-weight="400" fill="#6E7681" text-anchor="middle">20 sep → 29 oct</text>
+</svg>
