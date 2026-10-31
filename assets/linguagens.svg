@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="430" height="238" viewBox="0 0 430 238" role="img" aria-label="Linguagens: TypeScript 28.9%, HTML 23.0%, JavaScript 18.4%, Python 10.8%, CSS 6.8%, C# 4.7%, Java 3.4%, C++ 2.1%">
-<title>Linguagens: TypeScript 28.9%, HTML 23.0%, JavaScript 18.4%, Python 10.8%, CSS 6.8%, C# 4.7%, Java 3.4%, C++ 2.1%</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="238" viewBox="0 0 430 238" role="img" aria-label="Linguagens: TypeScript 27.8%, HTML 22.2%, JavaScript 18.5%, Python 10.5%, CSS 6.6%, C# 4.5%, TeX 3.9%, Java 3.3%">
+<title>Linguagens: TypeScript 27.8%, HTML 22.2%, JavaScript 18.5%, Python 10.5%, CSS 6.6%, C# 4.5%, TeX 3.9%, Java 3.3%</title>
 <defs>
 <linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#F4F8FF"/>
@@ -10,19 +10,19 @@
 <path d="M14.5 0.5 H415.5 A14 14 0 0 1 429.5 14.5 V223.5 A14 14 0 0 1 415.5 237.5 H14.5 A14 14 0 0 1 0.5 223.5 V14.5 A14 14 0 0 1 14.5 0.5 Z" fill="none" stroke="#E7E9F0"/>
 <text x="20" y="35" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">TypeScript</text>
 <path d="M92.40000000000002 25 H362.0 A4 4 0 0 1 366.0 29 V35 A4 4 0 0 1 362.0 40 H92.40000000000002 Z" fill="#17398C"/>
-<text x="410" y="36.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">28.9%</text><text x="20" y="60" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">HTML</text>
-<path d="M92.40000000000002 50 H306.4 A4 4 0 0 1 310.4 54 V60 A4 4 0 0 1 306.4 65 H92.40000000000002 Z" fill="#1E53B8"/>
-<text x="410" y="61.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">23.0%</text><text x="20" y="85" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">JavaScript</text>
-<path d="M92.40000000000002 75 H262.6 A4 4 0 0 1 266.6 79 V85 A4 4 0 0 1 262.6 90 H92.40000000000002 Z" fill="#2F6FE0"/>
-<text x="410" y="86.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">18.4%</text><text x="20" y="110" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">Python</text>
-<path d="M92.40000000000002 100 H190.7 A4 4 0 0 1 194.7 104 V110 A4 4 0 0 1 190.7 115 H92.40000000000002 Z" fill="#5B9BFF"/>
-<text x="410" y="111.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">10.8%</text><text x="20" y="135" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">CSS</text>
-<path d="M92.40000000000002 125 H152.7 A4 4 0 0 1 156.7 129 V135 A4 4 0 0 1 152.7 140 H92.40000000000002 Z" fill="#8FBCFF"/>
-<text x="410" y="136.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">6.8%</text><text x="20" y="160" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">C#</text>
-<path d="M92.40000000000002 150 H132.5 A4 4 0 0 1 136.5 154 V160 A4 4 0 0 1 132.5 165 H92.40000000000002 Z" fill="#BBD6FF"/>
-<text x="410" y="161.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">4.7%</text><text x="20" y="185" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">Java</text>
-<path d="M92.40000000000002 175 H121.1 A4 4 0 0 1 125.1 179 V185 A4 4 0 0 1 121.1 190 H92.40000000000002 Z" fill="#DCE9FF"/>
-<text x="410" y="186.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">3.4%</text><text x="20" y="210" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">C++</text>
-<path d="M92.40000000000002 200 H108.5 A4 4 0 0 1 112.5 204 V210 A4 4 0 0 1 108.5 215 H92.40000000000002 Z" fill="#DCE9FF"/>
-<text x="410" y="211.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">2.1%</text>
+<text x="410" y="36.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">27.8%</text><text x="20" y="60" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">HTML</text>
+<path d="M92.40000000000002 50 H307.0 A4 4 0 0 1 311.0 54 V60 A4 4 0 0 1 307.0 65 H92.40000000000002 Z" fill="#1E53B8"/>
+<text x="410" y="61.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">22.2%</text><text x="20" y="85" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">JavaScript</text>
+<path d="M92.40000000000002 75 H270.0 A4 4 0 0 1 274.0 79 V85 A4 4 0 0 1 270.0 90 H92.40000000000002 Z" fill="#2F6FE0"/>
+<text x="410" y="86.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">18.5%</text><text x="20" y="110" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">Python</text>
+<path d="M92.40000000000002 100 H191.6 A4 4 0 0 1 195.6 104 V110 A4 4 0 0 1 191.6 115 H92.40000000000002 Z" fill="#5B9BFF"/>
+<text x="410" y="111.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">10.5%</text><text x="20" y="135" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">CSS</text>
+<path d="M92.40000000000002 125 H153.1 A4 4 0 0 1 157.1 129 V135 A4 4 0 0 1 153.1 140 H92.40000000000002 Z" fill="#8FBCFF"/>
+<text x="410" y="136.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">6.6%</text><text x="20" y="160" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">C#</text>
+<path d="M92.40000000000002 150 H132.6 A4 4 0 0 1 136.6 154 V160 A4 4 0 0 1 132.6 165 H92.40000000000002 Z" fill="#BBD6FF"/>
+<text x="410" y="161.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">4.5%</text><text x="20" y="185" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">TeX</text>
+<path d="M92.40000000000002 175 H126.9 A4 4 0 0 1 130.9 179 V185 A4 4 0 0 1 126.9 190 H92.40000000000002 Z" fill="#DCE9FF"/>
+<text x="410" y="186.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">3.9%</text><text x="20" y="210" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">Java</text>
+<path d="M92.40000000000002 200 H121.2 A4 4 0 0 1 125.2 204 V210 A4 4 0 0 1 121.2 215 H92.40000000000002 Z" fill="#DCE9FF"/>
+<text x="410" y="211.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">3.3%</text>
 </svg>

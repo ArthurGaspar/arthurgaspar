@@ -12,7 +12,7 @@
 <path d="M143.3 52 V184" stroke="#30363D"/>
 <path d="M286.7 52 V184" stroke="#30363D"/>
 
-<text x="71.66666666666667" y="118" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" font-weight="700" fill="#E6EDF3" text-anchor="middle">481</text>
+<text x="71.66666666666667" y="118" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="25" font-weight="700" fill="#E6EDF3" text-anchor="middle">486</text>
 <text x="71.66666666666667" y="139" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#9198A1" text-anchor="middle">Total</text>
 <text x="71.66666666666667" y="156" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="9.5" font-weight="400" fill="#6E7681" text-anchor="middle">last 12 months</text>
 <circle cx="215" cy="74" r="30" fill="#2A2415" opacity="0.8"/>
