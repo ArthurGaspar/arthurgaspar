@@ -77,6 +77,19 @@
       "artisticas": "Artistic tools",
       "criativo": "Creative",
       "misc": "Misc"
+    },
+    "pagina": {
+      "titulo": "Arthur Gaspar · Full-stack developer and software engineer in test",
+      "link": "Read my story",
+      "historia": "My story",
+      "trajetoria": "Path",
+      "curriculo": "Résumé (PDF)",
+      "email": "Email",
+      "idiomas": "Language",
+      "rodape": "Generated from the same data as my GitHub profile, updated daily.",
+      "experiencia": "Experience",
+      "formacao": "Education",
+      "falados": "Languages I speak"
     }
   },
   "pt-BR": {
@@ -157,6 +170,19 @@
       "artisticas": "Ferramentas artísticas",
       "criativo": "Criativo",
       "misc": "Diversos"
+    },
+    "pagina": {
+      "titulo": "Arthur Gaspar · Desenvolvedor full-stack e engenheiro de software em testes",
+      "link": "Conheça minha história",
+      "historia": "Minha história",
+      "trajetoria": "Trajetória",
+      "curriculo": "Currículo (PDF)",
+      "email": "E-mail",
+      "idiomas": "Idioma",
+      "rodape": "Gerada a partir dos mesmos dados do meu perfil no GitHub, atualizada todo dia.",
+      "experiencia": "Experiência",
+      "formacao": "Formação",
+      "falados": "Idiomas"
     }
   },
   "es": {
@@ -237,6 +263,19 @@
       "artisticas": "Herramientas artísticas",
       "criativo": "Creativo",
       "misc": "Varios"
+    },
+    "pagina": {
+      "titulo": "Arthur Gaspar · Desarrollador full-stack e ingeniero de software en pruebas",
+      "link": "Conoce mi historia",
+      "historia": "Mi historia",
+      "trajetoria": "Trayectoria",
+      "curriculo": "Currículum (PDF)",
+      "email": "Correo",
+      "idiomas": "Idioma",
+      "rodape": "Generada a partir de los mismos datos de mi perfil de GitHub, actualizada cada día.",
+      "experiencia": "Experiencia",
+      "formacao": "Formación",
+      "falados": "Idiomas"
     }
   }
 }

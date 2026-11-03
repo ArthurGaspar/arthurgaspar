@@ -1,0 +1,182 @@
+{
+  "_nota": "Conteúdo da página central (GitHub Pages). É a história em prosa, que no README não cabe. Os rótulos de seção ficam em strings.json, como o resto da interface. Chave começando com _ é comentário e não sai na página. Campo vazio é omitido: item sem data sai sem data, sem 'cv' o botão some.",
+
+  "url": "https://arthurgaspar.github.io/arthurgaspar/",
+
+  "_contato": "Fonte única dos links de contato: o README e a página leem daqui. email e cv são opcionais. cv pode ser um PDF dentro de profile/ ou um link externo.",
+  "contato": {
+    "linkedin": "https://www.linkedin.com/in/arthur-gaspar-197a7b265/",
+    "orcid": "https://orcid.org/0009-0002-1994-5429",
+    "lattes": "http://lattes.cnpq.br/9977874151104568",
+    "github": "https://github.com/ArthurGaspar",
+    "email": "",
+    "cv": ""
+  },
+
+  "_estrutura": "Tirado do currículo. experiencia e formacao vão do mais recente ao mais antigo; cada item tem quando, titulo, onde, texto (opcional) e pontos (os resultados, como no currículo).",
+
+  "en": {
+    "resumo": "Full-stack software engineer with experience at two startups and in academic research at UFABC (Federal University of ABC). Built React and TypeScript systems used by companies like Amazon, Mercado Livre and Natura, AI-powered platforms, and Playwright E2E tests that guard critical journeys at Vivo and Itaú",
+    "historia": [
+      "I work across the whole stack, but the part I care about most is knowing that things actually have a purpose. At my internship at Shippify I built the routing and analytics screens behind roughly a thousand daily delivery routes; at Voidr I moved to the other side of the fence, writing AI-assisted services and synthetic Playwright tests that catch production failures before customers do. I have lots of personal projects, such as e2e-detective: an agent that investigates failing end-to-end tests and writes up the culprit like a case file, comes straight out of that work.",
+      "My path into software meets with science and education. At UFABC I study Science and Technology, where I follow with the two specific bachelors of Neuroscience and of Biotechnology, and my undergraduate research in bioinformatics was my first real full-stack system: an analytical pipeline over 200,000 genomic records with a dashboard that UFABC researchers adopted. I have also worked with scientific method in personal projects such as bioarcade and pv-bench.",
+      "A lot of what I build is also for other students. Under UÉFIabecê I work on MCP servers that bring UFABC course material to AI assistants, and on Ontology, a Socratic AI that answers questions with better questions, which was originally a project from a specific course. I work day to day in Portuguese, English and Spanish, and also wish to learn other languages such as Mandarin and French."
+    ],
+    "experiencia": [
+      {
+        "quando": "Apr 2026 – Oct 2026",
+        "titulo": "AI Test Assistant (Full Stack & QA Automation)",
+        "onde": "Voidr",
+        "pontos": [
+          "Built Node.js/TypeScript microservices integrated with generative AI via LiteLLM, automating 50+ journeys across 10 clients and cutting test setup and maintenance effort by about 30%.",
+          "Created and monitored synthetic Playwright E2E tests for high-risk journeys at companies such as Vivo, Itaú and Serasa, catching production failures before they reached end users.",
+          "Modeled NoSQL schemas and optimized MongoDB queries for retention and fast retrieval of executions and logs.",
+          "Investigated and resolved around 5 technical failures a day with high autonomy, working directly with partner companies' developers and QAs."
+        ]
+      },
+      {
+        "quando": "May 2025 – Mar 2026",
+        "titulo": "Full Stack Developer (Internship)",
+        "onde": "Shippify Inc.",
+        "pontos": [
+          "Built analytical dashboards and logistics routing systems in React (TypeScript) for operations at Amazon, Mercado Livre and Natura, visualizing about 1,000 routes a day.",
+          "Integrated APIs and MySQL databases into ETL pipelines on AWS, processing over 1 million logistics records a month.",
+          "Automated routing with geolocation and machine learning models, helping optimize daily routes and reduce operating costs.",
+          "Worked in agile, multinational squads, in daily contact with Latin American teams in Portuguese, Spanish and English."
+        ]
+      },
+      {
+        "quando": "Nov 2023 – Mar 2025",
+        "titulo": "Undergraduate Research in Technology and Innovation (Bioinformatics)",
+        "onde": "Federal University of ABC (UFABC)",
+        "pontos": [
+          "Structured and analyzed over 200,000 sensitive genomic records in SQL, optimizing queries and storage.",
+          "Built a Python analytical pipeline and a full-stack scientific dashboard (Node.js) for data visualization, adopted by UFABC researchers and presented at 3 scientific and innovation events."
+        ]
+      }
+    ],
+    "formacao": [
+      {
+        "quando": "2024 – present",
+        "titulo": "Bachelor's degrees in Neuroscience and Biotechnology",
+        "onde": "Federal University of ABC (UFABC)"
+      },
+      {
+        "quando": "2023 – present",
+        "titulo": "Bachelor's degree in Science and Technology",
+        "onde": "Federal University of ABC (UFABC)"
+      }
+    ],
+    "idiomas": ["Portuguese: native", "English: fluent", "Spanish: advanced"]
+  },
+
+  "pt-BR": {
+    "resumo": "Engenheiro de software full-stack com experiência em duas startups e em pesquisa acadêmica na UFABC (Universidade Federal do ABC). Desenvolvi sistemas em React e TypeScript utilizados por empresas como Amazon, Mercado Livre e Natura, plataformas baseadas em inteligência artificial, além de testes E2E com Playwright que asseguram fluxos críticos na Vivo e no Itaú.",
+    "historia": [
+    "Trabalho em toda a pilha tecnológica (*full stack*), mas o que mais me importa é saber que as coisas têm, de fato, um propósito. Durante meu estágio na Shippify, desenvolvi as telas de roteamento e análise que sustentam cerca de mil rotas de entrega diárias; na Voidr, atuei em uma frente diferente, criando serviços com auxílio de IA e testes sintéticos (usando Playwright) capazes de detectar falhas em produção antes mesmo que os usuários as percebam. Tenho diversos projetos pessoais, como o *e2e-detective* — um agente que investiga testes *end-to-end* que falharam e elabora um relatório detalhado sobre a causa raiz, como se fosse um dossiê de investigação; esse projeto surgiu justamente a partir dessas experiências.",
+    "Minha trajetória no desenvolvimento de software cruza com a ciência e a educação. Na UFABC, curso Ciência e Tecnologia, com habilitações em Neurociência e Biotecnologia. Minha pesquisa de iniciação científica em bioinformática foi, na prática, meu primeiro sistema *full-stack* completo: um *pipeline* analítico que processava mais de 200 mil registros genômicos, acompanhado de um *dashboard* que passou a ser utilizado por pesquisadores da própria universidade. Também aplico o método científico em projetos pessoais, como o *bioarcade* e o *pv-bench*.",
+    "Grande parte do que desenvolvo é voltada para outros estudantes. No âmbito do 'UÉFIabecê', trabalho em servidores MCP que integram o material didático da UFABC a assistentes de IA, além de desenvolver a *Ontology* — uma IA de abordagem socrática que responde a perguntas com outras perguntas mais instigantes (um projeto que nasceu originalmente em uma disciplina específica). No meu dia a dia, utilizo português, inglês e espanhol, e tenho o desejo de aprender outros idiomas, como mandarim e francês."
+    ],
+    "experiencia": [
+      {
+        "quando": "abr/2026 – out/2026",
+        "titulo": "AI Test Assistant (Full Stack e Automação de QA)",
+        "onde": "Voidr",
+        "pontos": [
+          "Desenvolvi microsserviços em Node.js/TypeScript integrados a IA generativa via LiteLLM, automatizando mais de 50 jornadas em 10 clientes e reduzindo em cerca de 30% o esforço de configuração e manutenção de testes.",
+          "Criei e monitorei testes E2E sintéticos em Playwright para jornadas de alto risco em empresas como Vivo, Itaú e Serasa, detectando falhas em produção antes de impactarem o usuário final.",
+          "Modelei schemas NoSQL e otimizei consultas no MongoDB para retenção e recuperação rápida de execuções e logs.",
+          "Investiguei e resolvi cerca de 5 falhas técnicas por dia com alta autonomia, em contato direto com desenvolvedores e QAs das empresas parceiras."
+        ]
+      },
+      {
+        "quando": "mai/2025 – mar/2026",
+        "titulo": "Desenvolvedor Full Stack (Estágio)",
+        "onde": "Shippify Inc.",
+        "pontos": [
+          "Desenvolvi dashboards analíticos e sistemas de roteirização logística em React (TypeScript) para operações de Amazon, Mercado Livre e Natura, com a visualização de cerca de 1.000 rotas por dia.",
+          "Integrei APIs e bancos MySQL a pipelines ETL na AWS, processando mais de 1 milhão de registros logísticos por mês.",
+          "Automatizei a roteirização com geolocalização e modelos de Machine Learning, contribuindo para a otimização diária de rotas e a redução de custos operacionais.",
+          "Atuei em squads ágeis e multinacionais, em contato diário com times da América Latina em português, espanhol e inglês."
+        ]
+      },
+      {
+        "quando": "nov/2023 – mar/2025",
+        "titulo": "Iniciação em Desenvolvimento Tecnológico e Inovação (Bioinformática)",
+        "onde": "Universidade Federal do ABC (UFABC)",
+        "pontos": [
+          "Estruturei e analisei mais de 200 mil registros de dados genômicos sensíveis em SQL, otimizando consultas e armazenamento.",
+          "Desenvolvi um pipeline analítico em Python e um painel científico full-stack (Node.js) para visualização e manipulação de dados, adotado por pesquisadores da UFABC e apresentado em 3 eventos científicos e de inovação."
+        ]
+      }
+    ],
+    "formacao": [
+      {
+        "quando": "2024 – atual",
+        "titulo": "Bacharelados em Neurociência e Biotecnologia",
+        "onde": "Universidade Federal do ABC (UFABC)"
+      },
+      {
+        "quando": "2023 – atual",
+        "titulo": "Bacharelado em Ciência e Tecnologia",
+        "onde": "Universidade Federal do ABC (UFABC)"
+      }
+    ],
+    "idiomas": ["Português: nativo", "Inglês: fluente", "Espanhol: avançado"]
+  },
+
+  "es": {
+    "resumo": "Ingeniero de software full-stack con experiencia en dos startups y en investigación académica en la UFABC (Universidad Federal del ABC). Ha desarrollado sistemas con React y TypeScript utilizados por empresas como Amazon, Mercado Livre y Natura; plataformas basadas en inteligencia artificial; y pruebas E2E con Playwright que protegen flujos críticos en Vivo e Itaú.",
+    "historia": [
+    "Trabajo en todo el espectro tecnológico (*full stack*), pero lo que más me importa es saber que lo que desarrollo tiene un propósito real. Durante mis prácticas en Shippify, creé las interfaces de enrutamiento y análisis que sustentan cerca de mil rutas de entrega diarias. En Voidr, abordé el desarrollo desde otra perspectiva: diseñé servicios asistidos por inteligencia artificial y pruebas sintéticas con Playwright, capaces de detectar fallos en producción antes de que los usuarios los noten. Cuento con numerosos proyectos personales, como *e2e-detective* —un agente que investiga pruebas *end-to-end* fallidas y documenta la causa raíz como si fuera un informe de investigación—, el cual surgió precisamente de esa experiencia",
+    "Mi trayectoria en el desarrollo de software se entrelaza con la ciencia y la educación. En la UFABC curso estudios en Ciencia y Tecnología, con especializaciones en Neurociencia y Biotecnología. Mi investigación de grado en bioinformática constituyó mi primer sistema *full-stack* integral: un flujo de trabajo analítico que procesaba más de 200.000 registros genómicos, acompañado de un panel de control que fue adoptado por los investigadores de la universidad. Asimismo, he aplicado el método científico en proyectos personales como *bioarcade* y *pv-bench*",
+    "Gran parte de lo que desarrollo está orientado a otros estudiantes. En el marco de UÉFIabecê, trabajo en servidores MCP que integran el material didáctico de la UFABC en asistentes de IA. También desarrollo *Ontology*, una IA de corte socrático que responde a las preguntas planteando, a su vez, otras preguntas más profundas; un proyecto que nació originalmente en el contexto de una asignatura. En mi día a día, trabajo utilizando portugués, inglés y español, y tengo el interés de aprender otros idiomas, como el mandarín y el francés."
+    ],
+    "experiencia": [
+      {
+        "quando": "abr/2026 – oct/2026",
+        "titulo": "AI Test Assistant (Full Stack y Automatización de QA)",
+        "onde": "Voidr",
+        "pontos": [
+          "Desarrollé microservicios en Node.js/TypeScript integrados con IA generativa vía LiteLLM, automatizando más de 50 recorridos en 10 clientes y reduciendo cerca de un 30% el esfuerzo de configuración y mantenimiento de pruebas.",
+          "Creé y monitoreé pruebas E2E sintéticas en Playwright para recorridos de alto riesgo en empresas como Vivo, Itaú y Serasa, detectando fallas en producción antes de que afectaran al usuario final.",
+          "Modelé esquemas NoSQL y optimicé consultas en MongoDB para la retención y recuperación rápida de ejecuciones y logs.",
+          "Investigué y resolví unas 5 fallas técnicas por día con alta autonomía, en contacto directo con desarrolladores y QAs de las empresas socias."
+        ]
+      },
+      {
+        "quando": "may/2025 – mar/2026",
+        "titulo": "Desarrollador Full Stack (Pasantía)",
+        "onde": "Shippify Inc.",
+        "pontos": [
+          "Desarrollé dashboards analíticos y sistemas de ruteo logístico en React (TypeScript) para operaciones de Amazon, Mercado Livre y Natura, con la visualización de unas 1.000 rutas por día.",
+          "Integré APIs y bases MySQL en pipelines ETL en AWS, procesando más de 1 millón de registros logísticos por mes.",
+          "Automaticé el ruteo con geolocalización y modelos de Machine Learning, contribuyendo a la optimización diaria de rutas y a la reducción de costos operativos.",
+          "Trabajé en squads ágiles y multinacionales, en contacto diario con equipos de América Latina en portugués, español e inglés."
+        ]
+      },
+      {
+        "quando": "nov/2023 – mar/2025",
+        "titulo": "Iniciación en Desarrollo Tecnológico e Innovación (Bioinformática)",
+        "onde": "Universidad Federal del ABC (UFABC)",
+        "pontos": [
+          "Estructuré y analicé más de 200 mil registros de datos genómicos sensibles en SQL, optimizando consultas y almacenamiento.",
+          "Desarrollé un pipeline analítico en Python y un panel científico full-stack (Node.js) para visualización y manipulación de datos, adoptado por investigadores de la UFABC y presentado en 3 eventos científicos y de innovación."
+        ]
+      }
+    ],
+    "formacao": [
+      {
+        "quando": "2024 – actualidad",
+        "titulo": "Grados en Neurociencia y Biotecnología",
+        "onde": "Universidad Federal del ABC (UFABC)"
+      },
+      {
+        "quando": "2023 – actualidad",
+        "titulo": "Grado en Ciencia y Tecnología",
+        "onde": "Universidad Federal del ABC (UFABC)"
+      }
+    ],
+    "idiomas": ["Portugués: nativo", "Inglés: fluido", "Español: avanzado"]
+  }
+}

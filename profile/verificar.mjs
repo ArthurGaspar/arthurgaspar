@@ -59,9 +59,36 @@ for (const f of readdirSync(join(RAIZ, "assets"))) {
   if (!usados.has(f)) reprovar(`assets/${f}: gerado mas nenhum README usa`);
 }
 
+/*
+ * A página central. Mesmo raciocínio do README: imagem quebrada só aparece
+ * depois de publicada. Mais uma regra própria dela: é só tema claro, então
+ * nenhum .dark.svg pode entrar, nem por engano.
+ */
+const PAGINAS = ["index.html", "pt-BR/index.html", "es/index.html"];
+const SITE = join(RAIZ, "_site");
+for (const p of PAGINAS) {
+  const caminho = join(SITE, p);
+  if (!existsSync(caminho)) {
+    reprovar(`_site/${p}: não foi gerada`);
+    continue;
+  }
+  const texto = readFileSync(caminho, "utf8");
+  const pasta = p.includes("/") ? p.slice(0, p.lastIndexOf("/") + 1) : "";
+
+  for (const m of texto.matchAll(/src="((?:\.\.\/)?assets\/[^"?]+)/g)) {
+    const alvo = join(SITE, pasta, m[1]);
+    if (!existsSync(alvo)) reprovar(`_site/${p}: aponta para ${m[1]}, que não existe`);
+    if (m[1].endsWith(".dark.svg")) reprovar(`_site/${p}: usa ${m[1]}, mas a página é só tema claro`);
+  }
+  if (!/assets\/repo-/.test(texto)) reprovar(`_site/${p}: nenhum card de repositório`);
+  for (const lixo of ["NaN", "undefined", "[object"]) {
+    if (texto.includes(lixo)) reprovar(`_site/${p}: contém "${lixo}", sinal de dado faltando`);
+  }
+}
+
 if (falhas.length) {
   console.error(`\n${falhas.length} problema(s):`);
   for (const f of falhas) console.error(`  - ${f}`);
   process.exit(1);
 }
-console.log(`ok: ${READMES.length} READMEs, ${usados.size} assets, todos referenciados e fechados.`);
+console.log(`ok: ${READMES.length} READMEs, ${usados.size} assets, todos referenciados e fechados; ${PAGINAS.length} páginas.`);

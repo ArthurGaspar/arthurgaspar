@@ -19,6 +19,10 @@ concurrency:
 
 permissions:
   contents: write
+  # A página central sai pelo GitHub Pages. Exige, uma vez só, Settings → Pages
+  # → Source: "GitHub Actions".
+  pages: write
+  id-token: write
 
 jobs:
   gerar:
@@ -42,6 +46,13 @@ jobs:
       - name: Conferir o que foi gerado
         run: node profile/verificar.mjs
 
+      # _site/ é montada pelo generate.mjs junto com os READMEs. Não vai para o
+      # repositório: segue como artefato para o job de publicar.
+      - name: Empacotar a página
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
       - name: Commitar se algo mudou
         run: |
           # A identidade é a do bot de propósito. Commitar com o PAT marcaria
@@ -58,3 +69,14 @@ jobs:
           fi
           git commit -m "perfil: atualizar badges e contribuições"
           git push
+
+  publicar:
+    needs: gerar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

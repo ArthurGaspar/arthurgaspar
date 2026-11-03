@@ -8,24 +8,32 @@
  *
  *   node profile/generate.mjs              # dados ao vivo, precisa de token
  *   node profile/generate.mjs --fixture    # dados de exemplo, roda offline
+ *
+ * Além dos READMEs, monta a página central em _site/, que o workflow publica no
+ * GitHub Pages. _site/ não é commitada: é saída de build, refeita a cada rodada.
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync, rmSync, copyFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cabecalhoCategoria, chipIdioma, faixa } from "./render.mjs";
 import { pegarToken, buscarLinguagens, buscarContribuicoes, buscarRepos } from "./github.mjs";
 import { aplicarTema } from "./theme.mjs";
+import { montarPagina, urlBadge } from "./pagina.mjs";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const RAIZ = join(AQUI, "..");
 const ASSETS = join(RAIZ, "assets");
+const SITE = join(RAIZ, "_site");
 
 const ler = (p) => JSON.parse(readFileSync(join(AQUI, p), "utf8"));
 const CFG = ler("featured.json");
 const STR = ler("strings.json");
 const TOOLS = ler("tools.json");
+const HIST = ler("historia.json");
 
 const ARQUIVO = { en: "README.md", "pt-BR": "README.pt-BR.md", es: "README.es.md" };
+/** Pasta de cada idioma na página. O inglês fica na raiz, como no README. */
+const PASTA = { en: "", "pt-BR": "pt-BR/", es: "es/" };
 const CHIP = { en: "English", "pt-BR": "Português", es: "Español" };
 const LOCAIS = Object.keys(ARQUIVO);
 
@@ -183,14 +191,28 @@ function blocoFerramentas(s) {
   return TOOLS.grupos
     .map((g) => {
       const badges = g.badges
-        .map((b) => {
-          const rotulo = encodeURIComponent(b.nome).replace(/-/g, "--").replace(/_/g, "__");
-          const logo = b.logo ? `&logo=${encodeURIComponent(b.logo)}&logoColor=${b.logoCor ?? "white"}` : "";
-          return `<img src="https://img.shields.io/badge/${rotulo}-${b.cor}?style=flat-square${logo}" alt="${b.nome}">`;
-        })
+        .map((b) => `<img src="${urlBadge(b)}" alt="${b.nome}">`)
         .join("\n");
       return `<p><sub><b>${s.grupos[g.chave]}</b></sub></p>\n<p>\n${badges}\n</p>`;
     })
+    .join("\n");
+}
+
+/**
+ * Badges de contato, na ordem do CONTATO. Link vazio no historia.json some.
+ *
+ * O Lattes não tem logo no Simple Icons, então vai só com o nome, na cor da
+ * casa (o azul do CNPq).
+ */
+const CONTATO = [
+  { chave: "linkedin", nome: "LinkedIn", cor: "2F6FE0", logo: "linkedin" },
+  { chave: "orcid", nome: "ORCID", cor: "A6CE39", logo: "orcid" },
+  { chave: "lattes", nome: "Lattes", cor: "1E53B8" },
+];
+
+function blocoContato() {
+  return CONTATO.filter((c) => HIST.contato[c.chave])
+    .map((c) => `<a href="${HIST.contato[c.chave]}"><img src="${urlBadge(c)}" alt="${c.nome}"></a>`)
     .join("\n");
 }
 
@@ -207,6 +229,8 @@ function montarReadme(loc, s, d, alvo) {
 ${img(`banner${alvo}`, `${s.nome} · ${s.papel}`, ' width="100%"')}
 
 ${chips}
+
+<p><a href="${HIST.url}${PASTA[loc]}"><b>${s.pagina.link} &rarr;</b></a></p>
 
 ${img(`interesses${alvo}`, s.interesses.map((i) => i.rotulo).join(" · "), ' width="100%"')}
 
@@ -239,10 +263,68 @@ ${blocoFerramentas(s)}
 
 ${img(`faixa-contato${alvo}`, s.faixas.contato, ' width="100%"')}
 
-<p><a href="https://www.linkedin.com/in/arthur-gaspar-197a7b265/"><img src="https://img.shields.io/badge/LinkedIn-2F6FE0?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a></p>
+<p>${blocoContato()}</p>
 
 <p><sub>${s.geradoEm} ${new Date().toISOString().slice(0, 10)}${offline ? " · fixture" : ""}</sub></p>
 `;
+}
+
+/* -------------------------------------------------------------------- página */
+
+/**
+ * Monta _site/ do zero: um index.html por idioma e só os SVGs claros.
+ *
+ * As faixas de "história" e "trajetória" não existem no README, então são
+ * desenhadas aqui direto em _site/assets. Se fossem para assets/, o verificar
+ * reprovaria por asset que nenhum README usa, e com razão.
+ */
+function montarSite(d) {
+  rmSync(SITE, { recursive: true, force: true });
+  mkdirSync(join(SITE, "assets"), { recursive: true });
+
+  for (const f of escritos) {
+    if (!f.endsWith(".dark.svg")) copyFileSync(join(ASSETS, f), join(SITE, "assets", f));
+  }
+
+  aplicarTema("claro");
+  const hoje = new Date().toISOString().slice(0, 10);
+
+  for (const loc of LOCAIS) {
+    const s = { ...STR[loc], loc };
+    const alvo = loc === "en" ? "" : `.${loc}`;
+    for (const chave of ["historia", "trajetoria"]) {
+      writeFileSync(join(SITE, "assets", `faixa-${chave}${alvo}.svg`), faixa(s.pagina[chave]), "utf8");
+    }
+
+    const raiz = PASTA[loc] ? "../" : "";
+    // O padrão de medida é o da faixa, que é o asset mais repetido na página.
+    const svg = (base, alt, extra = ' width="880" height="50"') =>
+      `<img src="${raiz}assets/${base}.svg?v=${STAMP}" alt="${alt.replace(/"/g, "&quot;")}"${extra}>`;
+
+    const categorias = d.categorias.map((c) => ({
+      chave: c.chave,
+      repos: c.repos.map((r) => ({ ...r, id: idCard(r), descricaoLocal: descDe(r, loc) })),
+    }));
+
+    const html = montarPagina({
+      loc,
+      s,
+      h: HIST[loc],
+      contato: HIST.contato,
+      d: { ...d, categorias },
+      alvo,
+      tools: TOOLS,
+      url: HIST.url,
+      ctx: { raiz, svg, caminho: PASTA, idiomas: CHIP, data: hoje },
+    });
+    mkdirSync(join(SITE, PASTA[loc]), { recursive: true });
+    writeFileSync(join(SITE, PASTA[loc], "index.html"), html, "utf8");
+  }
+
+  // Sem isto o Pages passaria o _site pelo Jekyll, que ignora pasta com _ e
+  // não tem nada a acrescentar a HTML pronto.
+  writeFileSync(join(SITE, ".nojekyll"), "");
+  console.log(`· página: ${LOCAIS.length} idiomas em _site/`);
 }
 
 /* --------------------------------------------------------------------- rodar */
@@ -283,6 +365,8 @@ async function principal() {
 
     writeFileSync(join(RAIZ, ARQUIVO[loc]), montarReadme(loc, s, d, alvo), "utf8");
   }
+
+  montarSite(d);
 
   // Um repo tirado da lista curada deixaria o card órfão em assets/.
   for (const f of readdirSync(ASSETS)) {
