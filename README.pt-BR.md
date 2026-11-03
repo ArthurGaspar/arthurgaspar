@@ -68,7 +68,7 @@
 </tr>
 </table>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/contribuicoes.pt-BR.dark.svg?v=202611031702"><img src="assets/contribuicoes.pt-BR.svg?v=202611031702" alt="1003 contribuições no último ano" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/contribuicoes.pt-BR.dark.svg?v=202611031702"><img src="assets/contribuicoes.pt-BR.svg?v=202611031702" alt="486 contribuições no último ano" width="100%"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/faixa-ferramentas.pt-BR.dark.svg?v=202611031702"><img src="assets/faixa-ferramentas.pt-BR.svg?v=202611031702" alt="Ferramentas que uso" width="100%"></picture>
 
@@ -125,4 +125,4 @@
 <a href="https://orcid.org/0009-0002-1994-5429"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID"></a>
 <a href="http://lattes.cnpq.br/9977874151104568"><img src="https://img.shields.io/badge/Lattes-1E53B8?style=flat-square" alt="Lattes"></a></p>
 
-<p><sub>Badges geradas em 2026-11-03 · fixture</sub></p>
+<p><sub>Badges geradas em 2026-11-03</sub></p>
