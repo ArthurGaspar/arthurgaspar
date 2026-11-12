@@ -5,6 +5,7 @@ deles à mão: a próxima execução sobrescreve. Edite os arquivos desta pasta.
 
 ```
 profile/strings.json    toda a prosa, nos três idiomas
+profile/historia.json   história, trajetória e estudos de caso do GitHub Pages
 profile/featured.json   quais repos aparecem, e em que ordem
 profile/tools.json      as badges de ferramenta (shields.io)
 profile/theme.mjs       cores, fonte, medida de texto
@@ -17,7 +18,12 @@ profile/verificar.mjs   confere o resultado antes de virar commit
 
 O motivo de os três idiomas saírem de um template só: enquanto cada um era um
 arquivo editado à mão, o português ficou para trás e o espanhol nunca chegou a
-existir. Agora não há caminho em que eles divirjam: só `strings.json` tem prosa.
+existir. Os textos compartilhados ficam em `strings.json`; o conteúdo exclusivo
+do GitHub Pages fica em `historia.json`, também nos três idiomas.
+
+Os estudos de caso ficam em `cases` de cada idioma em `historia.json`, com
+`repo`, `titulo`, `problema`, `abordagem` e `resultado`. A página os apresenta
+entre a história e a trajetória, com link para cada repositório.
 
 ## Dê `git pull` antes de mexer
 

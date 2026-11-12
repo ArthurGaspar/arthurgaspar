@@ -249,6 +249,34 @@
      "url": "https://github.com/ArthurGaspar/sp-transit-logistics",
      "linguagem": "TypeScript",
      "corLinguagem": "#3178c6"
+    },
+    {
+     "nome": "pokemon-md-guild-ledger",
+     "dono": "ArthurGaspar",
+     "desc": {
+      "en": "Mystery Dungeon-style team manager: roster, job board, shared storage and an auditable Poké ledger.",
+      "pt-BR": "Gerenciador de time no estilo Mystery Dungeon: elenco, missões, armazém e livro-caixa de Poké.",
+      "es": "Gestor de equipo al estilo Mystery Dungeon: plantilla, misiones, almacén y libro de Poké."
+     },
+     "descricao": "",
+     "estrelas": 0,
+     "url": "https://github.com/ArthurGaspar/pokemon-md-guild-ledger",
+     "linguagem": "Java",
+     "corLinguagem": "#b07219"
+    },
+    {
+     "nome": "blast-radius",
+     "dono": "ArthurGaspar",
+     "desc": {
+      "en": "Which of your sites each vulnerability reaches: NVD and GitHub advisories, KEV and EPSS.",
+      "pt-BR": "Mapeia quais dos seus sites cada vulnerabilidade atinge: NVD e GitHub, com KEV e EPSS.",
+      "es": "Mapea qué sitios tuyos alcanza cada vulnerabilidad: NVD y GitHub, con KEV y EPSS."
+     },
+     "descricao": "",
+     "estrelas": 0,
+     "url": "https://github.com/ArthurGaspar/blast-radius",
+     "linguagem": "C#",
+     "corLinguagem": "#178600"
     }
    ]
   },

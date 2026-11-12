@@ -119,6 +119,22 @@
             "pt-BR": "Otimizador de rotas sobre o feed ao vivo do transporte de São Paulo, com análises num site estático.",
             "es": "Optimizador de rutas sobre el feed en vivo del transporte de São Paulo, con análisis en un sitio estático."
           }
+        },
+        {
+          "repo": "pokemon-md-guild-ledger",
+          "desc": {
+            "en": "Mystery Dungeon-style team manager: roster, job board, shared storage and an auditable Poké ledger.",
+            "pt-BR": "Gerenciador de time no estilo Mystery Dungeon: elenco, missões, armazém e livro-caixa de Poké.",
+            "es": "Gestor de equipo al estilo Mystery Dungeon: plantilla, misiones, almacén y libro de Poké."
+          }
+        },
+        {
+          "repo": "blast-radius",
+          "desc": {
+            "en": "Which of your sites each vulnerability reaches: NVD and GitHub advisories, KEV and EPSS.",
+            "pt-BR": "Mapeia quais dos seus sites cada vulnerabilidade atinge: NVD e GitHub, com KEV e EPSS.",
+            "es": "Mapea qué sitios tuyos alcanza cada vulnerabilidad: NVD y GitHub, con KEV y EPSS."
+          }
         }
       ]
     },

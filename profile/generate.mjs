@@ -292,7 +292,7 @@ function montarSite(d) {
   for (const loc of LOCAIS) {
     const s = { ...STR[loc], loc };
     const alvo = loc === "en" ? "" : `.${loc}`;
-    for (const chave of ["historia", "trajetoria"]) {
+    for (const chave of ["historia", "cases", "trajetoria"]) {
       writeFileSync(join(SITE, "assets", `faixa-${chave}${alvo}.svg`), faixa(s.pagina[chave]), "utf8");
     }
 

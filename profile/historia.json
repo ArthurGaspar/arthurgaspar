@@ -16,6 +16,29 @@
   "_estrutura": "Tirado do currículo. experiencia e formacao vão do mais recente ao mais antigo; cada item tem quando, titulo, onde, texto (opcional) e pontos (os resultados, como no currículo).",
 
   "en": {
+    "cases": [
+      {
+        "repo": "e2e-detective",
+        "titulo": "When an E2E test breaks, who is to blame?",
+        "problema": "QA teams spend hours deciding whether a failing test is flaky, the environment is down, there is a real bug, or the test is outdated. I saw this firsthand while monitoring critical user journeys at Voidr.",
+        "abordagem": "I built an agent that gathers evidence from Playwright traces, classifies the cause with a model trained on labeled cases, and uses a local LLM to write the report and suggest a new selector. GitHub Actions deliberately injects failures every 3 hours, so the correct diagnosis is always known.",
+        "resultado": "98.4% accuracy across 192 failures, compared with 77.1% for manual rules; 20 out of 20 on previously unseen cases. The first model caught 0% of real bugs; three clues a person would use fixed that."
+      },
+      {
+        "repo": "sp-transit-logistics",
+        "titulo": "Fewer kilometers per delivery",
+        "problema": "At Shippify, I worked on routing for clients such as Amazon, Mercado Livre and Natura. I wanted to understand the problem beyond the company's code, using open data.",
+        "abordagem": "A pipeline using SPTrans GTFS and live GPS data (22,274 stops, 1,349 routes), a hexagonal map of transit access, and a capacity-constrained route planner that runs in the browser.",
+        "resultado": "11–29% fewer kilometers than nearest-neighbor dispatch, using the same fleet. I also showed that the official timetable does not predict where buses slow down (R² of −0.10), which is why the speed model uses GPS data."
+      },
+      {
+        "repo": "bioarcade",
+        "titulo": "Genomics you can play",
+        "problema": "Genomic data is hard to explore for people who do not code. I experienced this during my undergraduate technology research at INTERAGRO, working with over 200,000 bovine genomic records.",
+        "abordagem": "A Python pipeline that retrieves genes from Ensembl, finds Cas9 cut sites, and checks for off-target matches against an index of 5.9 million sites in the human exome, presented through four browser games.",
+        "resultado": "25 genes, 8,107 cut sites, and a test requiring identical scores from the Python and TypeScript implementations for every published guide RNA."
+      }
+    ],
     "resumo": "Full-stack software engineer with experience at two startups and in academic research at UFABC (Federal University of ABC). Built React and TypeScript systems used by companies like Amazon, Mercado Livre and Natura, AI-powered platforms, and Playwright E2E tests that guard critical journeys at Vivo and Itaú",
     "historia": [
       "I work across the whole stack, but the part I care about most is knowing that things actually have a purpose. At my internship at Shippify I built the routing and analytics screens behind roughly a thousand daily delivery routes; at Voidr I moved to the other side of the fence, writing AI-assisted services and synthetic Playwright tests that catch production failures before customers do. I have lots of personal projects, such as e2e-detective: an agent that investigates failing end-to-end tests and writes up the culprit like a case file, comes straight out of that work.",
@@ -71,6 +94,29 @@
   },
 
   "pt-BR": {
+    "cases": [
+      {
+        "repo": "e2e-detective",
+        "titulo": "Quando um teste E2E quebra, de quem é a culpa?",
+        "problema": "Times de QA perdem horas decidindo se um teste quebrado é instabilidade, ambiente fora do ar, bug real ou teste desatualizado. Vi esse problema de perto monitorando jornadas críticas na Voidr.",
+        "abordagem": "Construí um agente que coleta evidências dos traces do Playwright, classifica a causa com um modelo treinado em casos rotulados e usa um LLM local para escrever o relatório e sugerir o novo seletor. Falhas são injetadas de propósito a cada 3 horas pelo GitHub Actions, então sempre existe gabarito.",
+        "resultado": "98,4% de acurácia em 192 falhas, contra 77,1% de regras manuais; 20 de 20 em casos nunca vistos. O primeiro modelo pegava 0% dos bugs reais; três pistas que uma pessoa usaria resolveram isso."
+      },
+      {
+        "repo": "sp-transit-logistics",
+        "titulo": "Menos quilômetros por entrega",
+        "problema": "Na Shippify, trabalhei com roteirização para operações de clientes como Amazon, Mercado Livre e Natura. Quis entender o problema fora do código da empresa, com dados abertos.",
+        "abordagem": "Pipeline sobre o GTFS e o GPS ao vivo da SPTrans (22.274 paradas, 1.349 linhas), mapa de acesso ao transporte por hexágono e roteirizador capacitado que roda no navegador.",
+        "resultado": "11 a 29% menos km que o despacho por vizinho mais próximo, com a mesma frota. Também mostrei que o horário oficial não prevê onde o ônibus anda devagar (R² de −0,10), por isso o modelo de velocidade usa GPS."
+      },
+      {
+        "repo": "bioarcade",
+        "titulo": "Genômica que dá para jogar",
+        "problema": "Dados genômicos são difíceis de explorar para quem não programa, algo que vivi na iniciação tecnológica no INTERAGRO, com 200 mil+ registros genômicos de bovinos.",
+        "abordagem": "Pipeline em Python que busca genes no Ensembl, encontra sítios de corte do Cas9 e confere alvos fora do esperado num índice de 5,9 milhões de sítios do exoma humano, servido como quatro jogos no navegador.",
+        "resultado": "25 genes, 8.107 sítios de corte, e um teste que exige pontuação idêntica entre as implementações Python e TypeScript de cada guia publicado."
+      }
+    ],
     "resumo": "Engenheiro de software full-stack com experiência em duas startups e em pesquisa acadêmica na UFABC (Universidade Federal do ABC). Desenvolvi sistemas em React e TypeScript utilizados por empresas como Amazon, Mercado Livre e Natura, plataformas baseadas em inteligência artificial, além de testes E2E com Playwright que asseguram fluxos críticos na Vivo e no Itaú.",
     "historia": [
     "Trabalho em toda a pilha tecnológica (*full stack*), mas o que mais me importa é saber que as coisas têm, de fato, um propósito. Durante meu estágio na Shippify, desenvolvi as telas de roteamento e análise que sustentam cerca de mil rotas de entrega diárias; na Voidr, atuei em uma frente diferente, criando serviços com auxílio de IA e testes sintéticos (usando Playwright) capazes de detectar falhas em produção antes mesmo que os usuários as percebam. Tenho diversos projetos pessoais, como o *e2e-detective* — um agente que investiga testes *end-to-end* que falharam e elabora um relatório detalhado sobre a causa raiz, como se fosse um dossiê de investigação; esse projeto surgiu justamente a partir dessas experiências.",
@@ -126,6 +172,29 @@
   },
 
   "es": {
+    "cases": [
+      {
+        "repo": "e2e-detective",
+        "titulo": "Cuando falla una prueba E2E, ¿de quién es la culpa?",
+        "problema": "Los equipos de QA pierden horas decidiendo si una prueba falla por inestabilidad, un entorno caído, un error real o una prueba desactualizada. Vi este problema de cerca al monitorear recorridos críticos en Voidr.",
+        "abordagem": "Construí un agente que recopila evidencias de las trazas de Playwright, clasifica la causa con un modelo entrenado con casos etiquetados y usa un LLM local para redactar el informe y sugerir un nuevo selector. GitHub Actions introduce fallos deliberadamente cada 3 horas, por lo que siempre se conoce el diagnóstico correcto.",
+        "resultado": "98,4% de exactitud en 192 fallos, frente al 77,1% de las reglas manuales; 20 de 20 en casos nunca vistos. El primer modelo detectaba el 0% de los errores reales; tres pistas que usaría una persona resolvieron el problema."
+      },
+      {
+        "repo": "sp-transit-logistics",
+        "titulo": "Menos kilómetros por entrega",
+        "problema": "En Shippify, trabajé en la planificación de rutas para operaciones de clientes como Amazon, Mercado Livre y Natura. Quise entender el problema fuera del código de la empresa, con datos abiertos.",
+        "abordagem": "Un pipeline con GTFS y GPS en vivo de SPTrans (22.274 paradas, 1.349 líneas), un mapa de acceso al transporte por hexágono y un planificador de rutas con restricciones de capacidad que funciona en el navegador.",
+        "resultado": "Entre un 11 y un 29% menos de kilómetros que el despacho por vecino más cercano, con la misma flota. También mostré que el horario oficial no predice dónde los autobuses circulan despacio (R² de −0,10), por lo que el modelo de velocidad usa GPS."
+      },
+      {
+        "repo": "bioarcade",
+        "titulo": "Genómica para jugar",
+        "problema": "Los datos genómicos son difíciles de explorar para quienes no programan, algo que viví durante mi investigación de grado en desarrollo tecnológico en INTERAGRO, con más de 200.000 registros genómicos bovinos.",
+        "abordagem": "Un pipeline en Python que busca genes en Ensembl, encuentra sitios de corte de Cas9 y comprueba coincidencias fuera del objetivo en un índice de 5,9 millones de sitios del exoma humano, presentado mediante cuatro juegos en el navegador.",
+        "resultado": "25 genes, 8.107 sitios de corte y una prueba que exige puntuaciones idénticas entre las implementaciones en Python y TypeScript de cada ARN guía publicado."
+      }
+    ],
     "resumo": "Ingeniero de software full-stack con experiencia en dos startups y en investigación académica en la UFABC (Universidad Federal del ABC). Ha desarrollado sistemas con React y TypeScript utilizados por empresas como Amazon, Mercado Livre y Natura; plataformas basadas en inteligencia artificial; y pruebas E2E con Playwright que protegen flujos críticos en Vivo e Itaú.",
     "historia": [
     "Trabajo en todo el espectro tecnológico (*full stack*), pero lo que más me importa es saber que lo que desarrollo tiene un propósito real. Durante mis prácticas en Shippify, creé las interfaces de enrutamiento y análisis que sustentan cerca de mil rutas de entrega diarias. En Voidr, abordé el desarrollo desde otra perspectiva: diseñé servicios asistidos por inteligencia artificial y pruebas sintéticas con Playwright, capaces de detectar fallos en producción antes de que los usuarios los noten. Cuento con numerosos proyectos personales, como *e2e-detective* —un agente que investiga pruebas *end-to-end* fallidas y documenta la causa raíz como si fuera un informe de investigación—, el cual surgió precisamente de esa experiencia",

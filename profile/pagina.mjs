@@ -92,6 +92,18 @@ ${falados.length ? `<h3 class="grupo-tempo">${esc(p.falados)}</h3>\n<p class="fa
 </section>`
       : "";
 
+  const blocoCases = (h.cases ?? []).length
+    ? `<section aria-labelledby="cases">
+<h2 id="cases">${svg(`faixa-cases${alvo}`, p.cases)}</h2>
+${h.cases.map((c, i) => `<article class="case" aria-labelledby="case-${esc(c.repo)}">
+<p class="case-numero">${esc(p.case)} ${i + 1}</p>
+<h3 id="case-${esc(c.repo)}">${esc(c.titulo)}</h3>
+<a class="case-repo" href="https://github.com/ArthurGaspar/${esc(c.repo)}">${esc(c.repo)} &rarr;</a>
+${["problema", "abordagem", "resultado"].map((chave) => `<p><strong>${esc(p[chave])}.</strong> ${esc(c[chave])}</p>`).join("\n")}
+</article>`).join("\n")}
+</section>`
+    : "";
+
   const categorias = d.categorias
     .filter((c) => c.repos.length)
     .map((c) => {
@@ -193,6 +205,13 @@ h3 { margin: 0; }
 
 .prosa p { margin: 0 0 1em; max-width: 46em; text-wrap: pretty; }
 
+.case { margin: 0 0 24px; padding: 24px; border: 1px solid var(--linha); border-radius: 16px; background: var(--papel); }
+.case-numero { margin: 0 0 8px; font: 600 13px/1.4 ${MONO}; color: var(--ambar); }
+.case h3 { font-size: 23px; line-height: 1.35; text-wrap: pretty; }
+.case-repo { display: inline-block; margin: 8px 0 12px; font: 14px/1.5 ${MONO}; overflow-wrap: anywhere; }
+.case > p:not(.case-numero) { margin: 0 0 12px; max-width: 46em; text-wrap: pretty; }
+.case > p:last-child { margin-bottom: 0; }
+
 .linha-do-tempo { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; }
 .linha-do-tempo::before {
   content: ""; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--linha);
@@ -238,6 +257,8 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--linha)
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .resumo { font-size: 18px; }
+  .case { padding: 18px; }
+  .case h3 { font-size: 21px; }
   .numeros { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .cards a { transition: none; } }
@@ -257,6 +278,8 @@ ${acoes}
 </header>
 
 ${blocoHistoria}
+
+${blocoCases}
 
 ${blocoTrajetoria}
 

@@ -1,8 +1,8 @@
 {
   "en": {
     "nome": "Arthur Gaspar",
-    "papel": "Full-stack developer · Software engineer in test",
-    "lugar": "São Paulo, Brazil · UFABC",
+    "papel": "Full Stack Software Engineer · LLM & AI integrations",
+    "lugar": "São Caetano do Sul, SP, Brazil · UFABC",
     "interesses": [
       {
         "icone": "software",
@@ -82,6 +82,11 @@
       "titulo": "Arthur Gaspar · Full-stack developer and software engineer in test",
       "link": "Read my story",
       "historia": "My story",
+      "cases": "Case studies",
+      "case": "Case",
+      "problema": "Problem",
+      "abordagem": "Approach",
+      "resultado": "Result",
       "trajetoria": "Path",
       "curriculo": "Résumé (PDF)",
       "email": "Email",
@@ -94,8 +99,8 @@
   },
   "pt-BR": {
     "nome": "Arthur Gaspar",
-    "papel": "Desenvolvedor full-stack · Engenheiro de software em testes",
-    "lugar": "São Paulo, Brasil · UFABC",
+    "papel": "Engenheiro de Software Full Stack · Integrações com LLMs e IA",
+    "lugar": "São Caetano do Sul, SP, Brasil · UFABC",
     "interesses": [
       {
         "icone": "software",
@@ -175,6 +180,11 @@
       "titulo": "Arthur Gaspar · Desenvolvedor full-stack e engenheiro de software em testes",
       "link": "Conheça minha história",
       "historia": "Minha história",
+      "cases": "Estudos de caso",
+      "case": "Caso",
+      "problema": "Problema",
+      "abordagem": "Abordagem",
+      "resultado": "Resultado",
       "trajetoria": "Trajetória",
       "curriculo": "Currículo (PDF)",
       "email": "E-mail",
@@ -187,8 +197,8 @@
   },
   "es": {
     "nome": "Arthur Gaspar",
-    "papel": "Desarrollador full-stack · Ingeniero de software en pruebas",
-    "lugar": "São Paulo, Brasil · UFABC",
+    "papel": "Ingeniero de software de pila completa · Integraciones de LLM y AI",
+    "lugar": "São Caetano do Sul, SP, Brasil · UFABC",
     "interesses": [
       {
         "icone": "software",
@@ -268,6 +278,11 @@
       "titulo": "Arthur Gaspar · Desarrollador full-stack e ingeniero de software en pruebas",
       "link": "Conoce mi historia",
       "historia": "Mi historia",
+      "cases": "Casos de estudio",
+      "case": "Caso",
+      "problema": "Problema",
+      "abordagem": "Enfoque",
+      "resultado": "Resultado",
       "trajetoria": "Trayectoria",
       "curriculo": "Currículum (PDF)",
       "email": "Correo",
