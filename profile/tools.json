@@ -1,14 +1,15 @@
 {
-  "_nota": "Estas continuam sendo badges do shields.io, por escolha: fazer uma SVG por ferramenta à mão seria trabalho demais para pouco retorno. As badges que mostram DADO (linguagem mais usada, contribuição, sequência) são geradas aqui e não dependem de ninguém.",
+  "_nota": "Estas continuam sendo badges do shields.io, por escolha: fazer uma SVG por ferramenta à mão seria trabalho demais para pouco retorno. As badges que mostram DADO (linguagem mais usada, contribuição, sequência) são geradas aqui e não dependem de ninguém. O título de cada grupo vem de `grupos` no strings.json; grupo novo precisa da chave lá, nos três idiomas. O logo é o slug do simple-icons na versão que o shields.io usa: AWS, por exemplo, não existe mais lá e vai sem logo.",
   "grupos": [
     {
       "chave": "linguagens",
       "badges": [
         { "nome": "TypeScript", "cor": "3178C6", "logo": "typescript" },
         { "nome": "JavaScript", "cor": "F7DF1E", "logo": "javascript", "logoCor": "black" },
-        { "nome": "Python", "cor": "3776AB", "logo": "python" },
         { "nome": "Java", "cor": "ED8B00", "logo": "openjdk" },
         { "nome": "C#", "cor": "512BD4", "logo": "c-sharp" },
+        { "nome": "Python", "cor": "3776AB", "logo": "python" },
+        { "nome": "SQL", "cor": "336791", "logo": "postgresql" },
         { "nome": "C++", "cor": "00599C", "logo": "c++" },
         { "nome": "C", "cor": "A8B9CC", "logo": "c", "logoCor": "black" },
         { "nome": "Lua", "cor": "2C2D72", "logo": "lua" },
@@ -21,25 +22,78 @@
       "chave": "frameworks",
       "badges": [
         { "nome": "React", "cor": "61DAFB", "logo": "react", "logoCor": "black" },
+        { "nome": "Redux", "cor": "764ABC", "logo": "redux" },
         { "nome": "Next.js", "cor": "1F2328", "logo": "next.js" },
         { "nome": "Node.js", "cor": "5FA04E", "logo": "node.js" },
+        { "nome": "Spring Boot", "cor": "6DB33F", "logo": "springboot" },
+        { "nome": "Hibernate", "cor": "59666C", "logo": "hibernate" },
+        { "nome": "ASP.NET Core", "cor": "512BD4", "logo": ".net" },
+        { "nome": "Entity Framework Core", "cor": "512BD4", "logo": ".net" },
+        { "nome": "FastAPI", "cor": "009688", "logo": "fastapi" },
         { "nome": "Vite", "cor": "646CFF", "logo": "vite" },
         { "nome": "Three.js", "cor": "1F2328", "logo": "three.js" },
-        { "nome": "Electron", "cor": "47848F", "logo": "electron" },
-        { "nome": "Playwright", "cor": "2EAD33", "logo": "playwright" },
-        { "nome": "Pytest", "cor": "0A9EDC", "logo": "pytest" },
-        { "nome": "Ollama", "cor": "1F2328", "logo": "ollama" },
+        { "nome": "Electron", "cor": "47848F", "logo": "electron" }
+      ]
+    },
+    {
+      "chave": "dados",
+      "badges": [
+        { "nome": "PostgreSQL", "cor": "4169E1", "logo": "postgresql" },
         { "nome": "MySQL", "cor": "4479A1", "logo": "mysql" },
+        { "nome": "MongoDB", "cor": "47A248", "logo": "mongodb" },
         { "nome": "MariaDB", "cor": "003545", "logo": "mariadb" },
+        { "nome": "Flyway", "cor": "CC0200", "logo": "flyway" },
+        { "nome": "AWS", "cor": "232F3E" },
+        { "nome": "Docker", "cor": "2496ED", "logo": "docker" },
         { "nome": "Git", "cor": "F05032", "logo": "git" },
         { "nome": "GitHub Actions", "cor": "2088FF", "logo": "github-actions" },
-        { "nome": ".NET", "cor": "512BD4", "logo": ".net" },
+        { "nome": "GitLab", "cor": "FC6D26", "logo": "gitlab" },
+        { "nome": "Jira", "cor": "0052CC", "logo": "jira" },
+        { "nome": "JWT", "cor": "1F2328", "logo": "jsonwebtokens" }
+      ]
+    },
+    {
+      "chave": "testes",
+      "badges": [
+        { "nome": "Playwright", "cor": "2EAD33", "logo": "playwright" },
+        { "nome": "JUnit 5", "cor": "25A162", "logo": "junit5" },
+        { "nome": "xUnit", "cor": "512BD4", "logo": ".net" },
+        { "nome": "Testcontainers", "cor": "291A3F" },
+        { "nome": "Pytest", "cor": "0A9EDC", "logo": "pytest" }
+      ]
+    },
+    {
+      "chave": "ia",
+      "badges": [
+        { "nome": "AI agents", "cor": "1F2328" },
+        { "nome": "Function calling", "cor": "1F2328" },
+        { "nome": "Tool use", "cor": "1F2328" },
+        { "nome": "MCP", "cor": "1F2328", "logo": "modelcontextprotocol" },
+        { "nome": "LiteLLM", "cor": "1F2328" },
+        { "nome": "Ollama", "cor": "1F2328", "logo": "ollama" },
+        { "nome": "Machine Learning", "cor": "1F2328" }
+      ]
+    },
+    {
+      "chave": "criativas",
+      "badges": [
         { "nome": "Unity", "cor": "1F2328", "logo": "unity" },
         { "nome": "Blender", "cor": "E87D0D", "logo": "blender" },
         { "nome": "LaTeX", "cor": "008080", "logo": "latex" },
         { "nome": "Photoshop", "cor": "31A8FF", "logo": "adobe-photoshop" },
         { "nome": "FL Studio", "cor": "F89A14", "logo": "fl-studio" },
         { "nome": "Excel", "cor": "217346", "logo": "microsoft-excel" }
+      ]
+    },
+    {
+      "chave": "praticas",
+      "badges": [
+        { "nome": "LGPD", "cor": "009C3B" },
+        { "nome": "TDD", "cor": "59666C" },
+        { "nome": "CI/CD", "cor": "59666C" },
+        { "nome": "Code Review", "cor": "59666C" },
+        { "nome": "Clean Code", "cor": "59666C" },
+        { "nome": "Scrum / Kanban", "cor": "59666C" }
       ]
     },
     {

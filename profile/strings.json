@@ -67,7 +67,12 @@
     "geradoEm": "Badges generated on",
     "grupos": {
       "linguagens": "Languages",
-      "frameworks": "Frameworks · Databases · Tools",
+      "frameworks": "Frameworks and libraries",
+      "dados": "Databases · Cloud · DevOps",
+      "testes": "Testing",
+      "ia": "AI and LLMs",
+      "criativas": "Creative and productivity",
+      "praticas": "Practices",
       "aprendendo": "Learning next"
     },
     "categorias": {
@@ -79,7 +84,7 @@
       "misc": "Misc"
     },
     "pagina": {
-      "titulo": "Arthur Gaspar · Full-stack developer and software engineer in test",
+      "titulo": "Arthur Gaspar · Full Stack Software Engineer · LLM & AI integrations",
       "link": "Read my story",
       "historia": "My story",
       "cases": "Case studies",
@@ -165,7 +170,12 @@
     "geradoEm": "Badges geradas em",
     "grupos": {
       "linguagens": "Linguagens",
-      "frameworks": "Frameworks · Bancos de dados · Ferramentas",
+      "frameworks": "Frameworks e bibliotecas",
+      "dados": "Bancos de dados · Cloud · DevOps",
+      "testes": "Testes",
+      "ia": "IA e LLMs",
+      "criativas": "Criação e produtividade",
+      "praticas": "Práticas",
       "aprendendo": "Quero aprender"
     },
     "categorias": {
@@ -177,7 +187,7 @@
       "misc": "Diversos"
     },
     "pagina": {
-      "titulo": "Arthur Gaspar · Desenvolvedor full-stack e engenheiro de software em testes",
+      "titulo": "Arthur Gaspar · Engenheiro de Software Full Stack · Integrações com LLMs e IA",
       "link": "Conheça minha história",
       "historia": "Minha história",
       "cases": "Estudos de caso",
@@ -197,7 +207,7 @@
   },
   "es": {
     "nome": "Arthur Gaspar",
-    "papel": "Ingeniero de software de pila completa · Integraciones de LLM y AI",
+    "papel": "Ingeniero de Software Full Stack · Integraciones con LLMs e IA",
     "lugar": "São Caetano do Sul, SP, Brasil · UFABC",
     "interesses": [
       {
@@ -263,7 +273,12 @@
     "geradoEm": "Badges generadas el",
     "grupos": {
       "linguagens": "Lenguajes",
-      "frameworks": "Frameworks · Bases de datos · Herramientas",
+      "frameworks": "Frameworks y bibliotecas",
+      "dados": "Bases de datos · Cloud · DevOps",
+      "testes": "Pruebas",
+      "ia": "IA y LLMs",
+      "criativas": "Creación y productividad",
+      "praticas": "Prácticas",
       "aprendendo": "Quiero aprender"
     },
     "categorias": {
@@ -275,7 +290,7 @@
       "misc": "Varios"
     },
     "pagina": {
-      "titulo": "Arthur Gaspar · Desarrollador full-stack e ingeniero de software en pruebas",
+      "titulo": "Arthur Gaspar · Ingeniero de Software Full Stack · Integraciones con LLMs e IA",
       "link": "Conoce mi historia",
       "historia": "Mi historia",
       "cases": "Casos de estudio",

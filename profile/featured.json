@@ -123,17 +123,17 @@
         {
           "repo": "pokemon-md-guild-ledger",
           "desc": {
-            "en": "Mystery Dungeon-style team manager: roster, job board, shared storage and an auditable Poké ledger.",
-            "pt-BR": "Gerenciador de time no estilo Mystery Dungeon: elenco, missões, armazém e livro-caixa de Poké.",
-            "es": "Gestor de equipo al estilo Mystery Dungeon: plantilla, misiones, almacén y libro de Poké."
+            "en": "Spring Boot (Java 21) API with an auditable, concurrency-safe ledger, for a Mystery Dungeon-style guild.",
+            "pt-BR": "API Spring Boot (Java 21) com livro-razão auditável e à prova de concorrência, para uma guilda Mystery Dungeon.",
+            "es": "API Spring Boot (Java 21) con libro mayor auditable y a prueba de concurrencia, para un gremio Mystery Dungeon."
           }
         },
         {
           "repo": "blast-radius",
           "desc": {
-            "en": "Which of your sites each vulnerability reaches: NVD and GitHub advisories, KEV and EPSS.",
-            "pt-BR": "Mapeia quais dos seus sites cada vulnerabilidade atinge: NVD e GitHub, com KEV e EPSS.",
-            "es": "Mapea qué sitios tuyos alcanza cada vulnerabilidad: NVD y GitHub, con KEV y EPSS."
+            "en": "ASP.NET Core API that maps which of your sites each CVE reaches: NVD and GitHub advisories, KEV and EPSS.",
+            "pt-BR": "API ASP.NET Core que mapeia quais dos seus sites cada CVE atinge: NVD e GitHub, com KEV e EPSS.",
+            "es": "API ASP.NET Core que mapea qué sitios tuyos alcanza cada CVE: NVD y GitHub, con KEV y EPSS."
           }
         }
       ]
