@@ -7,6 +7,14 @@
       "chave": "ia",
       "repos": [
         {
+          "repo": "uefiabece/uefi-rag",
+          "desc": {
+            "en": "RAG over UFABC syllabi, course plans and past exams: pgvector hybrid search, cited streaming answers and automated evaluation.",
+            "pt-BR": "RAG sobre ementas, PPCs e provas da UFABC: busca híbrida com pgvector, respostas citadas em streaming e avaliação automatizada.",
+            "es": "RAG sobre programas, planes de curso y exámenes de la UFABC: búsqueda híbrida con pgvector, respuestas citadas en streaming y evaluación automatizada."
+          }
+        },
+        {
           "repo": "pv-bench",
           "desc": {
             "en": "Benchmark for Brazilian Portuguese comprehension in LLMs: 64 hand-written items, objective grading.",
