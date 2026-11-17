@@ -53,7 +53,7 @@
       cta: "Check it out",
       fechar: "Close ad",
       porque: "Why this ad?",
-      explica: "A house ad: another project by Arthur Gaspar, in the same category as this one. No cookies, no tracking.",
+      explica: "A house ad: another project by the same author, in the same category as this one. No cookies, no tracking.",
       dispensar: "No thanks",
     },
     "pt-BR": {
@@ -61,7 +61,7 @@
       cta: "Conhecer",
       fechar: "Fechar anúncio",
       porque: "Por que este anúncio?",
-      explica: "Anúncio da casa: outro projeto de Arthur Gaspar, da mesma categoria deste. Sem cookies, sem rastreamento.",
+      explica: "Anúncio da casa: outro projeto do mesmo autor, da mesma categoria deste. Sem cookies, sem rastreamento.",
       dispensar: "Agora não",
     },
     es: {
@@ -69,7 +69,7 @@
       cta: "Conocer",
       fechar: "Cerrar anuncio",
       porque: "¿Por qué este anuncio?",
-      explica: "Anuncio de la casa: otro proyecto de Arthur Gaspar, de la misma categoría que este. Sin cookies, sin rastreo.",
+      explica: "Anuncio de la casa: otro proyecto del mismo autor, de la misma categoría que este. Sin cookies, sin rastreo.",
       dispensar: "Ahora no",
     },
   }[loc];
