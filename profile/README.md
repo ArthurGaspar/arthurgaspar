@@ -14,6 +14,8 @@ profile/render.mjs      os desenhos
 profile/github.mjs      as consultas à API
 profile/generate.mjs    junta tudo e escreve os READMEs
 profile/verificar.mjs   confere o resultado antes de virar commit
+profile/anuncios/       os anúncios que os sites do GitHub Pages exibem uns dos outros
+profile/anuncios.mjs    publica os anúncios em _site/ads/
 ```
 
 O motivo de os três idiomas saírem de um template só: enquanto cada um era um
@@ -104,6 +106,31 @@ Saíram do validador de paleta, não do olho:
 linguagens. Com byte cru, a primeira rodada real devolveu **TeX 37,8%** e
 **TypeScript 1,5%**: uma tese em LaTeX e pastas de HTML enterraram todo o resto.
 Byte mede tamanho de arquivo, não ofício.
+
+## Os anúncios
+
+Os sites do GitHub Pages anunciam uns aos outros, com banner fixo no rodapé, card
+lateral e modal. Cada site tem uma linha só no `index.html`:
+
+```html
+<script src="https://arthurgaspar.github.io/arthurgaspar/ads/ads.js" data-site="bioarcade" defer></script>
+```
+
+O resto mora aqui. `anuncios/inventario.json` diz as categorias (um site só
+anuncia projetos da própria), quem exibe anúncio (`anuncia: false` só é
+anunciado), a chamada nos três idiomas e o criativo. A descrição vem de
+`featured.json`. O `generate.mjs` embute tudo no `anuncios/ads.js` e publica em
+`_site/ads/`, então mudar um anúncio é só editar o inventário e dar push: nenhum
+site precisa ser publicado de novo.
+
+- Criativo novo: um 16:9 em `anuncios/img/` (640x360, JPEG). Sem `img`, o
+  anúncio sai tipográfico na `cor` do projeto.
+- O modal sai uma vez por sessão, por site, depois de `atrasoModalMs` ou de a
+  pessoa rolar `scrollModal` da página. Banner e card fechados somem pelo resto
+  da sessão.
+- Nada aparece em `localhost` nem para teste automatizado (`navigator.webdriver`).
+  `?ads` força tudo na hora, ignorando a frequência; `?noads` esconde.
+- `"ativo": false` no inventário desliga todos os sites de uma vez.
 
 ## Limites conhecidos
 

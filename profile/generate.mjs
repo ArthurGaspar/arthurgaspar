@@ -19,6 +19,7 @@ import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cab
 import { pegarToken, buscarLinguagens, buscarContribuicoes, buscarRepos } from "./github.mjs";
 import { aplicarTema } from "./theme.mjs";
 import { montarPagina, urlBadge } from "./pagina.mjs";
+import { montarAnuncios } from "./anuncios.mjs";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const RAIZ = join(AQUI, "..");
@@ -324,6 +325,8 @@ function montarSite(d) {
   // Sem isto o Pages passaria o _site pelo Jekyll, que ignora pasta com _ e
   // não tem nada a acrescentar a HTML pronto.
   writeFileSync(join(SITE, ".nojekyll"), "");
+  // Os anúncios que os outros sites do Pages carregam daqui. Ver anuncios.mjs.
+  montarAnuncios(SITE, CFG);
   console.log(`· página: ${LOCAIS.length} idiomas em _site/`);
 }
 

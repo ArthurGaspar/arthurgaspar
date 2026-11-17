@@ -86,6 +86,20 @@ for (const p of PAGINAS) {
   }
 }
 
+/*
+ * Os anúncios. Outros sites carregam este arquivo de fora, então um ads.js
+ * sem dados ou com criativo faltando quebraria todos eles de uma vez.
+ */
+const ADS = join(SITE, "ads", "ads.js");
+if (!existsSync(ADS)) reprovar("_site/ads/ads.js: não foi gerado");
+else {
+  const ads = readFileSync(ADS, "utf8");
+  if (ads.includes("/*__DADOS__*/")) reprovar("_site/ads/ads.js: o inventário não foi embutido");
+  for (const m of ads.matchAll(/"img":"([^"]+)"/g)) {
+    if (!existsSync(join(SITE, "ads", "img", m[1]))) reprovar(`_site/ads/ads.js: usa img/${m[1]}, que não foi copiada`);
+  }
+}
+
 if (falhas.length) {
   console.error(`\n${falhas.length} problema(s):`);
   for (const f of falhas) console.error(`  - ${f}`);

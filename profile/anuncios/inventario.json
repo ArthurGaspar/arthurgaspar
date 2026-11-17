@@ -1,0 +1,139 @@
+{
+  "_leia": "Inventário dos anúncios que os sites do GitHub Pages exibem uns dos outros. O generate.mjs junta isto com as descrições de featured.json e publica em _site/ads/ads.js. Cada site inclui uma linha só: <script src=\"https://arthurgaspar.github.io/arthurgaspar/ads/ads.js\" data-site=\"<id>\" defer></script>. Mudou algo aqui, o próximo deploy do perfil já vale para todos, sem publicar os sites de novo.",
+
+  "_ativo": "false desliga todos os anúncios de uma vez, sem tirar o script de nenhum site.",
+  "ativo": true,
+
+  "_categorias": "Um site só anuncia projetos da própria categoria, e nunca a si mesmo.",
+  "categorias": {
+    "educacional": ["uefi-rag", "ontology-app-public"],
+    "curriculo": ["pv-bench", "e2e-detective", "bioarcade", "sp-transit-logistics", "blast-radius"],
+    "criativos": ["tft-meta-pipeline", "pokemon-md-guild-ledger"]
+  },
+
+  "_projetos": "repo: o mesmo texto de featured.json, de onde vem a descrição. anuncia: false faz o site só ser anunciado, nunca exibir anúncio (o script nem desenha nada). url: o site, ou o repo enquanto não houver GitHub Pages. img: um 16:9 em anuncios/img/; sem img, o criativo sai tipográfico na cor do projeto. chamada: o título do anúncio, nos três idiomas.",
+  "projetos": {
+    "uefi-rag": {
+      "repo": "uefiabece/uefi-rag",
+      "nome": "Acervo UFABC",
+      "anuncia": true,
+      "url": "https://github.com/uefiabece/uefi-rag",
+      "cor": "#1f5e8c",
+      "chamada": {
+        "en": "Ask UFABC's syllabi, and get the source cited",
+        "pt-BR": "Pergunte às ementas da UFABC, com a fonte citada",
+        "es": "Pregúntale a los programas de la UFABC, con la fuente citada"
+      }
+    },
+    "ontology-app-public": {
+      "repo": "uefiabece/ontology-app-public",
+      "nome": "Ontology",
+      "anuncia": true,
+      "url": "https://github.com/uefiabece/ontology-app-public",
+      "cor": "#5b3f8c",
+      "chamada": {
+        "en": "An AI that answers with questions",
+        "pt-BR": "Uma IA que responde com perguntas",
+        "es": "Una IA que responde con preguntas"
+      }
+    },
+    "pv-bench": {
+      "repo": "pv-bench",
+      "nome": "Recado bench",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/pv-bench/",
+      "img": "pv-bench.jpg",
+      "cor": "#306447",
+      "chamada": {
+        "en": "Did the model really understand the message?",
+        "pt-BR": "O modelo entendeu o recado?",
+        "es": "¿El modelo entendió el mensaje?"
+      }
+    },
+    "e2e-detective": {
+      "repo": "e2e-detective",
+      "nome": "Case Files",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/e2e-detective/",
+      "img": "e2e-detective.jpg",
+      "cor": "#b8862b",
+      "chamada": {
+        "en": "Your test failed. Open the case file.",
+        "pt-BR": "Seu teste falhou. Abra o inquérito.",
+        "es": "Tu prueba falló. Abre el expediente."
+      }
+    },
+    "bioarcade": {
+      "repo": "bioarcade",
+      "nome": "BioArcade",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/bioarcade/",
+      "img": "bioarcade.jpg",
+      "cor": "#2f7d6b",
+      "chamada": {
+        "en": "Hunt CRISPR sites in real human DNA",
+        "pt-BR": "Cace sítios de CRISPR em DNA humano de verdade",
+        "es": "Caza sitios de CRISPR en ADN humano real"
+      }
+    },
+    "sp-transit-logistics": {
+      "repo": "sp-transit-logistics",
+      "nome": "SP Transit Logistics",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/sp-transit-logistics/",
+      "img": "sp-transit-logistics.jpg",
+      "cor": "#ad3c1b",
+      "chamada": {
+        "en": "Plan deliveries on São Paulo's live transit",
+        "pt-BR": "Planeje entregas sobre o transporte de SP ao vivo",
+        "es": "Planifica entregas sobre el transporte de São Paulo en vivo"
+      }
+    },
+    "blast-radius": {
+      "repo": "blast-radius",
+      "nome": "Blast Radius",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/blast-radius/",
+      "img": "blast-radius.jpg",
+      "cor": "#0e3b36",
+      "chamada": {
+        "en": "Which of your sites does this CVE reach?",
+        "pt-BR": "Quais dos seus sites essa CVE atinge?",
+        "es": "¿Qué sitios tuyos alcanza esta CVE?"
+      }
+    },
+    "tft-meta-pipeline": {
+      "repo": "tft-meta-pipeline",
+      "nome": "TFT Meta Pipeline",
+      "anuncia": true,
+      "url": "https://arthurgaspar.github.io/tft-meta-pipeline/",
+      "img": "tft-meta-pipeline.jpg",
+      "cor": "#4b3590",
+      "chamada": {
+        "en": "Scout the meta, then build a board to fight with",
+        "pt-BR": "Estude o meta e monte um board para lutar",
+        "es": "Estudia el meta y arma un tablero para pelear"
+      }
+    },
+    "pokemon-md-guild-ledger": {
+      "repo": "pokemon-md-guild-ledger",
+      "nome": "Guild Ledger",
+      "anuncia": false,
+      "url": "https://arthurgaspar.github.io/pokemon-md-guild-ledger/",
+      "img": "pokemon-md-guild-ledger.jpg",
+      "cor": "#e3350d",
+      "chamada": {
+        "en": "Every Poké your guild spends, on the ledger",
+        "pt-BR": "Cada Poké da sua guilda, no livro-razão",
+        "es": "Cada Poké de tu gremio, en el libro mayor"
+      }
+    }
+  },
+
+  "_frequencia": "atrasoModalMs: quanto esperar antes do modal; ele também abre antes, se a pessoa rolar scrollModal da página. O modal sai uma vez por sessão do navegador, por site. Banner e card, depois de fechados, somem pelo resto da sessão naquele site.",
+  "frequencia": {
+    "atrasoModalMs": 8000,
+    "scrollModal": 0.4,
+    "atrasoCardMs": 3000
+  }
+}
