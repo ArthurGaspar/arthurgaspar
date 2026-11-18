@@ -11,7 +11,7 @@
 <text x="20" y="35" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">TypeScript</text>
 <path d="M92.40000000000002 25 H362.0 A4 4 0 0 1 366.0 29 V35 A4 4 0 0 1 362.0 40 H92.40000000000002 Z" fill="#17398C"/>
 <text x="410" y="36.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">27.9%</text><text x="20" y="60" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">HTML</text>
-<path d="M92.40000000000002 50 H287.1 A4 4 0 0 1 291.1 54 V60 A4 4 0 0 1 287.1 65 H92.40000000000002 Z" fill="#1E53B8"/>
+<path d="M92.40000000000002 50 H287.2 A4 4 0 0 1 291.2 54 V60 A4 4 0 0 1 287.2 65 H92.40000000000002 Z" fill="#1E53B8"/>
 <text x="410" y="61.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">20.3%</text><text x="20" y="85" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">JavaScript</text>
 <path d="M92.40000000000002 75 H280.8 A4 4 0 0 1 284.8 79 V85 A4 4 0 0 1 280.8 90 H92.40000000000002 Z" fill="#2F6FE0"/>
 <text x="410" y="86.5" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#54607A" text-anchor="end">19.6%</text><text x="20" y="110" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#16203A">Python</text>
