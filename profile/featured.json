@@ -113,6 +113,14 @@
       "chave": "habilidades",
       "repos": [
         {
+          "repo": "uefiabece/uefi-matricula",
+          "desc": {
+            "en": "UFABC enrollment built for the rush: virtual queue, priority allocation, Kafka saga with outbox, offline QR receipts.",
+            "pt-BR": "Matrícula da UFABC feita para o pico: fila virtual, deferimento por prioridade, saga em Kafka com outbox, QR offline.",
+            "es": "Matrícula de la UFABC hecha para el pico: fila virtual, asignación por prioridad, saga en Kafka con outbox, QR offline."
+          }
+        },
+        {
           "repo": "tft-meta-pipeline",
           "desc": {
             "en": "Serverless ETL pipeline for Teamfight Tactics meta data, simulating AWS services from scratch.",

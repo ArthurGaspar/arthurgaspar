@@ -223,6 +223,20 @@
    "chave": "habilidades",
    "repos": [
     {
+     "nome": "uefi-matricula",
+     "dono": "uefiabece",
+     "desc": {
+      "en": "UFABC enrollment built for the rush: virtual queue, priority allocation, Kafka saga with outbox, offline QR receipts.",
+      "pt-BR": "Matrícula da UFABC feita para o pico: fila virtual, deferimento por prioridade, saga em Kafka com outbox, QR offline.",
+      "es": "Matrícula de la UFABC hecha para el pico: fila virtual, asignación por prioridad, saga en Kafka con outbox, QR offline."
+     },
+     "descricao": "",
+     "estrelas": 0,
+     "url": "https://github.com/uefiabece/uefi-matricula",
+     "linguagem": "Java",
+     "corLinguagem": "#b07219"
+    },
+    {
      "nome": "tft-meta-pipeline",
      "dono": "ArthurGaspar",
      "desc": {
