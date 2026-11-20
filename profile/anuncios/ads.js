@@ -261,12 +261,20 @@
         </div>
       </aside>`);
     raiz.appendChild(el);
-    const medir = () => raiz.style.setProperty("--banner", `${el.offsetHeight}px`);
+    // A altura também sai no <html> como --ads-banner: site de tela fixa (100vh,
+    // sem rolagem) não tem como descer o conteúdo por baixo do banner, então ele
+    // desconta essa variável da própria altura.
+    const pagina = document.documentElement.style;
+    const medir = () => {
+      raiz.style.setProperty("--banner", `${el.offsetHeight}px`);
+      pagina.setProperty("--ads-banner", `${el.offsetHeight}px`);
+    };
     medir();
     addEventListener("resize", medir);
     remover.banner = () => {
       el.remove();
       raiz.style.setProperty("--banner", "0px");
+      pagina.setProperty("--ads-banner", "0px");
       removeEventListener("resize", medir);
       marcar("banner");
     };
