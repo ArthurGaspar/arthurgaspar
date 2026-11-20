@@ -15,9 +15,9 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync, rmSync, copyFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cabecalhoCategoria, chipIdioma, faixa } from "./render.mjs";
+import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cabecalhoCategoria, chipIdioma, faixa, painelEcossistema, chipServidor } from "./render.mjs";
 import { pegarToken, buscarLinguagens, buscarContribuicoes, buscarRepos } from "./github.mjs";
-import { aplicarTema } from "./theme.mjs";
+import { aplicarTema, esc } from "./theme.mjs";
 import { montarPagina, urlBadge } from "./pagina.mjs";
 import { montarAnuncios } from "./anuncios.mjs";
 
@@ -92,11 +92,57 @@ function dataCurta(iso, s, loc) {
 
 /* --------------------------------------------------------------------- dados */
 
+/**
+ * Monta a vitrine a partir do featured.json, com `buscar` resolvendo cada lista
+ * de repos. Os servidores do ecossistema guardam o nome do curso e se são porta
+ * de entrada, que não vêm do GitHub.
+ */
+async function montarCategorias(buscar) {
+  const categorias = [];
+  for (const c of CFG.categorias) {
+    const repos = await buscar(c.repos);
+    console.log(`  ${c.chave}: ${repos.length} de ${c.repos.length}`);
+    const cat = { chave: c.chave, repos };
+
+    if (c.ecossistema) {
+      cat.ecossistema = { grupos: [] };
+      for (const g of c.ecossistema.grupos) {
+        const achados = await buscar(g.repos);
+        const porNome = new Map(g.repos.map((item) => [item.repo.split("/").pop(), item]));
+        cat.ecossistema.grupos.push({
+          chave: g.chave,
+          repos: achados.map((r) => ({ ...r, curso: porNome.get(r.nome)?.curso ?? null, porta: !!porNome.get(r.nome)?.porta })),
+        });
+        console.log(`    ${g.chave}: ${achados.length} de ${g.repos.length}`);
+      }
+    }
+    categorias.push(cat);
+  }
+  return categorias;
+}
+
+/**
+ * No fixture os repos saem do fixture.json quando ele tem o repo, e do próprio
+ * featured.json quando não tem. Assim repo novo na vitrine aparece no preview
+ * sem precisar escrever fixture para ele.
+ */
+function reposFixture(f) {
+  const conhecidos = new Map(f.categorias.flatMap((c) => c.repos).map((r) => [r.nome, r]));
+  return async (itens) =>
+    itens.map((item) => {
+      const alvo = typeof item === "string" ? { repo: item } : item;
+      const [dono, nome] = alvo.repo.includes("/") ? alvo.repo.split("/") : [CFG.usuario, alvo.repo];
+      const r = conhecidos.get(nome) ?? { nome, dono, descricao: "", estrelas: 0, url: `https://github.com/${dono}/${nome}`, linguagem: "Python", corLinguagem: "#3572A5" };
+      return { ...r, desc: alvo.desc ?? r.desc ?? null };
+    });
+}
+
 async function colher() {
   if (offline) {
     console.log("· modo fixture: nenhuma chamada de rede");
     const f = ler("fixture.json");
-    return { ...f, escopo: f.escopo ?? "privado" };
+    const categorias = await montarCategorias(reposFixture(f));
+    return { ...f, categorias, escopo: f.escopo ?? "privado" };
   }
 
   const { token, escopo } = pegarToken();
@@ -115,12 +161,7 @@ async function colher() {
   console.log(`  ${dias.length} dias de histórico`);
 
   console.log("· repos da vitrine");
-  const categorias = [];
-  for (const c of CFG.categorias) {
-    const repos = await buscarRepos(login, c.repos, token);
-    console.log(`  ${c.chave}: ${repos.length} de ${c.repos.length}`);
-    categorias.push({ chave: c.chave, repos });
-  }
+  const categorias = await montarCategorias((itens) => buscarRepos(login, itens, token));
 
   return { escopo, langs, dias, categorias };
 }
@@ -179,13 +220,67 @@ function blocoCategorias(categorias, s, loc, alvo) {
         })
         .join("\n");
       const titulo = s.categorias[c.chave] ?? c.chave;
-      return `${img(`cat-${c.chave}${alvo}`, `${titulo} (${c.repos.length})`, ' height="44"')}
+      const resumo = c.ecossistema ? `\n<a href="${urlEcossistema(c)}">${img(`eco-${c.chave}${alvo}`, esc(tituloEco(c, s)), ` width="${LARGURA_ECO}"`)}</a>` : "";
+      return `${img(`cat-${c.chave}${alvo}`, `${titulo} (${quantos(c)})`, ' height="44"')}
 
 <p>
-${cards}
-</p>`;
+${cards}${resumo}
+</p>${c.ecossistema ? `\n\n${blocoEcossistema(c, s, loc, alvo)}` : ""}`;
     })
     .join("\n\n");
+}
+
+/* ---------------------------------------------------------------- ecossistema */
+
+/** Largura do painel-resumo no README: dois cards e o espaço entre eles. */
+const LARGURA_ECO = LARGURA_CARD * 2 + 4;
+/** Largura do chip de servidor: quatro por linha na mesma coluna dos cards. */
+const LARGURA_CHIP = 200;
+
+const servidores = (c) => c.ecossistema?.grupos.flatMap((g) => g.repos) ?? [];
+const quantos = (c) => c.repos.length + servidores(c).length;
+const idChip = (r) => `mcp-${r.nome.replace(/^uefi-uefimcp-/, "")}`.toLowerCase();
+const cursoDe = (r, loc) => r.curso?.[loc] ?? r.nome;
+const tituloEco = (c, s) => s.ecossistema.titulo.replace("{n}", servidores(c).length);
+/** O painel-resumo leva à lista dos servidores na organização. */
+const urlEcossistema = (c) => {
+  const [r] = servidores(c);
+  return r ? `https://github.com/orgs/${r.dono}/repositories?q=${encodeURIComponent(c.repos[0]?.nome ?? "")}` : c.repos[0]?.url;
+};
+
+/**
+ * Os servidores de curso, recolhidos. São trinta e quase iguais por dentro: aberta,
+ * a lista empurraria todo o resto do perfil para baixo. O <details> é HTML que o
+ * GitHub preserva no README; o <summary> é texto puro de propósito, porque o
+ * GitHub embrulha toda <img> num link para a própria imagem, e aí clicar no
+ * resumo abriria o SVG em vez de expandir.
+ */
+function blocoEcossistema(c, s, loc, alvo) {
+  const e = s.ecossistema;
+  const grupos = c.ecossistema.grupos
+    .filter((g) => g.repos.length)
+    .map((g) => {
+      const chips = g.repos
+        .map((r) => {
+          const alt = esc(`${cursoDe(r, loc)} · ${r.nome}`);
+          return `<a href="${r.url}">${img(`${idChip(r)}${alvo}`, alt, ` width="${LARGURA_CHIP}"`)}</a>`;
+        })
+        .join("\n");
+      return `<p><sub><b>${esc(e.grupos[g.chave] ?? g.chave)} (${g.repos.length})</b></sub></p>
+<p>
+${chips}
+</p>`;
+    })
+    .join("\n");
+
+  return `<details>
+<summary><b>${esc(e.resumo.replace("{n}", servidores(c).length))}</b> · <sub>${esc(e.abrir)}</sub></summary>
+
+<p><sub>${esc(e.sobre)} ✦ = ${esc(e.porta)}.</sub></p>
+
+${grupos}
+
+</details>`;
 }
 
 function blocoFerramentas(s) {
@@ -304,7 +399,17 @@ function montarSite(d) {
 
     const categorias = d.categorias.map((c) => ({
       chave: c.chave,
+      quantos: quantos(c),
       repos: c.repos.map((r) => ({ ...r, id: idCard(r), descricaoLocal: descDe(r, loc) })),
+      ecossistema: c.ecossistema && {
+        id: `eco-${c.chave}`,
+        url: urlEcossistema(c),
+        titulo: tituloEco(c, s),
+        total: servidores(c).length,
+        grupos: c.ecossistema.grupos
+          .filter((g) => g.repos.length)
+          .map((g) => ({ chave: g.chave, repos: g.repos.map((r) => ({ ...r, id: idChip(r), cursoLocal: cursoDe(r, loc) })) })),
+      },
     }));
 
     const html = montarPagina({
@@ -356,8 +461,13 @@ async function principal() {
 
     for (const c of d.categorias) {
       if (!c.repos.length) continue;
-      gravarTemas(`cat-${c.chave}${alvo}`, () => cabecalhoCategoria(s.categorias[c.chave] ?? c.chave, c.repos.length));
+      gravarTemas(`cat-${c.chave}${alvo}`, () => cabecalhoCategoria(s.categorias[c.chave] ?? c.chave, quantos(c)));
       for (const r of c.repos) gravarTemas(`${idCard(r)}${alvo}`, () => cardRepo({ ...r, descricao: descDe(r, loc) }));
+      if (c.ecossistema) {
+        const grupos = c.ecossistema.grupos.filter((g) => g.repos.length);
+        gravarTemas(`eco-${c.chave}${alvo}`, () => painelEcossistema(grupos, s));
+        for (const r of servidores(c)) gravarTemas(`${idChip(r)}${alvo}`, () => chipServidor({ ...r, curso: cursoDe(r, loc) }));
+      }
     }
 
     gravarTemas(`banner${alvo}`, () => banner(s));
@@ -379,7 +489,7 @@ async function principal() {
     }
   }
 
-  const totalRepos = d.categorias.reduce((a, c) => a + c.repos.length, 0);
+  const totalRepos = d.categorias.reduce((a, c) => a + quantos(c), 0);
   const usadas = d.categorias.filter((c) => c.repos.length).length;
   console.log(`\n${escritos.size} SVGs, ${totalRepos} projetos em ${usadas} categorias, ${LOCAIS.length} READMEs.`);
 }

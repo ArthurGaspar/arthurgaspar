@@ -27,6 +27,13 @@ Os estudos de caso ficam em `cases` de cada idioma em `historia.json`, com
 `repo`, `titulo`, `problema`, `abordagem` e `resultado`. A página os apresenta
 entre a história e a trajetória, com link para cada repositório.
 
+Uma categoria pode ter `ecossistema` em `featured.json`: são os servidores MCP
+de curso, trinta e quase iguais por dentro. Eles não viram card. A integração
+base sai como card normal, ao lado de um painel-resumo (um ponto por servidor),
+e os cursos ficam recolhidos num `<details>`, como chips agrupados pela porta de
+entrada da UFABC. O `<summary>` é texto puro: o GitHub embrulha toda `<img>`
+num link para a própria imagem, e clicar no resumo abriria o SVG.
+
 ## Dê `git pull` antes de mexer
 
 O workflow commita sozinho todo dia. Se você editar sem puxar antes, os dois

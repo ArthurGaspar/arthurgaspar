@@ -291,6 +291,93 @@ ${txt(w - 18, 30, String(quantos), { tam: 11, peso: 600, cor: C.tinta3, anc: "en
   return painel(w, h, corpo, { titulo: `${titulo} (${quantos})`, forma });
 }
 
+/* ----------------------------------------------------------- ecossistema MCP */
+
+/**
+ * Largura do painel-resumo: o espaço de dois cards lado a lado, para ele fechar
+ * a linha com o card da integração base. Mesma escala do card (284 → 268), então
+ * as alturas batem no README.
+ */
+const LARGO_ECO = 572;
+
+/**
+ * Painel-resumo do ecossistema: uma linha por grupo, um ponto por servidor. O
+ * ponto em brilho é curso de entrada (primeiro ciclo); o redondo, curso
+ * específico. O número de cada linha vai em texto, a forma só repete.
+ */
+export function painelEcossistema(grupos, s) {
+  const e = s.ecossistema;
+  const w = LARGO_ECO;
+  const h = 142;
+  const pad = 22;
+  const sobe = 13;
+  const forma = formaArco(w, h, { sobe, r: 16 });
+  const total = grupos.reduce((a, g) => a + g.repos.length, 0);
+  const titulo = e.titulo.replace("{n}", total);
+
+  const colRotulo = 292;
+  const passo = 20;
+  const linhas = grupos
+    .map((g, i) => {
+      const y = 70 + i * 19;
+      const pontos = g.repos
+        .map((r, k) => {
+          const cx = pad + colRotulo + k * passo + 5;
+          return r.porta ? brilho(cx, y - 4, 6.5, C.amarelo, 1) : `<circle cx="${cx}" cy="${y - 4}" r="4.5" fill="${C.azul}"/>`;
+        })
+        .join("");
+      const rotulo = quebrar(e.grupos[g.chave] ?? g.chave, colRotulo - 12, 11.5, 600, 1)[0];
+      return `${txt(pad, y, rotulo, { tam: 11.5, peso: 600, cor: C.tinta2 })}
+${pontos}
+${txt(w - pad, y, String(g.repos.length), { tam: 11.5, peso: 700, cor: C.tinta, anc: "end" })}`;
+    })
+    .join("");
+
+  const defs = `
+<radialGradient id="cupulaEco" cx="0.5" cy="0" r="0.9">
+<stop offset="0" stop-color="${C.azulPalido}" stop-opacity="0.9"/>
+<stop offset="1" stop-color="${C.azulPalido}" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="corteEco"><path d="${forma}"/></clipPath>`;
+
+  const legenda = e.porta;
+  const corpo = `
+<g clip-path="url(#corteEco)"><rect width="${w}" height="${h}" fill="url(#cupulaEco)"/></g>
+${brilho(pad + 6, 37, 7, C.amarelo, 1)}
+${txt(pad + 20, 42, titulo, { tam: 14, peso: 700 })}
+${linhas}
+${brilho(w - pad - largura(legenda, 10, 400) - 12, 37, 5, C.amarelo, 1)}
+${txt(w - pad, 41, legenda, { tam: 10, cor: C.tinta3, anc: "end" })}`;
+
+  return painel(w, h, corpo, { defs, titulo: `${titulo}. ${e.sobre}`, forma });
+}
+
+/**
+ * Chip de um servidor de curso: compacto, porque são trinta e quase iguais por
+ * dentro. O que distingue um do outro é o curso, então é ele que vai em
+ * destaque; o nome do repo vem embaixo, em mono.
+ */
+export function chipServidor(r) {
+  const w = 212;
+  const h = 58;
+  const xTexto = 32;
+  const linhas = quebrar(r.curso, w - xTexto - 12, 11.5, 600, 2);
+  const slug = r.nome.replace(/^uefi-/, "");
+  // Bloco centrado na vertical: uma ou duas linhas de curso, mais o slug.
+  const alturaBloco = linhas.length * 14 + 13;
+  const y0 = (h - alturaBloco) / 2 + 10;
+  const marca = r.porta
+    ? brilho(17, h / 2, 7.5, C.amarelo, 1)
+    : `<circle cx="17" cy="${h / 2}" r="4.5" fill="${C.azul}"/>`;
+
+  const corpo = `
+${marca}
+${linhas.map((l, i) => txt(xTexto, y0 + i * 14, l, { tam: 11.5, peso: 600 })).join("")}
+${txt(xTexto, y0 + linhas.length * 14 + 1, slug, { tam: 9.5, cor: C.tinta3, mono: true })}`;
+
+  return painel(w, h, corpo, { titulo: `${r.curso} · ${r.nome}`, raio: 12 });
+}
+
 /* ------------------------------------------------------------------- idiomas */
 
 /** Chip de idioma: o seletor no topo de cada README. */

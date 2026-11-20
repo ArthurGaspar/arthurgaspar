@@ -44,38 +44,6 @@
           }
         },
         {
-          "repo": "uefiabece/uefi-uefimcp",
-          "desc": {
-            "en": "Base integration behind the UÉFIabecê MCP servers for UFABC course material.",
-            "pt-BR": "Integração base por trás dos servidores MCP UÉFIabecê das disciplinas da UFABC.",
-            "es": "Integración base detrás de los servidores MCP UÉFIabecê de las asignaturas de la UFABC."
-          }
-        },
-        {
-          "repo": "uefiabece/uefi-uefimcp-bct",
-          "desc": {
-            "en": "MCP server for UFABC's Science and Technology undergraduate programme.",
-            "pt-BR": "Servidor MCP do Bacharelado em Ciência e Tecnologia da UFABC.",
-            "es": "Servidor MCP del Bachillerato en Ciencia y Tecnología de la UFABC."
-          }
-        },
-        {
-          "repo": "uefiabece/uefi-uefimcp-biotec",
-          "desc": {
-            "en": "MCP server for UFABC's Biotechnology undergraduate programme.",
-            "pt-BR": "Servidor MCP do Bacharelado em Biotecnologia da UFABC.",
-            "es": "Servidor MCP del Bachillerato en Biotecnología de la UFABC."
-          }
-        },
-        {
-          "repo": "uefiabece/uefi-uefimcp-neuro",
-          "desc": {
-            "en": "MCP server for UFABC's Neuroscience undergraduate programme.",
-            "pt-BR": "Servidor MCP do Bacharelado em Neurociência da UFABC.",
-            "es": "Servidor MCP del Bachillerato en Neurociencia de la UFABC."
-          }
-        },
-        {
           "repo": "uefiabece/uefi-tutorial",
           "desc": {
             "en": "Tutorials and guides for the UÉFIabecê projects.",
@@ -110,8 +78,84 @@
       ]
     },
     {
+      "_ecossistema": "Os servidores MCP de curso. São trinta e quase iguais por dentro, então não viram card: a integração base sai como card normal (em `repos`), ao lado de um painel-resumo, e os cursos ficam recolhidos num <details>, como chips agrupados pela porta de entrada da UFABC. `curso` é o nome do curso por idioma; `porta: true` marca os cursos de primeiro ciclo (BC&T, BC&H e as licenciaturas interdisciplinares), por onde o aluno entra.",
+      "chave": "uefimcp",
+      "repos": [
+        {
+          "repo": "uefiabece/uefi-uefimcp",
+          "desc": {
+            "en": "The template and shared base behind every UÉFI course MCP server: one codebase, one server per UFABC programme.",
+            "pt-BR": "O template e a base comum de todos os servidores MCP de curso UÉFI: um código só, um servidor por curso da UFABC.",
+            "es": "La plantilla y la base común de todos los servidores MCP de carrera UÉFI: un solo código, un servidor por carrera de la UFABC."
+          }
+        }
+      ],
+      "ecossistema": {
+        "grupos": [
+          {
+            "chave": "engenharias",
+            "repos": [
+              { "repo": "uefiabece/uefi-uefimcp-engenharias", "curso": { "en": "Engineering, all tracks", "pt-BR": "Engenharias, todas", "es": "Ingenierías, todas" } },
+              { "repo": "uefiabece/uefi-uefimcp-aero", "curso": { "en": "Aerospace Engineering", "pt-BR": "Engenharia Aeroespacial", "es": "Ingeniería Aeroespacial" } },
+              { "repo": "uefiabece/uefi-uefimcp-biomed", "curso": { "en": "Biomedical Engineering", "pt-BR": "Engenharia Biomédica", "es": "Ingeniería Biomédica" } },
+              { "repo": "uefiabece/uefi-uefimcp-eau", "curso": { "en": "Environmental and Urban Engineering", "pt-BR": "Engenharia Ambiental e Urbana", "es": "Ingeniería Ambiental y Urbana" } },
+              { "repo": "uefiabece/uefi-uefimcp-eng-energia", "curso": { "en": "Energy Engineering", "pt-BR": "Engenharia de Energia", "es": "Ingeniería de Energía" } },
+              { "repo": "uefiabece/uefi-uefimcp-eng-gest", "curso": { "en": "Management Engineering", "pt-BR": "Engenharia de Gestão", "es": "Ingeniería de Gestión" } },
+              { "repo": "uefiabece/uefi-uefimcp-eng-info", "curso": { "en": "Information Engineering", "pt-BR": "Engenharia de Informação", "es": "Ingeniería de la Información" } },
+              { "repo": "uefiabece/uefi-uefimcp-eng-materiais", "curso": { "en": "Materials Engineering", "pt-BR": "Engenharia de Materiais", "es": "Ingeniería de Materiales" } },
+              { "repo": "uefiabece/uefi-uefimcp-iar", "curso": { "en": "Instrumentation, Automation and Robotics", "pt-BR": "Instrumentação, Automação e Robótica", "es": "Instrumentación, Automatización y Robótica" } }
+            ]
+          },
+          {
+            "chave": "ciencias",
+            "repos": [
+              { "repo": "uefiabece/uefi-uefimcp-bct", "porta": true, "curso": { "en": "Science and Technology (BC&T)", "pt-BR": "Ciência e Tecnologia (BC&T)", "es": "Ciencia y Tecnología (BC&T)" } },
+              { "repo": "uefiabece/uefi-uefimcp-comp", "curso": { "en": "Computer Science", "pt-BR": "Ciência da Computação", "es": "Ciencias de la Computación" } },
+              { "repo": "uefiabece/uefi-uefimcp-dados", "curso": { "en": "Data Science", "pt-BR": "Ciência de Dados", "es": "Ciencia de Datos" } },
+              { "repo": "uefiabece/uefi-uefimcp-mat", "curso": { "en": "Mathematics", "pt-BR": "Matemática", "es": "Matemáticas" } },
+              { "repo": "uefiabece/uefi-uefimcp-fis", "curso": { "en": "Physics", "pt-BR": "Física", "es": "Física" } },
+              { "repo": "uefiabece/uefi-uefimcp-quim", "curso": { "en": "Chemistry", "pt-BR": "Química", "es": "Química" } },
+              { "repo": "uefiabece/uefi-uefimcp-bio", "curso": { "en": "Biological Sciences", "pt-BR": "Ciências Biológicas", "es": "Ciencias Biológicas" } },
+              { "repo": "uefiabece/uefi-uefimcp-biotec", "curso": { "en": "Biotechnology", "pt-BR": "Biotecnologia", "es": "Biotecnología" } },
+              { "repo": "uefiabece/uefi-uefimcp-neuro", "curso": { "en": "Neuroscience", "pt-BR": "Neurociência", "es": "Neurociencia" } }
+            ]
+          },
+          {
+            "chave": "humanidades",
+            "repos": [
+              { "repo": "uefiabece/uefi-uefimcp-bch", "porta": true, "curso": { "en": "Science and Humanities (BC&H)", "pt-BR": "Ciências e Humanidades (BC&H)", "es": "Ciencias y Humanidades (BC&H)" } },
+              { "repo": "uefiabece/uefi-uefimcp-econo", "curso": { "en": "Economics", "pt-BR": "Ciências Econômicas", "es": "Ciencias Económicas" } },
+              { "repo": "uefiabece/uefi-uefimcp-filo", "curso": { "en": "Philosophy", "pt-BR": "Filosofia", "es": "Filosofía" } },
+              { "repo": "uefiabece/uefi-uefimcp-pp", "curso": { "en": "Public Policy", "pt-BR": "Políticas Públicas", "es": "Políticas Públicas" } },
+              { "repo": "uefiabece/uefi-uefimcp-ri", "curso": { "en": "International Relations", "pt-BR": "Relações Internacionais", "es": "Relaciones Internacionales" } },
+              { "repo": "uefiabece/uefi-uefimcp-planejamento-territorial", "curso": { "en": "Territorial Planning", "pt-BR": "Planejamento Territorial", "es": "Planificación Territorial" } }
+            ]
+          },
+          {
+            "chave": "licenciaturas",
+            "repos": [
+              { "repo": "uefiabece/uefi-uefimcp-lcne", "porta": true, "curso": { "en": "Natural and Exact Sciences (LCNE)", "pt-BR": "Ciências Naturais e Exatas (LCNE)", "es": "Ciencias Naturales y Exactas (LCNE)" } },
+              { "repo": "uefiabece/uefi-uefimcp-lch", "porta": true, "curso": { "en": "Human Sciences (LCH)", "pt-BR": "Ciências Humanas (LCH)", "es": "Ciencias Humanas (LCH)" } },
+              { "repo": "uefiabece/uefi-uefimcp-leila", "porta": true, "curso": { "en": "Childhood Education, Languages and Arts (LEILA)", "pt-BR": "Educação das Infâncias, Linguagens e Artes (LEILA)", "es": "Educación de las Infancias, Lenguajes y Artes (LEILA)" } },
+              { "repo": "uefiabece/uefi-uefimcp-geo", "curso": { "en": "Geography", "pt-BR": "Geografia", "es": "Geografía" } },
+              { "repo": "uefiabece/uefi-uefimcp-hist", "curso": { "en": "History", "pt-BR": "História", "es": "Historia" } },
+              { "repo": "uefiabece/uefi-uefimcp-pedagogia", "curso": { "en": "Pedagogy", "pt-BR": "Pedagogia", "es": "Pedagogía" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "chave": "habilidades",
       "repos": [
+        {
+          "repo": "monitor-de-ec",
+          "desc": {
+            "en": "Brazil's economy through listed companies' filings: Python ETL on CVM and Treasury data, a dashboard, a fact-checked LLM bulletin.",
+            "pt-BR": "A economia pelos balanços das companhias abertas: ETL em Python sobre CVM e Tesouro, painel e boletim de LLM conferido.",
+            "es": "La economía brasileña por los balances de las cotizadas: ETL en Python sobre CVM y Tesoro, panel y boletín de LLM verificado."
+          }
+        },
         {
           "repo": "uefiabece/uefi-matricula",
           "desc": {

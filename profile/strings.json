@@ -75,9 +75,23 @@
       "praticas": "Practices",
       "aprendendo": "Learning next"
     },
+    "ecossistema": {
+      "titulo": "One template, {n} course servers",
+      "resumo": "{n} course servers, one per UFABC programme",
+      "abrir": "click to expand",
+      "sobre": "Every server speaks MCP over one UFABC programme: syllabi, bibliography, past exams, exercises and study plans. They are grouped by how students enter UFABC: everyone starts in an interdisciplinary first-cycle programme, then moves on to a specific degree.",
+      "porta": "first-cycle entry programme",
+      "grupos": {
+        "engenharias": "Engineering · via BC&T",
+        "ciencias": "Sciences and computing · via BC&T",
+        "humanidades": "Humanities and social sciences · via BC&H",
+        "licenciaturas": "Teaching degrees"
+      }
+    },
     "categorias": {
       "ia": "Artificial intelligence",
       "academico": "Research and education",
+      "uefimcp": "UÉFI MCP servers",
       "habilidades": "Skills",
       "artisticas": "Artistic tools",
       "criativo": "Creative",
@@ -178,9 +192,23 @@
       "praticas": "Práticas",
       "aprendendo": "Quero aprender"
     },
+    "ecossistema": {
+      "titulo": "Um template, {n} servidores de curso",
+      "resumo": "{n} servidores de curso, um por curso da UFABC",
+      "abrir": "clique para expandir",
+      "sobre": "Cada servidor fala MCP sobre um curso da UFABC: ementas, bibliografia, provas antigas, exercícios e planos de estudo. Estão agrupados pela porta de entrada: todo aluno começa num bacharelado ou licenciatura interdisciplinar de primeiro ciclo e só depois segue para o curso específico.",
+      "porta": "curso de entrada, primeiro ciclo",
+      "grupos": {
+        "engenharias": "Engenharias · pelo BC&T",
+        "ciencias": "Ciências e computação · pelo BC&T",
+        "humanidades": "Humanidades e ciências sociais · pelo BC&H",
+        "licenciaturas": "Licenciaturas"
+      }
+    },
     "categorias": {
       "ia": "Inteligência artificial",
       "academico": "Pesquisa e educação",
+      "uefimcp": "Servidores MCP UÉFI",
       "habilidades": "Habilidades",
       "artisticas": "Ferramentas artísticas",
       "criativo": "Criativo",
@@ -281,9 +309,23 @@
       "praticas": "Prácticas",
       "aprendendo": "Quiero aprender"
     },
+    "ecossistema": {
+      "titulo": "Una plantilla, {n} servidores de carrera",
+      "resumo": "{n} servidores de carrera, uno por carrera de la UFABC",
+      "abrir": "clic para expandir",
+      "sobre": "Cada servidor habla MCP sobre una carrera de la UFABC: programas, bibliografía, exámenes anteriores, ejercicios y planes de estudio. Están agrupados por la puerta de entrada: todo estudiante empieza en un programa interdisciplinario de primer ciclo y después pasa a la carrera específica.",
+      "porta": "programa de entrada, primer ciclo",
+      "grupos": {
+        "engenharias": "Ingenierías · por el BC&T",
+        "ciencias": "Ciencias y computación · por el BC&T",
+        "humanidades": "Humanidades y ciencias sociales · por el BC&H",
+        "licenciaturas": "Profesorados"
+      }
+    },
     "categorias": {
       "ia": "Inteligencia artificial",
       "academico": "Investigación y educación",
+      "uefimcp": "Servidores MCP UÉFI",
       "habilidades": "Habilidades",
       "artisticas": "Herramientas artísticas",
       "criativo": "Creativo",

@@ -7,7 +7,7 @@
   "_categorias": "Um site só anuncia projetos da própria categoria, e nunca a si mesmo.",
   "categorias": {
     "educacional": ["uefi-rag", "ontology-app-public"],
-    "curriculo": ["pv-bench", "e2e-detective", "bioarcade", "sp-transit-logistics", "blast-radius"],
+    "curriculo": ["pv-bench", "e2e-detective", "bioarcade", "sp-transit-logistics", "blast-radius", "monitor-de-ec"],
     "criativos": ["tft-meta-pipeline", "pokemon-md-guild-ledger"]
   },
 
@@ -113,6 +113,18 @@
         "en": "Scout the meta, then build a board to fight with",
         "pt-BR": "Estude o meta e monte um board para lutar",
         "es": "Estudia el meta y arma un tablero para pelear"
+      }
+    },
+    "monitor-de-ec": {
+      "repo": "monitor-de-ec",
+      "nome": "Monitor da Economia",
+      "anuncia": false,
+      "url": "https://arthurgaspar.github.io/monitor-de-ec/",
+      "cor": "#1d4f8f",
+      "chamada": {
+        "en": "Brazil's economy, read from the balance sheets",
+        "pt-BR": "A economia brasileira, lida nos balanços",
+        "es": "La economía brasileña, leída en los balances"
       }
     },
     "pokemon-md-guild-ledger": {

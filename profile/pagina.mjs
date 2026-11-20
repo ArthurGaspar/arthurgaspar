@@ -114,12 +114,35 @@ ${["problema", "abordagem", "resultado"].map((chave) => `<p><strong>${esc(p[chav
           return `<li><a href="${esc(r.url)}">${svg(`${r.id}${alvo}`, alt, ' width="284" height="142" loading="lazy"')}</a></li>`;
         })
         .join("\n");
-      return `<h3 class="categoria">${svg(`cat-${c.chave}${alvo}`, `${titulo} (${c.repos.length})`, ' height="44"')}</h3>
+      const eco = c.ecossistema;
+      const resumo = eco
+        ? `\n<li class="largo"><a href="${esc(eco.url)}">${svg(`${eco.id}${alvo}`, eco.titulo, ' width="572" height="142" loading="lazy"')}</a></li>`
+        : "";
+      return `<h3 class="categoria">${svg(`cat-${c.chave}${alvo}`, `${titulo} (${c.quantos ?? c.repos.length})`, ' height="44"')}</h3>
 <ul class="cards">
-${cards}
-</ul>`;
+${cards}${resumo}
+</ul>${eco ? blocoEcossistema(eco) : ""}`;
     })
     .join("\n");
+
+  /** Os servidores de curso, recolhidos como no README. Ver generate.mjs. */
+  function blocoEcossistema(eco) {
+    const e = s.ecossistema;
+    const grupos = eco.grupos
+      .map(
+        (g) => `<h4 class="grupo-eco">${esc(e.grupos[g.chave] ?? g.chave)} <span>${g.repos.length}</span></h4>
+<ul class="chips">
+${g.repos.map((r) => `<li><a href="${esc(r.url)}">${svg(`${r.id}${alvo}`, esc(`${r.cursoLocal} · ${r.nome}`), ' width="212" height="58" loading="lazy"')}</a></li>`).join("\n")}
+</ul>`,
+      )
+      .join("\n");
+    return `
+<details class="ecossistema">
+<summary><b>${esc(e.resumo.replace("{n}", eco.total))}</b> <span>${esc(e.abrir)}</span></summary>
+<p class="sobre-eco">${esc(e.sobre)} ✦ = ${esc(e.porta)}.</p>
+${grupos}
+</details>`;
+  }
 
   const ferramentas = tools.grupos
     .map(
@@ -241,6 +264,22 @@ h3 { margin: 0; }
 .cards a { display: block; border-radius: 16px; transition: transform 0.15s ease; }
 .cards a:hover { transform: translateY(-2px); }
 .cards img { width: 100%; }
+.cards .largo { grid-column: span 2; }
+
+.ecossistema { margin: 14px 0 0; border: 1px solid var(--linha); border-radius: 16px; background: var(--papel); }
+.ecossistema summary { cursor: pointer; padding: 14px 18px; font-size: 16px; }
+.ecossistema summary span { margin-left: 6px; font-size: 14px; color: var(--tinta3); }
+.ecossistema[open] summary span { display: none; }
+.ecossistema > :not(summary) { margin-left: 18px; margin-right: 18px; }
+.sobre-eco { margin: 0 0 4px; font-size: 15px; color: var(--tinta2); max-width: 46em; text-wrap: pretty; }
+.grupo-eco { margin: 18px 0 8px; font-size: 14px; color: var(--tinta2); }
+.grupo-eco span { color: var(--tinta3); font-weight: 400; }
+.chips {
+  list-style: none; padding: 0; margin-bottom: 18px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px;
+}
+.chips a { display: block; border-radius: 12px; }
+.chips img { width: 100%; }
 
 .numeros { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .numeros figure { margin: 0; }
@@ -260,6 +299,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--linha)
   .case { padding: 18px; }
   .case h3 { font-size: 21px; }
   .numeros { grid-template-columns: 1fr; }
+  .cards .largo { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .cards a { transition: none; } }
 </style>
