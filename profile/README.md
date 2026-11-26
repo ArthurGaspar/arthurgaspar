@@ -34,6 +34,26 @@ e os cursos ficam recolhidos num `<details>`, como chips agrupados pela porta de
 entrada da UFABC. O `<summary>` é texto puro: o GitHub embrulha toda `<img>`
 num link para a própria imagem, e clicar no resumo abriria o SVG.
 
+## A página do GitHub Pages
+
+`pagina.mjs` não reaproveita os SVGs do README: cards, gráficos, mapa de
+contribuições e títulos são HTML, para poderem se mexer. O conceito é "um dia de
+sol": a rolagem leva o sol (uma cena Three.js atrás do conteúdo, carregada do
+jsDelivr) do alto à direita até o pôr do sol no contato, o céu esquenta junto e
+cada seção leva um horário.
+
+- Sem JavaScript a página continua inteira: as animações de entrada só são
+  armadas quando o script marca `<html class="js">`. Se o WebGL falhar, fica um
+  sol em CSS (`.sol-css`).
+- `prefers-reduced-motion` desliga tudo que se mexe, inclusive o laço da cena.
+- O `verificar.mjs` reprova a página que contém palavras de dado faltando, e o
+  script embutido está dentro dessa checagem: nada de comparar tipo com a palavra
+  proibida nem de template literal no JS do navegador (ele já vive dentro de um
+  template literal do Node).
+- Para ver localmente: `node profile/generate.mjs --fixture` e
+  `python -m http.server --directory _site`. Não sirva de dentro de `_site/`: o
+  gerador apaga e recria a pasta.
+
 ## Dê `git pull` antes de mexer
 
 O workflow commita sozinho todo dia. Se você editar sem puxar antes, os dois

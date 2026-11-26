@@ -387,16 +387,10 @@ function montarSite(d) {
 
   for (const loc of LOCAIS) {
     const s = { ...STR[loc], loc };
-    const alvo = loc === "en" ? "" : `.${loc}`;
-    for (const chave of ["historia", "cases", "trajetoria"]) {
-      writeFileSync(join(SITE, "assets", `faixa-${chave}${alvo}.svg`), faixa(s.pagina[chave]), "utf8");
-    }
-
     const raiz = PASTA[loc] ? "../" : "";
-    // O padrão de medida é o da faixa, que é o asset mais repetido na página.
-    const svg = (base, alt, extra = ' width="880" height="50"') =>
-      `<img src="${raiz}assets/${base}.svg?v=${STAMP}" alt="${alt.replace(/"/g, "&quot;")}"${extra}>`;
 
+    // A página desenha cards, gráficos e títulos em HTML (ver pagina.mjs); os
+    // SVGs claros seguem copiados em _site/assets para quem linka direto neles.
     const categorias = d.categorias.map((c) => ({
       chave: c.chave,
       quantos: quantos(c),
@@ -418,10 +412,9 @@ function montarSite(d) {
       h: HIST[loc],
       contato: HIST.contato,
       d: { ...d, categorias },
-      alvo,
       tools: TOOLS,
       url: HIST.url,
-      ctx: { raiz, svg, caminho: PASTA, idiomas: CHIP, data: hoje },
+      ctx: { raiz, caminho: PASTA, idiomas: CHIP, data: hoje },
     });
     mkdirSync(join(SITE, PASTA[loc]), { recursive: true });
     writeFileSync(join(SITE, PASTA[loc], "index.html"), html, "utf8");

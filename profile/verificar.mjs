@@ -80,7 +80,8 @@ for (const p of PAGINAS) {
     if (!existsSync(alvo)) reprovar(`_site/${p}: aponta para ${m[1]}, que não existe`);
     if (m[1].endsWith(".dark.svg")) reprovar(`_site/${p}: usa ${m[1]}, mas a página é só tema claro`);
   }
-  if (!/assets\/repo-/.test(texto)) reprovar(`_site/${p}: nenhum card de repositório`);
+  // Os cards da página são HTML (pagina.mjs), marcados com data-repo.
+  if (!/data-repo="/.test(texto)) reprovar(`_site/${p}: nenhum card de repositório`);
   for (const lixo of ["NaN", "undefined", "[object"]) {
     if (texto.includes(lixo)) reprovar(`_site/${p}: contém "${lixo}", sinal de dado faltando`);
   }

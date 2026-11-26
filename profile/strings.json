@@ -113,7 +113,13 @@
       "rodape": "Generated from the same data as my GitHub profile, updated daily.",
       "experiencia": "Experience",
       "formacao": "Education",
-      "falados": "Languages I speak"
+      "falados": "Languages I speak",
+      "todos": "All",
+      "rolar": "Scroll",
+      "voltar": "Back to top",
+      "unidadeDias": "days",
+      "estrelas": "stars",
+      "secoes": "Sections"
     }
   },
   "pt-BR": {
@@ -230,7 +236,13 @@
       "rodape": "Gerada a partir dos mesmos dados do meu perfil no GitHub, atualizada todo dia.",
       "experiencia": "Experiência",
       "formacao": "Formação",
-      "falados": "Idiomas"
+      "falados": "Idiomas",
+      "todos": "Todos",
+      "rolar": "Role para ver",
+      "voltar": "Voltar ao topo",
+      "unidadeDias": "dias",
+      "estrelas": "estrelas",
+      "secoes": "Seções"
     }
   },
   "es": {
@@ -347,7 +359,13 @@
       "rodape": "Generada a partir de los mismos datos de mi perfil de GitHub, actualizada cada día.",
       "experiencia": "Experiencia",
       "formacao": "Formación",
-      "falados": "Idiomas"
+      "falados": "Idiomas",
+      "todos": "Todos",
+      "rolar": "Desliza",
+      "voltar": "Volver arriba",
+      "unidadeDias": "días",
+      "estrelas": "estrellas",
+      "secoes": "Secciones"
     }
   }
 }
