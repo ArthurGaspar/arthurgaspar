@@ -14,6 +14,7 @@ profile/render.mjs      os desenhos
 profile/github.mjs      as consultas à API
 profile/generate.mjs    junta tudo e escreve os READMEs
 profile/verificar.mjs   confere o resultado antes de virar commit
+profile/capas/          capturas e ícones dos projetos (ver "As capas")
 profile/anuncios/       os anúncios que os sites do GitHub Pages exibem uns dos outros
 profile/anuncios.mjs    publica os anúncios em _site/ads/
 ```
@@ -33,6 +34,24 @@ base sai como card normal, ao lado de um painel-resumo (um ponto por servidor),
 e os cursos ficam recolhidos num `<details>`, como chips agrupados pela porta de
 entrada da UFABC. O `<summary>` é texto puro: o GitHub embrulha toda `<img>`
 num link para a própria imagem, e clicar no resumo abriria o SVG.
+
+## As capas
+
+`capas/` guarda a imagem de cada projeto, pelo nome do repo. Tudo opcional:
+
+```
+capas/<repo>.jpg       16:9 (960x540): cards e estudos de caso da página
+capas/<repo>.mini.jpg  568x240: faixa do topo do card SVG do README
+capas/<repo>.svg       ícone, para projeto sem captura de tela
+```
+
+As duas JPEG saem de uma captura só: `python profile/capas/preparar.py <repo>
+<captura.png>` (precisa de Pillow; o CI não roda isso, as capas são commitadas
+prontas). A mini vai **embutida em base64** no SVG, porque SVG servido como
+imagem não carrega nada externo; por isso ela é pequena. Sem capa, o card fica
+com a faixa de luz (e o ícone, se houver), na mesma altura, para a linha não sair
+torta. O `verificar.mjs` ignora o base64 na busca por "NaN" e afins, onde essas
+letras aparecem por acaso.
 
 ## A página do GitHub Pages
 

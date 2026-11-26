@@ -237,13 +237,23 @@ ${lado(col * 2.5, d.maior, s.maior, d.maiorDe ?? "")}`;
 
 /* --------------------------------------------------------------- card de repo */
 
+/** Faixa da capa no topo do card: a mini de profile/capas é 568x240, o dobro disto. */
+const CAPA = 120;
+/** Altura do card. O painel do ecossistema usa a mesma, para fechar a linha alinhado. */
+const ALTO_CARD = CAPA + 115;
+
 /**
  * Card de projeto, em arco. São três por linha agora, porque a vitrine deixou de
  * ser uma seleção de seis e passou a ser o acervo inteiro por categoria.
+ *
+ * O topo é a capa do projeto (`r.mini`, JPEG em data URI: SVG servido como
+ * imagem não carrega nada externo). Sem capa, a faixa fica com a cúpula de luz e,
+ * se houver, o ícone do projeto (`r.icone`); todo card tem a mesma altura, então
+ * a linha não sai torta quando mistura os dois.
  */
 export function cardRepo(r) {
   const w = TERCO;
-  const h = 142;
+  const h = ALTO_CARD;
   const pad = 16;
   const sobe = 13;
   const forma = formaArco(w, h, { sobe, r: 16 });
@@ -269,11 +279,20 @@ export function cardRepo(r) {
 </radialGradient>
 <clipPath id="corteCard"><path d="${forma}"/></clipPath>`;
 
+  const icone = 52;
+  const faixa = r.mini
+    ? `<image href="${r.mini}" width="${w}" height="${CAPA}" preserveAspectRatio="xMidYMid slice"/>`
+    : `<rect width="${w}" height="${CAPA}" fill="url(#cupula)"/>
+${r.icone ? `<image href="${r.icone}" x="${(w - icone) / 2}" y="${(CAPA + sobe - icone) / 2}" width="${icone}" height="${icone}"/>` : brilho(w / 2, (CAPA + sobe) / 2, 13, C.amarelo, 0.9)}`;
+
   const corpo = `
-<g clip-path="url(#corteCard)"><rect width="${w}" height="${h}" fill="url(#cupula)"/></g>
-${brilho(w / 2, sobe + 11, 5.5, C.amarelo, 0.9)}
-${txt(w / 2, sobe + 36, r.nome, { tam: 13, peso: 700, anc: "middle", mono: true })}
-${desc.map((l, i) => txt(pad, sobe + 58 + i * 14.5, l, { tam: 10.8, cor: C.tinta2 })).join("")}
+<g clip-path="url(#corteCard)">
+${faixa}
+<path d="M0 ${CAPA - 0.5} H${w}" stroke="${C.linha}"/>
+</g>
+<path d="${forma}" fill="none" stroke="${C.linha}"/>
+${txt(w / 2, CAPA + 24, r.nome, { tam: 13, peso: 700, anc: "middle", mono: true })}
+${desc.map((l, i) => txt(pad, CAPA + 46 + i * 14.5, l, { tam: 10.8, cor: C.tinta2 })).join("")}
 ${metas.join("")}`;
 
   return painel(w, h, corpo, { defs, titulo: `${r.nome}${r.descricao ? ` · ${r.descricao}` : ""}`, forma });
@@ -308,7 +327,7 @@ const LARGO_ECO = 572;
 export function painelEcossistema(grupos, s) {
   const e = s.ecossistema;
   const w = LARGO_ECO;
-  const h = 142;
+  const h = ALTO_CARD;
   const pad = 22;
   const sobe = 13;
   const forma = formaArco(w, h, { sobe, r: 16 });
@@ -317,9 +336,12 @@ export function painelEcossistema(grupos, s) {
 
   const colRotulo = 292;
   const passo = 20;
+  // As linhas ocupam a altura que sobra abaixo do título, igualmente espaçadas.
+  const topo = 84;
+  const vao = grupos.length > 1 ? Math.min(40, (h - 34 - topo) / (grupos.length - 1)) : 0;
   const linhas = grupos
     .map((g, i) => {
-      const y = 70 + i * 19;
+      const y = topo + i * vao;
       const pontos = g.repos
         .map((r, k) => {
           const cx = pad + colRotulo + k * passo + 5;

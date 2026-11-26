@@ -179,7 +179,10 @@ ${cases
 <p class="case-numero">${esc(p.case)} ${String(i + 1).padStart(2, "0")}<span>/ ${String(cases.length).padStart(2, "0")}</span></p>
 <a class="case-repo" href="https://github.com/ArthurGaspar/${esc(c.repo)}">${esc(c.repo)} <span aria-hidden="true">→</span></a>
 </div>
+<div class="case-cabeca${c.capa ? "" : " sem-capa"}">
 <h3 id="case-${esc(c.repo)}">${prosa(c.titulo)}</h3>
+${c.capa ? `<a class="case-capa" href="https://github.com/ArthurGaspar/${esc(c.repo)}" tabindex="-1" aria-hidden="true"><img src="${ctx.raiz}capas/${esc(c.capa)}" alt="" width="960" height="540" loading="lazy" decoding="async"></a>` : ""}
+</div>
 <div class="case-colunas">
 ${["problema", "abordagem", "resultado"]
   .map((chave, k) => `<div class="case-bloco b${k}"><h4>${esc(p[chave])}</h4><p>${prosa(c[chave])}</p></div>`)
@@ -222,11 +225,19 @@ ${falados.length ? `<h3 class="grupo-tempo">${esc(p.falados)}</h3>\n<ul class="f
   /* ------------------------------------------------------------ projetos */
   const cats = d.categorias.filter((c) => c.repos.length);
   let n = 0;
+  // Todo card tem faixa de capa, para a linha não sair torta: a captura do
+  // projeto, ou o ícone dele, ou só a luz na cor da linguagem.
+  const capa = (r) =>
+    r.capa
+      ? `<span class="capa"><img src="${ctx.raiz}capas/${esc(r.capa)}" alt="" width="960" height="540" loading="lazy" decoding="async"></span>`
+      : `<span class="capa vazia" aria-hidden="true">${r.icone ? `<img src="${ctx.raiz}capas/${esc(r.icone)}" alt="" width="64" height="64">` : "<b>✦</b>"}</span>`;
+
   const card = (r, chave) => {
     const desc = r.descricaoLocal || r.descricao || "";
     const cor = r.corLinguagem || C.azul;
     return `<li class="projeto" data-cat="${esc(chave)}" data-repo="${esc(r.nome)}" style="view-transition-name:p${n++}">
 <a class="cartao" href="${esc(r.url)}" style="--c:${esc(cor)}">
+${capa(r)}
 <span class="brilho" aria-hidden="true"></span>
 <span class="cartao-topo">${r.linguagem ? `<span class="lang"><i></i>${esc(r.linguagem)}</span>` : "<span></span>"}${r.estrelas ? `<span class="estrelas" aria-label="${r.estrelas} ${esc(p.estrelas)}">★ ${nf.format(r.estrelas)}</span>` : ""}</span>
 <h4>${esc(r.nome)}</h4>
@@ -496,6 +507,11 @@ main { position: relative; }
 .case-repo span { display: inline-block; transition: transform 0.3s var(--mola); }
 .case-repo:hover span { transform: translateX(4px); }
 .case h3 { margin: 12px 0 22px; font: 600 clamp(22px, 2.6vw, 30px)/1.25 var(--display); letter-spacing: -0.01em; text-wrap: balance; max-width: 30em; }
+.case-cabeca { display: grid; grid-template-columns: 1fr minmax(220px, 34%); gap: 24px; align-items: start; }
+.case-cabeca.sem-capa { grid-template-columns: 1fr; }
+.case-capa { display: block; margin: 12px 0 22px; border-radius: 16px; overflow: hidden; border: 1px solid var(--linha); box-shadow: 0 18px 40px -24px rgba(30, 83, 184, 0.45); }
+.case-capa img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: transform 0.6s var(--mola); }
+.case-capa:hover img { transform: scale(1.04); }
 .case-colunas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .case-bloco { padding: 16px 18px; border-radius: 18px; background: rgba(244, 248, 255, 0.8); border: 1px solid var(--linha); }
 .case-bloco.b2 { background: rgba(255, 240, 191, 0.55); border-color: rgba(255, 201, 39, 0.45); }
@@ -552,7 +568,17 @@ main { position: relative; }
   border: 1px solid rgba(255, 255, 255, 0.95); box-shadow: var(--sombra);
   transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)); transition: transform 0.5s var(--mola), box-shadow 0.5s;
 }
-.cartao::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--c), var(--amarelo)); opacity: 0.9; }
+.cartao::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--c), var(--amarelo)); opacity: 0.9; z-index: 1; }
+.capa { display: block; margin: -22px -22px 18px; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--linha); }
+.capa img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s var(--mola); }
+a.cartao:hover .capa img { transform: scale(1.05); }
+.capa.vazia {
+  display: grid; place-items: center;
+  background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%), linear-gradient(180deg, rgba(255, 240, 191, 0.6), rgba(244, 248, 255, 0.4));
+}
+.capa.vazia img { width: 64px; height: 64px; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18)); }
+a.cartao:hover .capa.vazia img { transform: scale(1.1) rotate(-4deg); }
+.capa.vazia b { font-size: 34px; color: var(--amarelo); text-shadow: 0 0 22px rgba(255, 201, 39, 0.8); }
 a.cartao:hover { box-shadow: 0 26px 60px -26px rgba(30, 83, 184, 0.45), 0 0 0 1px rgba(255, 201, 39, 0.5); }
 .brilho {
   position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.4s;
@@ -649,6 +675,8 @@ footer a { color: var(--tinta2); }
   .ferr { grid-template-columns: 1fr; }
   .legenda { grid-template-columns: 1fr 1fr; }
   .case-colunas { grid-template-columns: 1fr; }
+  .case-cabeca { grid-template-columns: 1fr; gap: 0; }
+  .case-capa { order: -1; margin: 14px 0 0; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }

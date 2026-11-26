@@ -53,8 +53,10 @@ for (const f of readdirSync(join(RAIZ, "assets"))) {
 
   if (!s.trimStart().startsWith("<svg")) reprovar(`assets/${f}: não começa com <svg`);
   if (!s.trimEnd().endsWith("</svg>")) reprovar(`assets/${f}: não termina com </svg>`);
+  // A capa embutida é base64, onde "NaN" aparece por puro acaso: fica de fora.
+  const semCapa = s.replace(/data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+/g, "");
   for (const lixo of ["NaN", "undefined", "null,", "[object"]) {
-    if (s.includes(lixo)) reprovar(`assets/${f}: contém "${lixo}", sinal de dado faltando`);
+    if (semCapa.includes(lixo)) reprovar(`assets/${f}: contém "${lixo}", sinal de dado faltando`);
   }
   if (!usados.has(f)) reprovar(`assets/${f}: gerado mas nenhum README usa`);
 }
@@ -75,7 +77,7 @@ for (const p of PAGINAS) {
   const texto = readFileSync(caminho, "utf8");
   const pasta = p.includes("/") ? p.slice(0, p.lastIndexOf("/") + 1) : "";
 
-  for (const m of texto.matchAll(/src="((?:\.\.\/)?assets\/[^"?]+)/g)) {
+  for (const m of texto.matchAll(/src="((?:\.\.\/)?(?:assets|capas)\/[^"?]+)/g)) {
     const alvo = join(SITE, pasta, m[1]);
     if (!existsSync(alvo)) reprovar(`_site/${p}: aponta para ${m[1]}, que não existe`);
     if (m[1].endsWith(".dark.svg")) reprovar(`_site/${p}: usa ${m[1]}, mas a página é só tema claro`);

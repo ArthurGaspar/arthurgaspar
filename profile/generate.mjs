@@ -12,7 +12,7 @@
  * Além dos READMEs, monta a página central em _site/, que o workflow publica no
  * GitHub Pages. _site/ não é commitada: é saída de build, refeita a cada rodada.
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync, rmSync, copyFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync, rmSync, copyFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { banner, interesses, linguagens, contribuicoes, sequencia, cardRepo, cabecalhoCategoria, chipIdioma, faixa, painelEcossistema, chipServidor } from "./render.mjs";
@@ -25,6 +25,7 @@ const AQUI = dirname(fileURLToPath(import.meta.url));
 const RAIZ = join(AQUI, "..");
 const ASSETS = join(RAIZ, "assets");
 const SITE = join(RAIZ, "_site");
+const CAPAS = join(AQUI, "capas");
 
 const ler = (p) => JSON.parse(readFileSync(join(AQUI, p), "utf8"));
 const CFG = ler("featured.json");
@@ -193,6 +194,26 @@ const img = (base, alt, extra = "") =>
 const STAMP = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
 
 const idCard = (r) => `repo-${r.dono}-${r.nome}`.toLowerCase();
+
+/**
+ * Capa e ícone do projeto, por nome de repo, em profile/capas/ (ver preparar.py).
+ *
+ *   <nome>.jpg       16:9, para a página
+ *   <nome>.mini.jpg  faixa do card do README, embutida em base64
+ *   <nome>.svg       ícone, para quem não tem captura de tela
+ *
+ * Nada disso é obrigatório: o card sem capa sai com a faixa de luz de sempre.
+ */
+const dataUri = (arquivo, tipo) => `data:${tipo};base64,${readFileSync(join(CAPAS, arquivo)).toString("base64")}`;
+function capaDe(nome) {
+  const tem = (f) => existsSync(join(CAPAS, f));
+  return {
+    capa: tem(`${nome}.jpg`) ? `${nome}.jpg` : null,
+    mini: tem(`${nome}.mini.jpg`) ? dataUri(`${nome}.mini.jpg`, "image/jpeg") : null,
+    icone: tem(`${nome}.svg`) ? `${nome}.svg` : null,
+    iconeUri: tem(`${nome}.svg`) ? dataUri(`${nome}.svg`, "image/svg+xml") : null,
+  };
+}
 
 /** A descrição traduzida ganha da do GitHub, que é um campo só e não traduz. */
 const descDe = (r, loc) => r.desc?.[loc] ?? r.descricao ?? "";
@@ -382,6 +403,12 @@ function montarSite(d) {
     if (!f.endsWith(".dark.svg")) copyFileSync(join(ASSETS, f), join(SITE, "assets", f));
   }
 
+  // Capas 16:9 e ícones. A mini fica de fora: só serve para o SVG do README.
+  mkdirSync(join(SITE, "capas"), { recursive: true });
+  for (const f of readdirSync(CAPAS)) {
+    if (/\.(jpg|svg)$/.test(f) && !f.endsWith(".mini.jpg")) copyFileSync(join(CAPAS, f), join(SITE, "capas", f));
+  }
+
   aplicarTema("claro");
   const hoje = new Date().toISOString().slice(0, 10);
 
@@ -394,7 +421,10 @@ function montarSite(d) {
     const categorias = d.categorias.map((c) => ({
       chave: c.chave,
       quantos: quantos(c),
-      repos: c.repos.map((r) => ({ ...r, id: idCard(r), descricaoLocal: descDe(r, loc) })),
+      repos: c.repos.map((r) => {
+        const { capa, icone } = capaDe(r.nome);
+        return { ...r, id: idCard(r), descricaoLocal: descDe(r, loc), capa, icone };
+      }),
       ecossistema: c.ecossistema && {
         id: `eco-${c.chave}`,
         url: urlEcossistema(c),
@@ -406,10 +436,11 @@ function montarSite(d) {
       },
     }));
 
+    const h = HIST[loc];
     const html = montarPagina({
       loc,
       s,
-      h: HIST[loc],
+      h: { ...h, cases: (h.cases ?? []).map((c) => ({ ...c, capa: capaDe(c.repo).capa })) },
       contato: HIST.contato,
       d: { ...d, categorias },
       tools: TOOLS,
@@ -455,7 +486,10 @@ async function principal() {
     for (const c of d.categorias) {
       if (!c.repos.length) continue;
       gravarTemas(`cat-${c.chave}${alvo}`, () => cabecalhoCategoria(s.categorias[c.chave] ?? c.chave, quantos(c)));
-      for (const r of c.repos) gravarTemas(`${idCard(r)}${alvo}`, () => cardRepo({ ...r, descricao: descDe(r, loc) }));
+      for (const r of c.repos) {
+        const { mini, iconeUri } = capaDe(r.nome);
+        gravarTemas(`${idCard(r)}${alvo}`, () => cardRepo({ ...r, descricao: descDe(r, loc), mini, icone: iconeUri }));
+      }
       if (c.ecossistema) {
         const grupos = c.ecossistema.grupos.filter((g) => g.repos.length);
         gravarTemas(`eco-${c.chave}${alvo}`, () => painelEcossistema(grupos, s));
