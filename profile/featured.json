@@ -157,6 +157,14 @@
           }
         },
         {
+          "repo": "radar-vagas-public",
+          "desc": {
+            "en": "Hourly job radar over 10 ATS and 4 job boards: cross-source dedup, an ATS-style resume match score with no AI, Discord alerts.",
+            "pt-BR": "Radar de vagas de hora em hora em 10 ATS e 4 portais: dedup entre fontes, score de compatibilidade estilo ATS sem IA, Discord.",
+            "es": "Radar de vacantes cada hora en 10 ATS y 4 portales: dedup entre fuentes, score de compatibilidad estilo ATS sin IA, Discord."
+          }
+        },
+        {
           "repo": "uefiabece/uefi-matricula",
           "desc": {
             "en": "UFABC enrollment built for the rush: virtual queue, priority allocation, Kafka saga with outbox, offline QR receipts.",
